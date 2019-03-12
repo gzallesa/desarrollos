@@ -1,0 +1,7 @@
+parameters:
+#    helpdesk.example.class: Panel\HelpdeskBundle\Example
+
+services:
+#    helpdesk.example:
+#        class: %helpdesk.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

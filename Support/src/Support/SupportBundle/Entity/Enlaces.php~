@@ -1,0 +1,60 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Enlaces
+ *
+ * @ORM\Table(name="enlaces")
+ * @ORM\Entity
+ */
+class Enlaces
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="icon", type="string", length=255, nullable=false)
+     */
+    private $icon;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=false)
+     */
+    private $url;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=255, nullable=false)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="interno", type="string", length=1, nullable=false)
+     */
+    private $interno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=255, nullable=false)
+     */
+    private $descripcion;
+
+
+}

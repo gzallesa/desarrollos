@@ -1,0 +1,49 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanFolderPermission
+ *
+ * @ORM\Table(name="docman_folder_permission", indexes={@ORM\Index(name="f", columns={"file"})})
+ * @ORM\Entity
+ */
+class DocmanFolderPermission
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="users", type="string", length=3, nullable=false)
+     */
+    private $users;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="groups", type="string", length=3, nullable=false)
+     */
+    private $groups;
+
+    /**
+     * @var \DocmanFolder
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanFolder")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="file", referencedColumnName="idf")
+     * })
+     */
+    private $file;
+
+
+}

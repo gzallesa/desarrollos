@@ -1,0 +1,77 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Monitoreo
+ *
+ * @ORM\Table(name="monitoreo", indexes={@ORM\Index(name="fk_fuente", columns={"fuente"})})
+ * @ORM\Entity
+ */
+class Monitoreo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=1000, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+    private $link;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="pubDate", type="date", nullable=true)
+     */
+    private $pubdate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ext", type="integer", nullable=true)
+     */
+    private $ext;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="firma", type="string", length=50, nullable=true)
+     */
+    private $firma;
+
+    /**
+     * @var \Fuente
+     *
+     * @ORM\ManyToOne(targetEntity="Fuente")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fuente", referencedColumnName="id")
+     * })
+     */
+    private $fuente;
+
+
+}

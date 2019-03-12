@@ -1,0 +1,11 @@
+parameters:
+     support.example.class: Support\SupportBundle\ClassUtil\menu
+#    support.example.class: Support\SupportBundle\Example
+#services:
+#    support.example:
+#        class: %support.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    support.utilidades:
+        class: %support.example.class%
+        arguments:  [@doctrine]

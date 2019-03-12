@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title></title>
+<meta http-Equiv="Cache-Control" Content="no-cache">
+<meta http-Equiv="Pragma" Content="no-cache">
+<meta http-Equiv="Expires" Content="0">
+<link rel="stylesheet" href="style.css">
+<script src="Charts/FusionCharts.js"></script>
+</head>
+<body>
+<table>
+<tr><td>
+        <div id="chartbDiv">
+        </div>
+        <script type="text/javascript">
+           var chart2 = new FusionCharts("Charts/FCF_StackedColumn2D.swf", "ChId1", "730", "700");
+           chart2.setDataURL("Data/topdown.php");
+           chart2.render("chartbDiv");
+        </script>
+</td><td></td></tr>
+</table>
+<!--<table>
+<tr><td>Frecuencia de descarga</td><td>Frecuencia de carga</td></tr>
+<tr>
+    <td>
+        <div id="chart4Div"></div>
+	<script type="text/javascript">
+	var chart2 = new FusionCharts("Charts/FCF_MSLine.swf", "ChId1", "350", "350");
+	chart2.setDataURL("Data/topdown.php");
+	chart2.render("chart4Div");
+	</script>				
+    </td>
+    <td>
+        <div id="chart5Div"></div>
+	<script type="text/javascript">
+	var chart2 = new FusionCharts("Charts/FCF_MSLine.swf", "ChId1", "350", "350");
+	chart2.setDataURL("Data/SalesCompare.xml");
+	chart2.render("chart5Div");
+	</script>				
+    </td>
+</tr>
+</table>-->
+
+</body>
+</html>

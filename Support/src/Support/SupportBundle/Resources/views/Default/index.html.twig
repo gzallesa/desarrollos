@@ -1,0 +1,384 @@
+{% extends "::base.html.twig" %}
+{% block link %}
+{% endblock %}
+{% block stylesheets %}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            localStorage.setItem('num', '{{ num[0]['total'] }}');
+            getBars(1);
+            //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+            $.getJSON('{{ path('support_support_getJsonSupport') }}', function(data) {
+                // Create the chart
+                console.log(data);
+                $('#container').highcharts('StockChart', {
+                    rangeSelector: {
+                        selected: 1
+                    },
+                    title: {
+                        text: 'Rendimiento del Soporte {{ support.name }}'
+                    },
+                    series: [{
+                            name: 'Solicitudes atendidas',
+                            data: data,
+                            tooltip: {
+                                valueDecimals: 2
+                            }
+                        }]
+                });
+            });
+
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#donut').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false,
+                            color: '#000000',
+                            connectorColor: '#000000',
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        }
+                    }
+                },
+                series: [{
+                        type: 'pie',
+                        name: 'Solicitudes',
+                        data: [
+                            ['Pendientes', {{ donut[0] }}],
+                            ['Atendidas', {{ donut[1] }}]
+                        ]
+                    }]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+
+        });
+
+
+    </script>
+    <link rel='stylesheet' href='{{ asset('bundles') }}/css/style.css' type='text/css' media='all' />
+    <script>
+        var c = 0;
+    </script>    
+{% endblock %}
+{% block body %}
+    <div class="top">
+        <div class="logo"></div>
+        <div style="float: left;margin-left: 5px;margin-top: 6px;">
+            <a title="Inicio" href="{{ path('support_support_panel') }}" class="menutop"><i class="fa fa-home fa-fw"></i></a>
+                {% for problema in problemas %}
+                    {% set c="" %}
+                        {% for cont in contador %}
+                            {% if cont.problema.idp==problema.idp %}
+                                {% set c=c+1 %}
+                                    {% endif %}
+                                        {% endfor %}
+                                        <script>
+                                            c = c +{{ c }} ;</script>    
+                                        <a title="{{ problema.nombre }}" href="{{ path('support_support_mostrar',{ 'id': problema.idp }) }}" class="menutop"><i class="fa {{problema.icon}} fa-fw"></i><sup class="sup">{{ c }}</sup></a>
+                                                {% endfor %}
+                                        </div>
+                                        <div style="float:right;font-family:arial;font-size:12px;color: #222222;">
+                                            <a href="{{ path('support_support_logout') }}">Salir</a>
+                                        </div>    
+                                    </div>    
+                                    <div class="left">
+                                        <div class="box">
+                                            <img class="foto_soporte" src="{{ asset('bundles') }}/fotos/{{ support.id }}.jpg"/>
+                                            {{ support.name }}
+                                            <div style="font-size:11px;">{{ support.cargo }}</div>
+                                        </div>
+                                        <div class="box2">
+                                            <div id="donut" style="width: 100%; height: 120px; margin: 0 auto"></div>
+                                            <div>Solicitudes pendientes por usuario</div>
+                                            <ul style="margin: 0px;list-style: none;padding: 0px;height:560px;overflow-y: scroll;width:280px;">
+                                                {% for bar in bars %}
+                                                    <li style="font-size:12px;color: black;border-bottom-color:#cccccc;border-bottom-style:solid;border-bottom-width: 1px;padding: 5px;display:block;height:60px;background:linear-gradient(#ffffff,#dddddd,#ffffff);">
+                                                        <img class="foto" src="{{ asset('bundles') }}/fotos/{{ bar.id }}.jpg">
+                                                        <div style="float:left;width:60%" >{{ bar.name }}</div>
+                                                        <div style="float:left;width:60%" >PROBLEMA: {{ bar.nombre }}</div>
+                                                        {% if bar.total==1 %}
+                                                            <div style="color:white;line-height: 2.5em;text-align: center;width:30px;height:30px;border-radius:100%;float:right;background-color:#00B22D">{{ bar.total }}</div>
+                                                        {% endif %}    
+                                                        {% if bar.total==2 %}
+                                                            <div style="color:white;line-height: 2.5em;text-align: center;width:30px;height:30px;border-radius:100%;float:right;background-color:#FFBF00">{{ bar.total }}</div>
+                                                        {% endif %}    
+                                                        {% if bar.total==3 %}
+                                                            <div style="color:white;line-height: 2.5em;text-align: center;width:30px;height:30px;border-radius:100%;float:right;background-color:#B20000">{{ bar.total }}</div>
+                                                        {% endif %}    
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>       
+                                        </div>    
+                                    </div>    
+                                    <div class="center">
+                                        <fieldset style="height:400px;overflow-y: scroll;"> 
+                                            <legend>Solicitudes atendidas</legend>
+                                            <ul style="margin: 0px;list-style: none;padding: 0px;width: 600px">
+                                                {% for bar in cerradas %}
+                                                    <li style="font-size:12px;color: black;border-bottom-color:#cccccc;border-bottom-style:solid;border-bottom-width: 1px;padding: 5px;display:block;height:60px;background:linear-gradient(#ffffff,#dddddd,#ffffff);">
+                                                        <div style="float:left;width:70%;font-size:10px;">
+                                                            <img class="foto" src="{{ asset('bundles') }}/fotos/{{ bar.cerradas.id }}.jpg">
+                                                            <div>{{ bar['cerradas'].name }}</div>
+                                                            <div>PROBLEMA: {{ bar['cerradas'].nombre }}</div>
+                                                            <div>Fecha: {{ bar.cerradas.fechaSolicitud|date|date('Y-m-d') }} A hrs: {{ bar.cerradas.horaSolicitud|date|date('H-i-s') }}</div>
+                                                            <div>Fecha atención: {{ bar.cerradas.fechaSolucion|date|date('Y-m-d') }} A hrs: {{ bar.cerradas.horaAtencion|date|date('H-i-s') }}</div>
+                                                        </div>    
+                                                        <div style="padding:3px; font-size:10px;color: #222222;text-align: center;border-radius:5px;float:right;background-color: #FFBF00">
+                                                            <div>Tiempo de tardanza</div>
+                                                            {{ bar.tiempo.d }} días {{ bar.tiempo.h }}H {{ bar.tiempo.i }}m {{ bar.tiempo.s }}s.
+                                                        </div>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul> 
+                                        </fieldset>     
+                                        <fieldset> 
+                                            <legend>Rendimiento</legend>
+                                            <div id="container" style="height: 300px; min-width: 650px"></div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Solicitudes por servicio</legend>
+                                            <button onclick="getBars(1);">
+                                                <i class="fa fa-calendar fa-fw"></i> Hoy
+                                            </button>    
+                                            <button onclick="getBars(2);">
+                                                <i class="fa fa-calendar fa-fw"></i> 7 Días
+                                            </button>    
+                                            <button onclick="getBars(3);">
+                                                <i class="fa fa-calendar fa-fw"></i> Mes
+                                            </button>    
+                                            <div id="barras" style="width: 100%; height: 300px; margin: 0 auto"></div>
+                                        </fieldset>
+                                    </div> 
+
+                                    <div class="alert">
+                                        Solicitudes de Soporte
+                                        <ul>
+                                            {% for solicitud in solicitudes %}
+                                                <li>
+                                                    <img class="foto" src="http://172.16.0.8/SIEMISEG/doccargados/rrhh/{{ solicitud[1].solicitante.ci }}/FOTOS/{{ solicitud[1].solicitante.foto }}" onerror="this.src='/bundles/new-user.png'"/>
+                                                    <div class="titulo">
+                                                        <div class="nombre">{{ solicitud[1].solicitante.name|upper }}</div>
+                                                        <div class="cargo">{{ solicitud[1].solicitante.cargo|upper }}</div>
+                                                        <div class="interno">INT:{{ solicitud[1].solicitante.interno|upper }} - {{ solicitud[1].solicitante.movil|upper }}</div>
+                                                        <div class="interno">LUGAR:{{ solicitud[1].solicitante.direccion|upper }}</div>
+                                                    </div>
+                                                    <div class="time">{{ solicitud[1].horaSolicitud|date('h:i a') }}</div>
+                                                    <div class="sldr">
+                                                        <div class="problema">{{ solicitud[1].problema.nombre }}</div>
+                                                        <div class="descripcion">{{ solicitud[1].problema.descripcion }}</div>
+                                                        {% if solicitud[0].d > 0 %}
+                                                            <div style="font-size:10px;float:left;">Hace {{ solicitud[0].d }} días {{ solicitud[0].h }} horas {{ solicitud[0].i }} minutos</div>
+                                                        {% else %}
+                                                            {% if solicitud[0].h > 0 %}
+                                                                <div style="font-size:10px;float:left;">Hace {{ solicitud[0].h }} horas {{ solicitud[0].i }} minutos</div>
+                                                            {% else %}
+                                                                <div style="font-size:10px;">Hace {{ solicitud[0].i }} minutos</div>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                        <div style="float:right;">
+                                                            {% if solicitud[2]!=null %}
+                                                                {% if solicitud[1].derivado!=null %}
+                                                                    Transferido a {{ solicitud[2] }}
+                                                                {% else %}
+                                                                    <a href="javascript:mostrar({{ solicitud[1].id }});">transferir</a>
+                                                                {% endif %}   
+                                                            </div>       
+                                                        {% endif %}        
+                                                    </div>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>    
+                                    </div>
+                                    <iframe style="border:none;width:100%;height:500px"  src="{{ path('support_grid') }}"  ></iframe>
+                                    <div id="test">
+                                    </div>   
+                                    <script src="{{ asset('bundleAdmin') }}/js/highstock.js"></script>
+                                    <script src="{{ asset('bundleAdmin') }}/js/modules/exporting.js"></script>
+                                    <script src="{{ asset('bundleAdmin') }}/hc/js/highcharts.js"></script>
+                                    <script src="{{ asset('bundleAdmin') }}/hc/js/modules/exporting.js"></script>
+                                    <audio src="{{ asset('bundles') }}/1.mp3" id="mp3" preload="auto"></audio>
+                                    <script>
+                                                function getBars(i)
+                                                {
+                                                    val = '{{ path('support_getBars') }}';
+                                                    var parametros = {
+                                                        'parameter': i
+                                                    };
+                                                    $.ajax({
+                                                        data: parametros,
+                                                        url: val,
+                                                        type: 'post',
+                                                        beforeSend: function() {
+
+                                                        },
+                                                        success: function(response) {
+                                                            var problemas = new Array();
+                                                            var abiertas = new Array();
+                                                            var cerradas = new Array();
+                                                            for (var i = 0; i < response.length; i++)
+                                                            {
+                                                                problemas.push(response[i].problema);
+                                                                abiertas.push(parseInt(response[i].abiertas));
+                                                                cerradas.push(parseInt(response[i].cerradas));
+                                                            }
+                                                            console.log(problemas);
+                                                            console.log(abiertas);
+                                                            console.log(cerradas);
+                                                            $('#barras').highcharts({
+                                                                chart: {
+                                                                    type: 'column',
+                                                                },
+                                                                title: {
+                                                                    text: 'Solicitudes Atendidas por Servicio'
+                                                                },
+                                                                xAxis: {
+                                                                    categories: problemas
+                                                                },
+                                                                yAxis: {
+                                                                    min: 0,
+                                                                    title: {
+                                                                        text: 'Total solicitudes'
+                                                                    },
+                                                                    stackLabels: {
+                                                                        enabled: true,
+                                                                        style: {
+                                                                            fontWeight: 'bold',
+                                                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                                                        }
+                                                                    }
+                                                                },
+                                                                legend: {
+                                                                    align: 'right',
+                                                                    x: -70,
+                                                                    verticalAlign: 'top',
+                                                                    y: 20,
+                                                                    floating: true,
+                                                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                                                    borderColor: '#CCC',
+                                                                    borderWidth: 1,
+                                                                    shadow: false
+                                                                },
+                                                                tooltip: {
+                                                                    formatter: function() {
+                                                                        return '<b>' + this.x + '</b><br/>' +
+                                                                                this.series.name + ': ' + this.y + '<br/>' +
+                                                                                'Total: ' + this.point.stackTotal;
+                                                                    }
+                                                                },
+                                                                plotOptions: {
+                                                                    column: {
+                                                                        stacking: 'normal',
+                                                                        dataLabels: {
+                                                                            enabled: true,
+                                                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                                                            style: {
+                                                                                textShadow: '0 0 3px black, 0 0 3px black'
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    series: {
+                cursor: 'pointer',
+                point: {
+                    events: {
+                        click: function() {
+                            var url="{{ path('support_grid_popup',{'intervalo':'val1','problema':'val2'}) }}";
+                            url=url.replace('val1',parametros.parameter);
+                            url=url.replace('val2',this.category);
+                            window.showModalDialog(url,"name",
+                                "dialogWidth:1000px;dialogHeight:500px");
+                            
+                        }
+                    }
+                }
+            }
+                                                                },
+                                                                series: [{
+                                                                        name: 'Abierta',
+                                                                        data: abiertas,
+                                                                        color: 'red'
+                                                                    }, {
+                                                                        name: 'Cerradas',
+                                                                        data: cerradas,
+                                                                        color: '#85B200'
+                                                                    }]
+                                                            });
+                                                        }
+                                                    });
+                                                }
+                                                if (localStorage.getItem('c') < c)
+                                                {
+                                                    playMP3();
+                                                }
+                                                localStorage.setItem('c', c);
+                                                function playMP3() {
+                                                    document.getElementById("mp3").play();
+                                                }
+                                                function mostrar(p)
+                                                {
+                                                    if (!confirm('Confirme'))
+                                                    {
+                                                        return;
+                                                    }
+                                                    val = '{{ path('support_transferir') }}';
+                                                    var parametros = {
+                                                        'id': p
+                                                    };
+                                                    $.ajax({
+                                                        data: parametros,
+                                                        url: val,
+                                                        type: 'post',
+                                                        beforeSend: function() {
+
+                                                        },
+                                                        success: function(response) {
+                                                            console.log(response);
+                                                            location.reload();
+                                                            //$("#popup").fadeIn(200, "linear");
+                                                            //$("#popup_frame").html(response);
+                                                        }
+                                                    });
+                                                }
+
+                                    </script> 
+                                    <script>
+                                        setInterval(function() {
+                                            val = '{{ path('support_update') }}';
+                                            var parametros = {
+                                                'c': localStorage.getItem('num')
+                                            };
+                                            $.ajax({
+                                                data: parametros,
+                                                url: val,
+                                                type: 'post',
+                                                beforeSend: function() {
+                                                },
+                                                success: function(response) {
+                                                    if (response == "1")
+                                                    {
+                                                        localStorage.setItem('num', response);
+                                                        location.reload();
+                                                    }
+                                                }
+                                            })
+                                        }, 60000);
+                                    </script>    
+                                    {% endblock %}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id='Description'>Detalle</title>
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.ui-redmond.css" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.filter.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.sort.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.edit.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxpanel.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxnumberinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.grouping.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxtabs.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.columnsresize.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/globalization/globalize.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleAdmin') }}/js/localization.js"></script>
+        <style>
+            .imggrid{
+                border-radius: 5px;
+            }
+        </style>    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // prepare the data
+
+                var url = "{{ path('admin_detalle_pieJson',{'val': val}) }}";
+                var source =
+                        {
+                            datatype: "json",
+                            datafields:
+                                    [
+                                        {name: 'soporte', type: 'string'},
+                                        {name: 'estado', type: 'string'},
+                                        {name: 'usuario', type: 'string'},
+                                        {name: 'cargo', type: 'string'},
+                                        {name: 'interno', type: 'string'},
+                                        {name: 'servicio', type: 'string'},
+                                        {name: 'fechasolicitud', type: 'date'},
+                                        {name: 'horasolicitud', type: 'string'},
+                                        {name: 'fechasolucion', type: 'date'},
+                                        {name: 'horaatencion', type: 'string'},
+                                        {name: 'ids', type: 'string'},
+                                        {name: 'tiempo', type: 'string'},
+                                        {name: 'color', type: 'string'},
+                                    ],
+                            id: 'id',
+                            url: url
+                        };
+                var imagerenderer = function(row, datafield, value) {
+                    console.log(value);
+                    if(value=='Alerta')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:red"></div>';
+                    }
+                    if(value=='Medio')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:orange"></div>';
+                    }
+                    if(value=='Bueno')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:green"></div>';
+                    }
+                    
+                }
+                var estadorenderer = function(row, datafield, value) {
+                    console.log(value);
+                    if(value=='1')
+                    {
+                        return '<span style="color:green;">Cerrado</span>';
+                    }else{
+                        return '<span style="color:red;">Abierto</span>';
+                    }
+                }
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#jqxgrid").jqxGrid(
+                        {
+                            width: '100%',
+                            height: 500,
+                            source: dataAdapter,
+                            filterable: true,
+                            showfilterrow: true,
+                            pageable: true,
+                            columnsresize: true,
+                            localization: getLocalization(),
+                            sortable: true,
+                            theme: 'ui-redmond',
+                            columns: [
+                                {text: 'RESULTADO ATENCION', filtertype: 'list', filteritems: ['Alerta','Medio','Bueno'],datafield: 'color',cellsrenderer: imagerenderer,width: '60px'},
+                                {text: 'ESTADO', datafield: 'estado',width: '60',cellsrenderer: estadorenderer,filteritems: ['Abierto','Cerrado']},
+                                {text: 'TIEMPO ATENCION', datafield: 'tiempo',width: '160'},
+                                {text: 'SOPORTE', datafield: 'soporte', width: '20%',filtertype: 'list'},
+                                {text: 'USUARIO', datafield: 'usuario', width: '20%'},
+                                {text: 'SEVICIO', datafield: 'servicio', width: '20%',filtertype: 'none'},
+                                {text: 'FECHA SOLICITUD', datafield: 'fechasolicitud', width: '10%', filtertype: 'date',cellsformat: 'd'},
+                                {text: 'HORA SOLICITUD', datafield: 'horasolicitud', width: '10%'},
+                                {text: 'FECHA SOLUCION', datafield: 'fechasolucion', width: '10%',filtertype: 'date',cellsformat: 'd'},
+                                {text: 'HORA SOLUCION', datafield: 'horaatencion', width: '10%'},
+                                {text: 'ids', datafield: 'ids', hidden: true},
+                                {text: 'CARGO', datafield: 'cargo', hidden: true},
+                                {text: 'INTERNO', datafield: 'interno', hidden: true},
+                            ]
+                        });
+                $("#excelExport").click(function() {
+                    $("#jqxgrid").jqxGrid('exportdata', 'xls', 'jqxGrid');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id='jqxWidget' style=" width: 100%;font-size: 10px; font-family: Verdana; float: left;">
+            <input type="button" value="Exportar a Excel" id='excelExport' />
+            <div id="jqxgrid"></div>
+        </div>
+    </body>
+</html>

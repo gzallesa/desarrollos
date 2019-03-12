@@ -1,0 +1,68 @@
+cliente_comunicados_paginado:
+    pattern:  /comunicadosPag
+    defaults: { _controller: ClienteBundle:Default:comunicadosPag }
+cliente_homepage:
+    pattern:  /
+    defaults: { _controller: ClienteBundle:Default:index }
+cliente_enviar:
+    pattern:  /enviar
+    defaults: { _controller: ClienteBundle:Default:enviar }
+cliente_finalizar:
+    pattern:  /finalizar
+    defaults: { _controller: ClienteBundle:Default:finalizar }
+cliente_listar:
+    pattern:  /lista_usuarios
+    defaults: { _controller: ClienteBundle:Default:getUsers }
+cliente_lista_usuarios:
+    pattern:  /listar
+    defaults: { _controller: ClienteBundle:Default:lista }
+cliente_slider:
+    pattern:  /slider
+    defaults: { _controller: ClienteBundle:Default:slider }   
+cliente_calendar:
+    pattern:  /calendar
+    defaults: { _controller: ClienteBundle:Default:calendar }       
+cliente_events:
+    pattern:  /events
+    defaults: { _controller: ClienteBundle:Default:getEvents }           
+cliente_comunicados:
+    pattern:  /comunicados
+    defaults: { _controller: ClienteBundle:Default:getComunicados }               
+cliente_cumple:
+    pattern:  /cumple
+    defaults: { _controller: ClienteBundle:Default:getCumple }                   
+cliente_ticker:
+    pattern:  /ticker
+    defaults: { _controller: ClienteBundle:Default:getTicker }     
+cliente_monitoreoAction:
+    pattern:  /monitoreo/{url}
+    defaults: { _controller: ClienteBundle:Default:monitoreo }
+    requirements:
+        url: .+
+cliente_chat:
+    pattern:  /chat
+    defaults: { _controller: ClienteBundle:Default:chat }     
+cliente_flip:
+    pattern:  /flip
+    defaults: { _controller: ClienteBundle:Default:flip }     
+cliente_grilla:
+    pattern:  /resolgrilla
+    defaults: { _controller: ClienteBundle:Default:grilla }         
+cliente_resoluciones:
+    pattern:  /resoluciones
+    defaults: { _controller: ClienteBundle:Default:resoluciones }         
+cliente_eventos1:
+    pattern:  /getEventos
+    defaults: { _controller: ClienteBundle:Default:getEventos }             
+cliente_service:
+    pattern:  /service
+    defaults: { _controller: ClienteBundle:Default:service }             
+intranet_ws_getContenidoIntranet:
+    path:     /api/getContenidoIntranet/{limit}/{offset}/
+    defaults: { _controller: ClienteBundle:Default:getContenidoIntranet }
+intranet_ws_getOficinasIntranet:
+    path:     /api/getOficinasIntranet/
+    defaults: { _controller: ClienteBundle:Default:getOficinasIntranet }
+intranet_ws_getContenidoPorOficinaIntranet:
+    path:     /api/getContenidoPorOficinaIntranet/{idOficina}/{limit}/{offset}/
+    defaults: { _controller: ClienteBundle:Default:getContenidoPorOficinaIntranet }

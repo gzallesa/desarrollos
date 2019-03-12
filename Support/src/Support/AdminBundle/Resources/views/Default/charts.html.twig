@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Highstock Example</title>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style>
+            section{
+                text-align: center;
+                width: 100%;
+            }
+
+            .panel2{
+                width:90%;
+                float:left;
+                min-height:300px;
+                margin:10px;
+                border-color: #cccccc;
+                border-width:1px;
+                border-style: solid;
+                border-radius: 5px;
+            }
+            .titulo{
+                background: linear-gradient(#eeeeee,#dddddd,#eeeeee);
+                height:25px;
+                padding:5px;
+                text-shadow: 1px 1px #cccccc ;
+                text-transform: uppercase;
+                color:#555555;
+            }
+        </style>    
+        <script>
+            getBubbles();
+            function getBubbles()
+            {
+                val = '{{ path('admin_est_bubble') }}';
+                var parametros = {
+                    'param': ''
+                };
+                $.ajax({
+                    data: parametros,
+                    url: val,
+                    type: 'post',
+                    beforeSend: function() {
+
+                    },
+                    success: function(response) {
+                        bubble(response);
+                        //console.log(response.s);
+
+                        //$("#popup").fadeIn(200, "linear");
+                        //$("#popup_frame").html(response);
+                    }
+                });
+            }
+            function bubble(data) {
+                $('#bubble').highcharts({
+                    chart: {
+                        type: 'bubble',
+                        zoomType: 'xy'
+                    },
+                    tooltip: {
+                        formatter: function() {
+                            return 'Soporte:' + this.series.name + '<br>Solicitudes:' + this.x + '<br/>Atendidas:' + this.y + '<br/>Pendientes:' + this.point.options.z + '<br/>' + this.point.options.customParam;
+                        }
+                    },
+                    title: {
+                        text: 'Estado de las solicitudes'
+                    },
+                    plotOptions: {
+                        series: {
+                            cursor: 'pointer',
+                            point: {
+                                events: {
+                                    click: function() {
+                                        getDetalleBubble(this);
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    series: data.serie
+
+                });
+
+            }
+            $(function() {
+
+                $('#container').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: 0,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: ''
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        series: {
+                            cursor: 'pointer',
+                            point: {
+                                events: {
+                                    click: function() {
+                                        getDetallePie(this);
+                                    }
+                                }
+                            }
+                        },
+                        pie: {
+                            dataLabels: {
+                                enabled: true,
+                                style: {
+                                    color: 'black',
+                                    textShadow: '0px 1px 2px black'
+                                }
+                            }, showInLegend: false
+                        }
+                    },
+                    series: [{
+                            type: 'pie',
+                            name: 'Solicitudes por Problema',
+                            data: [{% for item in data %}
+                                ['{{ item.nombre }}', {{ item.total }}],
+            {% endfor %}                        
+                            ]
+                        }]
+                });
+                $('#container2').highcharts({
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: [{% for p in problemas %}
+                            '{{ p.nombre }}',
+                {% endfor %}],
+                                labels: {
+                                    rotation: -45,
+                                    align: 'right',
+                                    style: {
+                                        fontSize: '10px',
+                                        fontFamily: 'Verdana, sans-serif'
+                                    }
+                                }
+                            },
+                            yAxis: {
+                                min: 0,
+                                title: {
+                                    text: 'Numero de solicitudes atendidas'
+                                }
+                            },
+                            legend: {
+                                reversed: true
+                            },
+                            plotOptions: {
+                                series: {
+                                    stacking: 'normal',
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function() {
+                                                alert('Category: ' + this.category + ', value: ' + this.y);
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            series: [
+                            ]
+                        });
+                    });
+                    function getDetallePie(e)
+                    {
+                        var url = '{{ path('admin_detalle_pie',{'val':'value'}) }}';
+                        window.showModalDialog(url.replace('value', e.name), "name",
+                                "dialogWidth:1000px;dialogHeight:500px");
+                    }
+                    function getDetalleBubble(e)
+                    {
+                        var url = '{{ path('admin_detalle_bubble',{'problema':'v1','soporte':'v2'}) }}';
+                        url=url.replace('v1', e.customParam);
+                        window.showModalDialog(url.replace('v2', e.series.name), "name",
+                                "dialogWidth:1000px;dialogHeight:500px");
+                    }
+                </script>
+            </head>
+            <body>
+
+                <section>
+                    <div class="panel2">
+                        <div class="titulo">Solicitudes por problema</div>
+                        <div id="container" style="min-width: 250px; height: 300px; max-width: 600px; margin: 0 auto"></div>
+                    </div>    
+                    <div class="panel2">
+                        <div class="titulo">Solicitudes por problema</div>
+                        <div id="bubble" style="height: 250px; width: 100%;"></div>
+                    </div>    
+                    <div class="panel2">
+                        <div class="titulo">
+                            Problemas atendidos por soporte
+                        </div>
+                        <button onclick="getBars(1);">Hoy</button>
+                        <button onclick="getBars(2);">7 días</button>
+                        <button onclick="getBars(3);">Mes</button>
+                        <button onclick="getBars(4);">Gestión</button>
+                        <div id="container2" style="height: 500px; width: 100%; margin: 0 auto"></div>
+                    </div>
+                </section>    
+            </body>
+            <script>
+                getBars(1);
+                function getBars(param)
+                {
+                    val = '{{ path('admin_est_bars') }}';
+                    var parametros = {
+                        'param': param
+                    };
+                    $.ajax({
+                        data: parametros,
+                        url: val,
+                        type: 'post',
+                        beforeSend: function() {
+
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            llena(response);
+
+                            //$("#popup").fadeIn(200, "linear");
+                            //$("#popup_frame").html(response);
+                        }
+                    });
+                }
+                function llena(response)
+                {
+                    $('#container2').highcharts({
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: ''
+                        },
+                        xAxis: {
+                            categories: response.categories,
+                            labels: {
+                                rotation: -45,
+                                align: 'right',
+                                style: {
+                                    fontSize: '10px',
+                                    fontFamily: 'Verdana, sans-serif'
+                                }
+                            }
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'Numero de solicitudes atendidas'
+                            }
+                        },
+                        legend: {
+                            reversed: true
+                        },
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal',
+                                cursor: 'pointer',
+                                point: {
+                                    events: {
+                                        click: function() {
+                                            alert('Category: ' + this.category + ', value: ' + this.y);
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        series: response.series
+                    });
+                }
+            </script>        
+            <script src="{{ asset('highcharts') }}/js/highcharts.js"></script>
+            <script src="{{ asset('highcharts') }}/js/highcharts-more.js"></script>
+            <script src="{{ asset('highcharts') }}/js/modules/exporting.js"></script>
+        </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery Clean and Minimal Tooltip Plugin: Gips</title>
+    <link href="css/gips.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/gips.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input#purple').gips({ 'theme': 'purple', autoHide: true, text: 'This is purple tooltip, auto hide after pausess time elapses.' });
+            $('input#green').gips({ 'theme': 'green', placement: 'left' });
+            $('input#yellow').gips({ 'theme': 'yellow', autoHide: true, placement: 'right' });
+            $('input#red').gips({ 'theme': 'red', placement: 'bottom' });
+        });
+    </script>
+</head>
+<body>
+            <input type="text" value="Purple Tooltip Here." id="purple" />
+            <input type="text" value="Green Tooltip Here." id="green" />
+            <input type="text" value="Yellow Tooltip Here." id="yellow" />
+            <input type="text" value="Red Tooltip Here." id="red" />
+ </body>
+</html>

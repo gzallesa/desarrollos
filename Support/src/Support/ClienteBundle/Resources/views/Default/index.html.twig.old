@@ -1,0 +1,819 @@
+{% extends "::cliente.html.twig" %}
+{% block scripts %}
+    <meta http-equiv="refresh" content="600"/>
+    <link rel='stylesheet' href='{{ asset('bundleCliente') }}/css/style.css' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundleCliente') }}/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundleCliente') }}/css/bookblock.css" />
+    <!-- custom demo style -->
+    <script src="{{ asset('bundleCliente') }}/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="{{ asset('bootstrap') }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('bootstrap') }}/css/bootstrap-theme.min.css">
+    <script>
+        function cerrarr()
+        {
+            backgroundx.style.display = "none";
+        }
+        function mostrarr()
+        {
+            ifrm.src = "{{ path('cliente_grilla') }}";
+            backgroundx.style.display = "block";
+        }
+    </script>    
+{% endblock %}
+{% block body %}
+
+        -->
+
+        <!-- ===== CARGAR MP3 DE FONDO ===== -->
+        <!--
+        <div>
+            <audio autoplay loop>
+                <source src="https://www.oopp.gob.bo/Viva-Cochabamba-Mayllapipis.mp3">
+            </audio>
+        </div>
+        -->
+        <!-- ===== FIN CARGAR MP3 DE FONDO ===== -->
+
+
+        <!-- ===== INICIO POPUP ===== -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">COMUNICADOS</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="comunicado">
+                            <!--
+                            <div style="margin: 10px 0">
+                                <h4 class="modal-title">Nuevo Funcionario</h4>
+                                <center><img width="100%" src="http://intranet.oopp.gob.bo/images/Rafael-del-Rio_2016_11_11.jpg" alt="RRHH"></center>
+                            </div>
+                            <div style="margin: 10px 0">
+                                <h4 class="modal-title">Aniversario de Potosí</h4>
+                                <center><img width="100%" src="http://intranet.oopp.gob.bo/images/Aniversario-Potosi-1_2016_11_10.jpeg" alt="Aniversario Potosi"></center>
+                            </div>
+                            -->
+
+                            <!-- Se cambia el contenido con el siguiente Query MySQL:
+
+                                    SELECT 
+                                        *
+                                    FROM
+                                        docman.docman_intranet_popup
+                                    WHERE
+                                        Estado = 1
+                                    ORDER BY Fecha_Publicar;
+                            -->
+                            {% for popup in popup_intranet %}
+                                <div>{{ popup.Texto | raw }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!--
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <style>
+        .comunicado{
+            height: auto;
+            width: 100%;
+        }
+        </style>
+
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        -->
+
+        <script>
+            window.onload = function() {
+                $('#myModal').modal('show');
+            };
+        </script>
+
+        <!-- ===== FIN POPUP ===== -->
+
+
+    <div id="backgroundx" class="backgroundx">
+        <div style="color:white;float:right;margin-right: 10px; ">
+            <i class="fa fa-times-circle-o fa-2x"></i> <a style="color:white;" href="javascript:cerrarr();">Cerrar</a>
+        </div>   
+        <div id="contenedrx" class="contenedrx">
+            <h3 style="color:white;">ULTIMOS REGLAMENTOS</h3>
+            <iframe id="ifrm" style=" width:900px;height:500px;border:none;" src="" ></iframe>
+        </div>   
+    </div>    
+    <div class="alert2" id="alert2">
+        <div style="font-size:15px;color: white;text-align: center;height: 50px">
+            <img style="float:left;height:45px;width:45px;border-radius:50%;" src="http://siemi.oopp.gob.bo/doccargados/rrhh/{{ usuario.ci }}/FOTOS/{{ usuario.foto }}">
+            <div style="float:left;font-size:9px;">
+                {{ usuario.name }}<br>
+                <cite>{{ usuario.cargo }}</cite>
+            </div>
+        </div>
+        <ul>
+            {% set c="" %}
+            {% set ids="" %}
+            {% for problema in problemas %}
+                {% set c=0 %}
+                {% for solicitud in solicitudes %}
+                    {% if solicitud.idp==problema.idp %}
+                        {% set c=solicitud.n %}
+                        {% set ids=solicitud.id %}
+                    {% endif %}
+                {% endfor %}
+                {% if c>0 %}            
+                    <li>
+                        <div class="element">
+                            <div class="indicador">{{ c }}</div>
+                            <div class="botones">
+                                {% if problema.fun!=null %}
+                                    <div class="foto2">
+                                        <img style="height:45px;width:45px;border-radius:50%;" src='http://siemi.oopp.gob.bo/doccargados/rrhh/{{ problema.fun.ci }}/FOTOS/{{ problema.fun.foto }}'>
+
+                                    </div>    
+                                {% else %}   
+                                    <div class="foto2">
+                                        
+
+                                    </div>
+                                {% endif %}
+                                <div title="Solicitar soporte nuevamente" onclick="enviar({{ problema.idp }});" class="sol"><i class="fa fa-user-md fa-2x"></i></div>
+                                <div title="Finalizar solicitud" onclick="finaliza({{ ids }});" class="cer"><i class="fa fa-thumbs-o-up fa-2x"></i></div>
+                            </div>   
+                            <div class="icono">
+                                <i class="fa {{ problema.icon }} fa-2x"></i>
+                            </div>
+                            <div class="tituloxx">{{ problema.nombre }}</div>
+                        </div>               
+                    </li>
+                {% else %}   
+                    <li>
+                        <div class="element">
+
+                            <div class="botones">
+                                {% if problema.fun!=null %}
+                                    <div class="foto2">
+                                        <div style="font-size:9px;" >INT:{{ problema.fun.interno }}</div>
+                                    </div>    
+                                {% else %}   
+                                    <div class="foto2">
+                                    </div>
+                                {% endif %}
+                                <div title="Solicitar soporte" onclick="enviar({{ problema.idp }});" class="sol"><i class="fa fa-user-md fa-2x"></i></div>
+                            </div>   
+                            <div class="icono">
+                                <i class="fa {{ problema.icon }} fa-2x"></i>
+                            </div>
+                            <div class="tituloxx">{{ problema.nombre }}</div>
+                        </div>   
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>  
+        <div class="soporte">
+            <span style="float:left;">SOPORTE TÉCNICO:  </span><br>
+            <span style="float:left;">INTERNO: </span><br>
+            <span style="float:left;">CELULAR: </span><br>
+        </div>    
+    </div>    
+    <div id="panel">
+    </div> <!-- /login -->  
+    <!-- The tab on top --> 
+    <div class="tab">
+        <ul class="login">
+            <li class="left">&nbsp;</li>
+            <li>Bienvenido!</li>
+            <li class="sep">|</li>
+            <li id="toggle1">
+                <a id="open1" style="display: block;" class="open1" href="javascript:slideDown('{{ path('cliente_lista_usuarios') }}');">Funcionarios</a>
+            </li>
+            <li class="right">&nbsp;</li>
+        </ul> 
+    </div> <!-- / top -->
+    <div class="header">
+        <div class="logo"></div>
+        <div style='position: absolute;width: 100%;top:40px;'>
+            <div style='margin:auto;width: 1000px;height:100px;'>
+                <img style="width:100px;float: left;" src="{{ asset('bundleCliente') }}/css/images/escudo.png"/>
+                <img style="width:120px;float: right;" src="{{ asset('bundleCliente') }}/css/images/logo.png"/>
+            </div>
+            <div style='position:absolute;right:5px;top:80px;font-size:12px;'>
+                <a style='color:white;' href="{{ path('support_support_login') }}">
+                    <i class="fa fa-user fa-2x"></i> Entrar
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="center_box">
+            <div class="leftbuttons">
+                <a href="{{ asset('uploads') }}/Precios cafeteria -2014.pdf" title="ver" target="_blank"><i class="fa fa-coffee fa-1x"></i> Cafeteria</a>
+            </div>
+            <div class="leftbuttons2">
+                <i class="fa fa-video-camera fa-1x"></i> 
+                {% for video in videos %}
+                    <div>{{ video.titulo }}</div>
+                    {{ video.embebido|raw }}
+                {% endfor %}
+            </div>
+            <div style="text-align:center;">
+                <iframe scrolling="no" style="border:none;overflow:hidden;width:100%;height:270px;margin: auto;" src="{{ path('cliente_slider') }}"></iframe>
+            </div>
+            <div class="contenedorx">
+                <ul class="lista">
+                    {% if cumple|length >0 %}
+                        <li>
+                            <div class="contentbox">
+                                <div class="header3"><i class="fa fa-gift fa-1x"></i>Cumpleañeros de hoy</div>  
+                                <div class="line"></div>
+                                <ul style="padding:10px;font-size:10px;padding: 0px; list-style: none;margin-left: 10px;margin-top: 20px">
+                                    {% for cc in cumple %}
+                                        <li style="color: #006699;height:100px;">
+                                            <div class="cumplecont">
+                                                <div class="cumple"></div>
+                                                <img style="margin-right: 3px;border-radius: 5px;border-width:3px;border-style:solid;border-color: #666666 ;width: 70px;float:left;" src="http://siemi.oopp.gob.bo/doccargados/rrhh/{{ cc.ci }}/FOTOS/{{ cc.foto }} " onerro="this.src='/bundles/new-user.png'">
+                                            </div> 
+                                            <div style="font-weight: bold;color:#006699;font-size: 15px;line-height:1.5em;">
+                                                <div>Feliz cumpleaños:</div>    {{ cc.name }}
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                    <br>
+                                    <li>
+                                        Que el día de hoy sea un día hermoso e inolvidable en tu vida<br>Quienes compartimos el día a día contigo, queremos desearte feliz cumpleaños.
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                    {% endif %}
+
+                    <li><div class="contentbox">
+                            <div class="header3">
+                                <span>
+                                    <i class="fa fa-gift fa-1x"></i>CALENDARIO DE EVENTOS</span>
+                            </div>  
+                            <iframe style="background-color: transparent;border:none;overflow: hidden;width:280px;height:490px;margin: auto;" src="{{ path('cliente_calendar') }}"></iframe>
+                        </div>
+                    </li>
+                    <li><div class="contentbox">
+                            <div class="header3">
+                                <span>
+                                    <i class="fa fa-gift fa-1x"></i>EL CLIMA
+                                </span>    
+                            </div>  
+                            <a href="http://www.accuweather.com/es/bo/la-paz/33655/weather-forecast/33655" class="aw-widget-legal">
+                                <!--
+                                By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+                                -->
+                            </a><div id="awcc1395437751690" class="aw-widget-current"  data-locationkey="33655" data-unit="c" data-language="es" data-useip="false" data-uid="awcc1395437751690"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header3">
+                            <span>
+                                <i class="fa fa-edit fa-1x"></i>PROYECTOS
+                            </span>   
+                        </div>  
+                        <iframe style="width:300px;height:270px;padding: 0px;border:none;" src="{{ path('cliente_flip') }}"></iframe>
+                    </li>  
+
+                    <!-- MOSTRAR LISTA DE INTERNOS -->
+                    <li>
+                        <div class="header3">
+                            <span>
+                                <i class="fa fa-edit fa-1x"></i>LISTA DE INTERNOS Y CORPORATIVOS
+                            </span>    
+                        </div> 
+                        <div class="contentbox">
+                            <div style="margin:10px;font-size:12px;font-weight: bold">
+                                {% for form in forms %}
+                                    {% if form.titulo == "Lista de Internos y Corporativos"  %}
+
+                                        <i style="color: #cc0000;font-weight: bold;" class="fa fa-paperclip fa-1x"></i>
+                                        {{ form.titulo }}
+                                        <a target='_blank' style='float:right;' href="{{ asset('uploads') }}/{{ form.url }}"><i style="color:#006699;" class="fa fa-download fa-2x"></i></a>
+                                        <div style="font-weight: normal;font-size:10px;color: #999999;">
+                                            Fecha de publicación:{{ form.fechaPub|date('d-m-Y') }}
+                                        </div>
+                                        <hr style='border-color: #dddddd;'>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>    
+                        </div>    
+                    </li>
+
+
+
+                    <li>
+                        <div class="header3">
+                            <span>
+                                <i class="fa fa-edit fa-1x"></i>FORMULARIOS
+                            </span>    
+                        </div> 
+                        <div class="contentbox">
+                            <div style="margin:10px;font-size:12px;font-weight: bold">
+                                {% for form in forms %}
+                                    {% if form.titulo != "Lista de Internos y Corporativos"  %}
+
+                                        <i style="color: #cc0000;font-weight: bold;" class="fa fa-paperclip fa-1x"></i>
+                                        {{ form.titulo }}
+                                        <a target='_blank' style='float:right;' href="{{ asset('uploads') }}/{{ form.url }}"><i style="color:#006699;" class="fa fa-download fa-2x"></i></a>
+                                        <div style="font-weight: normal;font-size:10px;color: #999999;">
+                                            Fecha de publicación:{{ form.fechaPub|date('d-m-Y') }}
+                                        </div>
+                                        <hr style='border-color: #dddddd;'>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>    
+                        </div>    
+                    </li>
+
+
+                </ul>
+                <ul class="lista2" id="lista2">
+                    {% for com in comunicados %}
+                        <li>
+                            <div class="contentbox2">
+                                <div style="position:absolute;">
+                                    <div class="titulobox">
+                                        <span><i class="fa fa-comments-o fa-1x"></i> {{ com.titulo }}
+                                        </span>    
+                                    </div>
+                                    <div class="line"></div>
+                                    {% if com.url!= null  %}    
+                                        <div class="piec">
+                                            <a target="_blank" href="{{ asset('uploads') }}/{{ com.url }}">
+                                                <i class="fa fa-eye fa-3x"></i>
+                                            </a>
+                                        </div>
+                                    {% endif %}    
+                                </div> 
+                                <div style=" margin-top: 25px">
+                                    <div class="textbox">
+
+                                        <img style="border-radius:3px;margin:3px;width:50px;float:left;" src="http://siemi.oopp.gob.bo/doccargados/rrhh/{{ com.usuario.ci }}/FOTOS/{{ com.usuario.foto }}"/>
+                                        <div style="width:325px;float:left;">
+                                            <div style="float:left;margin-top:15px;z-index:100">
+                                                <img  src="{{ asset('bundleCliente') }}/css/images/f.png"/>
+                                            </div>   
+                                            <div class="contenidotexto">
+                                                <div><cite>{{ com.fechaPub|date('d-m-Y')}}</cite></div>
+                                                {{ com.descripcion|upper }}
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </li>
+                    {% endfor %}
+                    <li style=" text-align: center">
+                        {{ pag|raw }}
+                    </li>
+                </ul>  
+
+                <ul class="lista3">
+                    {% if anuncio|length >0 %}
+                        <li>
+                            <div class="contentbox3">
+                                <div style=" background: linear-gradient(#F6F5EC, #E5E2D9);padding: 20px;">
+                                    <div class="anuncio" ><i class="fa fa-bullhorn fa-3x"></i></div>
+                                        {% for anun in anuncio %}
+                                        <div style="font-size:13px;font-weight: bold">{{ anun.titulo }}</div>
+                                        <div style="font-size:12px;">
+                                            {{ anun.descripcion }}
+                                            <div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>    
+                                    </li>  
+                                {% else %}
+                                    <li>
+                                        <div class="contentbox3">
+                                            <div style=" background: linear-gradient(#F6F5EC, #E5E2D9);padding: 10px;font-size:12px;">
+                                                <strong>MISIÓN INSTITUCIONAL</strong><br>
+                                                <p>
+                                                    Promover y gestionar el acceso universal y equitativo de la población boliviana a obras y servicios de calidad, en telecomunicaciones, transportes y vivienda, en armonía con la naturaleza.</p>
+                                                <strong>VISIÓN INSTITUCIONAL</strong><br>
+                                                <p>Somos una entidad que con calidad y transparencia, satisface las necesidades de transportes, telecomunicaciones y vivienda de la población boliviana.</p>
+                                            </div>
+                                        </div>    
+                                    </li>  
+                                {% endif %}
+                                <li>
+                                    <div class="contentbox3">
+                                        <div class="header3">
+                                            <span><i class="fa fa-link fa-1x"></i>Sistemas MOPSV</span></div>  
+                                        <ul class="accesos">
+                                            <li>
+                                                {% for enlace in enlaces %}
+                                                    {% if enlace.interno==1 %}
+                                                        <a href="{{ enlace.url }}" title="{{ enlace.titulo }}" target="_blank">
+                                                            <div class="iconsoporte">
+                                                                <i class="fa {{ enlace.icon }} fa-2x"></i>
+                                                                <div style="font-size:8px;">{{ enlace.titulo }}</div>
+                                                            </div>
+                                                        </a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                <a href="{{ path('cliente_chat') }}" title="Chat" target="_blank">
+                                                    <div class="iconsoporte">
+                                                        <i class="fa fa-comments-o fa-2x"></i>
+                                                        <div style="font-size:8px;">Chat</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>    
+
+                                    </div>    
+                                </li>  
+                                <li>
+                                    <div class="contentbox3">
+                                        <div class="header3">
+                                            <span><i class="fa fa-link fa-1x"></i>Sistemas externos</span></div>  
+                                        <ul class="accesos">
+                                            <li>
+                                                {% for enlace in enlaces %}
+                                                    {% if enlace.interno==0 %}
+                                                        <a href="{{ enlace.url }}" title="{{ enlace.titulo }}" target="_blank">
+                                                            <div class="iconsoporte">
+                                                                <div style=" height:45px;">
+                                                                    <img style="max-width:60px;max-height:45px;" src="{{ asset('enlaces') }}/{{ enlace.icon }}"/>
+                                                                </div>    
+                                                                <div style="font-size:8px;">{{ enlace.titulo }}</div>
+                                                            </div>
+                                                        </a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </li>
+                                        </ul>    
+
+                                    </div>    
+                                </li>
+                                <li>
+                                    <div class="contentbox3">
+                                        <div class="header3">
+                                            <span><i class="fa fa-users fa-1x"></i>ULTIMOS REGLAMENTOS</span></div>  
+                                        <div class="content3">
+                                            <div style="font-weight: bold;font-size:12px;margin-bottom:5px" >
+                                                {% for documento in documentos %}
+                                                    <i style="color: #cc0000;font-weight: bold;" class="fa fa-paperclip fa-1x"></i>
+                                                    {{ documento.titulo }}
+                                                    <a target='_blank' style='float:right;' href="{{ asset('uploads') }}/{{ documento.url }}"><i style="color:#006699;" class="fa fa-download fa-2x"></i></a>
+                                                    <div style="font-weight: normal;font-size:10px;color: #999999;">
+                                                        Fecha de publicación:{{ documento.fechaPub|date('d-m-Y') }}
+                                                    </div>
+                                                    <hr style='border-color: #dddddd;'>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <a style="float:right;color: #0099ff" href="javascript:mostrarr();">ver más</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contentbox3">
+                                        <div class="header3">
+                                            <span><i class="fa fa-users fa-1x"></i>SEGUIDORES</span></div>  
+                                        <div style=" padding:5px">
+                                            <div id="fb-root"></div>
+                                            <script>
+                                                (function (d, s, id) {
+                                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                                    if (d.getElementById(id))
+                                                        return;
+                                                    js = d.createElement(s);
+                                                    js.id = id;
+                                                    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=533174466770548";
+                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                }(document, 'script', 'facebook-jssdk'));
+                                            </script>
+                                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Ministerio-de-Obras-P%C3%BAblicas-Servicios-y-Vivienda/767537823266104" data-width="250" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="FALSE" data-stream="false" data-show-border="true"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                </ul>    
+                            </div> 
+                            <div style="clear: both; width: 100%;padding:5px;"> 
+                                <ul class="ul1">
+                                    <div class="header3"><span><i class="fa fa-edit fa-1x"></i>ENLACES IMPORTANTES</span></div>
+                                    <marquee class="marq"  onmouseout="this.start()" onmouseover="this.stop()" style="float: right;margin: 5px;" behavior="scroll" scrollamount="2">
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="Reglamento para el desarrollo de tecnologias de información" src="{{ asset('carou') }}/1.jpg">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="https://www.oopp.gob.bo/uploads/Reglamento%20TIC%20%20MOPSV.pdf">
+                                                        Reglamento para el desarrollo de tecnologias de información
+                                                    </a>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="Decreto supremo 1793" src="{{ asset('carou') }}/2.jpg">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" href="https://www.oopp.gob.bo/uploads/DS%20Reglamento%20TIC%20MOPSV.pdf">
+                                                        Decreto supremo 1793
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="La historia de como llegamos al cielo" src="{{ asset('carou') }}/3.jpg">
+
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="https://www.oopp.gob.bo/uploads/LIBRO%20SATELITE%20TUPAC%20COMPLETO.pdf">
+                                                        La historia de como llegamos al cielo
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="Ley 441" src="{{ asset('carou') }}/4.png">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="http://sionet.oopp.gob.bo/Default.aspx?ReturnUrl=%2f">
+                                                        Ley 441
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="Proyectos de autovaluo" src="{{ asset('carou') }}/6.jpg">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="https://www.oopp.gob.bo/uploads/R.M_._342_Arq_._Rocha_.pdf">
+                                                        Proyectos de autovaluo
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="Resoluciones ministeriales Unidad de recursos jerarquicos" src="{{ asset('carou') }}/7.jpg">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="https://www.oopp.gob.bo/index.php/informacion_institucional/RESOLUCIONES-MINISTERIALES,952.html">
+                                                        Resoluciones ministeriales Unidad de recursos jerarquicos
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lidiv">
+                                                <div class="lay1">
+                                                    <img title="UNASUR" src="{{ asset('carou') }}/9.gif">
+                                                </div>
+                                                <div class="lay">
+                                                    <a target="_blank" style=" margin-right:15px;" href="#">
+                                                        UNASUR
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </marquee>
+                                </ul>    
+                                <ul style="list-style: none;display: inline-block;padding:0px;margin-top:0px;">
+                                    <li style=" background-color: white;width:985px;margin: 5px;height:100px">
+                                        <div class="header3">
+                                            <span>
+                                                <i class="fa fa-edit fa-1x"></i>MONITOREO INFORMATIVO</span></div>
+                                        <iframe style="border:none;width:985px;height:500px;background-color: white;" src="{{ path('monitoreo_monitoreo') }}"></iframe>
+                                    </li> 
+                                </ul> 
+                            </div>
+
+                            <div style=" height: 70px; color: white;background-color: #006699;text-align: center;font-size: 12px;text-shadow: 1px 1px 3px #000000;padding:10px;">
+                                Ministerio de Obras Públicas Servicios y Vivienda
+                                Av. Mariscal Santa Cruz Esq. Calle Oruro Edif. Centro de Comunicaciones La Paz 5to piso.
+                                Copyright © Sistemas 2012 - Ministerio de Obras Públicas, Servicios y Vivienda
+                                <br>
+                            </div>    
+                        </div> 
+                        </div>
+                        <div class="alertx" id="alertx">
+                            <div>
+                                <img class="foto" src="http://siemi.oopp.gob.bo/doccargados/rrhh/{{ usuario.ci }}/FOTOS/{{ usuario.foto }}"/>
+                                <div class="titulo">
+                                    <div class="nombre">{{ usuario.name }}</div>
+                                    INTERNO: <cite class="cite">{{ usuario.interno }}</cite>
+                                </div>
+                            </div>
+
+                        </div>   
+                        <div class="botonsolicitud" onclick="xxx();">
+                        </div>
+                        <script>
+                            function xxx()
+                            {
+                                var e = document.getElementById("alert2");
+                                if (e.style.width == '400px')
+                                {
+                                    e.style.width = "0px";
+                                    e.style.animationName = '';
+                                } else
+                                {
+                                    e.style.width = "400px";
+                                    e.style.animationName = 'alert2';
+                                }
+                            }
+
+                            function finaliza(ids)
+                            {
+                                if (!confirm('Confirme'))
+                                {
+                                    return;
+                                }
+                                var resp = prompt("Código de soporte:", "");
+
+                                if (resp != null) {
+                                    val = '{{ path('cliente_finalizar') }}';
+                                    var parametros = {
+                                        'ids': ids,
+                                        'codigo':resp
+                                    };
+                                    $.ajax({
+                                        data: parametros,
+                                        url: val,
+                                        type: 'post',
+                                        beforeSend: function () {
+
+                                        },
+                                        success: function (response) {
+                                            if(response=='Solicitud cerrada'){
+                                                location.reload();
+                                            }else{
+                                                alert(response);
+                                            }
+                                            //
+//location.reload();
+                                            //$("#popup_frame").html(response);
+                                        }
+                                    });
+                                }
+
+
+                            }
+
+                            function enviar(p)
+                            {
+                                if (!confirm('Confirme el envio de la solicitud'))
+                                {
+                                    return;
+                                }
+                                val = '{{ path('cliente_enviar') }}';
+                                var parametros = {
+                                    'p': p,
+                                };
+                                $.ajax({
+                                    data: parametros,
+                                    url: val,
+                                    type: 'post',
+                                    beforeSend: function () {
+
+                                    },
+                                    success: function (response) {
+                                        location.reload();
+                                        console.log(response);
+                                        //$("#popup").fadeIn(200, "linear");
+                                        //$("#popup_frame").html(response);
+                                    }
+                                });
+                            }
+                        </script>  
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                        <script src="{{ asset('bundleCliente') }}/js/jquerypp.custom.js"></script>
+                        <script src="{{ asset('bundleCliente') }}/js/jquery.bookblock.js"></script>
+                        <script>
+                            var Page = (function () {
+
+                                var config = {
+                                    $bookBlock: $('#bb-bookblock'),
+                                    $navNext: $('#bb-nav-next'),
+                                    $navPrev: $('#bb-nav-prev'),
+                                    $navFirst: $('#bb-nav-first'),
+                                    $navLast: $('#bb-nav-last')
+                                },
+                                init = function () {
+                                    config.$bookBlock.bookblock({
+                                        speed: 800,
+                                        shadowSides: 0.8,
+                                        shadowFlip: 0.7
+                                    });
+                                    initEvents();
+                                },
+                                        initEvents = function () {
+
+                                            var $slides = config.$bookBlock.children();
+
+                                            // add navigation events
+                                            config.$navNext.on('click touchstart', function () {
+                                                config.$bookBlock.bookblock('next');
+                                                return false;
+                                            });
+
+                                            config.$navPrev.on('click touchstart', function () {
+                                                config.$bookBlock.bookblock('prev');
+                                                return false;
+                                            });
+
+                                            config.$navFirst.on('click touchstart', function () {
+                                                config.$bookBlock.bookblock('first');
+                                                return false;
+                                            });
+
+                                            config.$navLast.on('click touchstart', function () {
+                                                config.$bookBlock.bookblock('last');
+                                                return false;
+                                            });
+
+                                            // add swipe events
+                                            $slides.on({
+                                                'swipeleft': function (event) {
+                                                    config.$bookBlock.bookblock('next');
+                                                    return false;
+                                                },
+                                                'swiperight': function (event) {
+                                                    config.$bookBlock.bookblock('prev');
+                                                    return false;
+                                                }
+                                            });
+
+                                            // add keyboard events
+                                            $(document).keydown(function (e) {
+                                                var keyCode = e.keyCode || e.which,
+                                                        arrow = {
+                                                            left: 37,
+                                                            up: 38,
+                                                            right: 39,
+                                                            down: 40
+                                                        };
+
+                                                switch (keyCode) {
+                                                    case arrow.left:
+                                                        config.$bookBlock.bookblock('prev');
+                                                        break;
+                                                    case arrow.right:
+                                                        config.$bookBlock.bookblock('next');
+                                                        break;
+                                                }
+                                            });
+                                        };
+
+                                return {init: init};
+
+                            })();
+                        </script>
+                        <script>
+                            Page.init();
+                            function getContent(pag) {
+                                val = '{{ path('cliente_comunicados_paginado') }}';
+                                var parametros = {
+                                    'pagina': pag,
+                                };
+                                $.ajax({
+                                    data: parametros,
+                                    url: val,
+                                    type: 'post',
+                                    beforeSend: function () {
+                                    },
+                                    success: function (response) {
+                                        lista2.innerHTML = response;
+                                        //$("#popup").fadeIn(200, "linear");
+                                        //$("#popup_frame").html(response);
+                                    }
+                                });
+                            }
+                        </script>
+                        <script src="{{ asset('bootstrap') }}/js/bootstrap.min.js"></script>
+                        <div style="position:fixed;bottom:0px;height:70px;width:100%;text-align: center;z-index: 101;">
+                            <iframe style="border:0px;padding: 0px;width:830px;" id="frm33" src="{{ path('cliente_ticker') }}" ></iframe>        
+                        </div>
+                    {% endblock %}

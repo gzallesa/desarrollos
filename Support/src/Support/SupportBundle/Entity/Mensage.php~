@@ -1,0 +1,77 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mensage
+ *
+ * @ORM\Table(name="mensage", indexes={@ORM\Index(name="fk_cliente", columns={"cliente"})})
+ * @ORM\Entity
+ */
+class Mensage
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numero", type="string", length=8, nullable=false)
+     */
+    private $numero;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texto", type="string", length=160, nullable=false)
+     */
+    private $texto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="hora", type="time", nullable=false)
+     */
+    private $hora;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=1, nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="respuesta", type="string", length=500, nullable=false)
+     */
+    private $respuesta;
+
+    /**
+     * @var \Cliente
+     *
+     * @ORM\ManyToOne(targetEntity="Cliente")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="cliente", referencedColumnName="id")
+     * })
+     */
+    private $cliente;
+
+
+}

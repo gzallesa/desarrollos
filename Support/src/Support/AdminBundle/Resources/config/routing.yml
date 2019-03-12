@@ -1,0 +1,45 @@
+admin_homepage:
+    pattern:  /administrator
+    defaults: { _controller: AdminBundle:Default:index }
+admin_soporte:
+    pattern:  /soptec
+    defaults: { _controller: AdminBundle:Default:getSolicitudes }
+admin_charts:
+    pattern:  /charts
+    defaults: { _controller: AdminBundle:Default:getCharts } 
+admin_supports:
+    pattern:  /supports
+    defaults: { _controller: AdminBundle:Default:supports } 
+admin_getSupportsChart:
+    pattern:  /getSupportsChart/{id}
+    defaults: { _controller: AdminBundle:Default:getSupportsChart } 
+admin_control:
+    pattern:  /control
+    defaults: { _controller: AdminBundle:Default:control } 
+admin_grilla:
+    pattern:  /grilla
+    defaults: { _controller: AdminBundle:Default:grilla } 
+admin_grilla_getsolicitudes:
+    pattern:  /solicitudesgrilla
+    defaults: { _controller: AdminBundle:Default:getJSONSolicitudes } 
+admin_panel:
+    pattern:  /panel
+    defaults: { _controller: AdminBundle:Default:panel } 
+admin_est_bars:
+    pattern:  /bars
+    defaults: { _controller: AdminBundle:Default:bars } 
+admin_est_bubble:
+    pattern:  /bubble
+    defaults: { _controller: AdminBundle:Default:bubble } 
+admin_detalle_pie:
+    pattern:  /detallepie/{val}
+    defaults: { _controller: AdminBundle:Default:detallePie } 
+admin_detalle_pieJson:
+    pattern:  /getJSONDetallePieAction/{val}
+    defaults: { _controller: AdminBundle:Default:getJSONDetallePie }     
+admin_detalle_bubble:
+    pattern:  /detallebubble/{problema}/{soporte}
+    defaults: { _controller: AdminBundle:Default:detalleBubble } 
+admin_detalle_bubbleJson:
+    pattern:  /getJSONDetalleBubbleAction/{problema}/{soporte}
+    defaults: { _controller: AdminBundle:Default:getJSONDetalleBubble }     

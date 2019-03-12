@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+{% for item in data %}
+    <img style="float: left" class="fotos_soporte" src=" {{ asset('bundles') }}/fotos/{{ item[1].solicitante.idu }}.jpg "></div>
+    <div>{{ item[1].solicitante.cargo }}</div>
+    <div>{{ item[1].estado }}</div>
+{% endfor %}
+{% endblock %}
+

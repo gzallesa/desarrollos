@@ -1,0 +1,257 @@
+{% extends "::base.html.twig" %}
+{% block link %}
+<meta http-equiv="refresh" content="30"/>
+{% endblock %}
+{% block stylesheets %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        //$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+        $.getJSON('{{ path('fun_support_getJsonSupport') }}', function(data) {
+            // Create the chart
+            console.log(data);
+            $('#container').highcharts('StockChart', {
+                rangeSelector: {
+                    selected: 1
+                },
+                title: {
+                    text: 'Rendimiento del Soporte {{ support.name }}'
+                },
+                series: [{
+                        name: 'Solicitudes atendidas',
+                        data: data,
+                        tooltip: {
+                            valueDecimals: 2
+                        }
+                    }]
+            });
+        });
+
+    });
+</script>
+<script>
+    $(function() {
+        $('#donut').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                    type: 'pie',
+                    name: 'Solicitudes',
+                    data: [
+                        ['Pendientes', {{ donut[0] }}],
+                        ['Atendidas', {{ donut[1] }}]
+                    ]
+                }]
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('#bar').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Solicitudes por usuario'
+            },
+            subtitle: {
+                text: 'Source: Wikipedia.org'
+            },
+            xAxis: {
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population (millions)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                    name: 'Year 1800',
+                    data: [
+                        {
+                            name: 'Point 1',
+                            y: 10
+                        }, {
+                            name: 'Point 2',
+                            y: 5
+                        },
+                        {
+                            name: 'Point 2',
+                            y: 6
+                        }, ]
+                }]
+        });
+    });
+
+
+</script>
+<link rel='stylesheet' href='{{ asset('bundles') }}/css/style.css' type='text/css' media='all' />
+<script>
+    var c = 0;
+</script>    
+{% endblock %}
+{% block body %}
+<div class="top">
+    <div class="logo"></div>
+    <div style="float: left;margin-left: 5px;margin-top: 6px;">
+        <a title="Inicio" href="{{ path('fun_support_panel') }}" class="menutop"><i class="fa fa-home fa-fw"></i></a>
+        {% for problema in problemas %}
+            {% set c="" %}
+            {% for cont in contador %}
+                {% if cont.problema.idp==problema.idp %}
+                    {% set c=c+1 %}
+                {% endif %}
+            {% endfor %}
+        <script>
+            c = c +{{ c }};
+        </script>    
+        <a title="{{ problema.nombre }}" href="{{ path('fun_support_mostrar',{ 'id': problema.idp }) }}" class="menutop"><i class="fa {{problema.icon}} fa-fw"></i><sup class="sup">{{ c }}</sup></a>
+        {% endfor %}
+    </div>
+    <div style="float:right;font-family:arial;font-size:12px;color: #222222;">
+        <a href="{{ path('support_support_logout') }}">Salir</a>
+    </div>    
+</div>    
+<div class="left">
+    <div class="box">
+        <img class="foto_soporte" src="{{ asset('bundles') }}/fotos/{{ support.id }}.jpg"/>
+    {{ support.name }}
+        <div style="font-size:11px;">{{ support.cargo }}</div>
+    </div>
+    <div class="box2">
+        <div id="donut" style="width: 100%; height: 150px; margin: 0 auto"></div>
+        <div>Solicitudes por usuario</div>
+        <ul style="margin: 0px;list-style: none;padding: 0px">
+        {% for bar in bars %}
+            <li style="font-size:12px;color: black;border-bottom-color:#cccccc;border-bottom-style:solid;border-bottom-width: 1px;padding: 5px;display:block;height:60px;background:linear-gradient(#ffffff,#dddddd,#ffffff);">
+                <img class="foto" src="{{ asset('bundles') }}/fotos/{{ bar.id }}.jpg">
+                <div style="float:left;width:60%" >{{ bar.name }}</div>
+                <div style="color:white;line-height: 2.5em;text-align: center;width:30px;height:30px;border-radius:100%;float:right;background-color:#B20000">{{ bar.y }}</div>
+            </li>
+        {% endfor %}
+        </ul>       
+    </div>    
+</div>    
+<div class="center">
+    <div id="container" style="height: 300px; min-width: 650px"></div>
+</div>    
+<div class="alert">
+    Solicitudes de Soporte
+    <ul>
+        {% for solicitud in solicitudes %}
+        <li>
+            <img class="foto" src="{{ asset('bundles') }}/fotos/{{ solicitud[1].solicitante.id }}.jpg"/>
+            <div class="titulo">
+                <div class="nombre">{{ solicitud[1].solicitante.name|upper }}</div>
+                <div class="cargo">{{ solicitud[1].solicitante.cargo|upper }}</div>
+            </div>
+            <div class="time">{{ solicitud[1].horaSolicitud|date('h:i a') }}</div>
+            <div class="sldr">
+                <div class="problema">{{ solicitud[1].problema.nombre }}</div>
+                <div class="descripcion">{{ solicitud[1].problema.descripcion }}</div>
+                    {% if solicitud[0].d > 0 %}
+                <div style="font-size:10px;float:left;">Hace {{ solicitud[0].d }} días {{ solicitud[0].h }} horas {{ solicitud[0].i }} minutos</div>
+                    {% else %}
+                        {% if solicitud[0].h > 0 %}
+                <div style="font-size:10px;float:left;">Hace {{ solicitud[0].h }} horas {{ solicitud[0].i }} minutos</div>
+                        {% else %}
+                <div style="font-size:10px;">Hace {{ solicitud[0].i }} minutos</div>
+                        {% endif %}
+                    {% endif %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>    
+</div>    
+<div id="test">
+</div>   
+<script src="{{ asset('bundleAdmin') }}/js/highstock.js"></script>
+<script src="{{ asset('bundleAdmin') }}/js/modules/exporting.js"></script>
+<script src="{{ asset('bundleAdmin') }}/hc/js/highcharts.js"></script>
+<script src="{{ asset('bundleAdmin') }}/hc/js/modules/exporting.js"></script>
+<audio src="{{ asset('bundles') }}/1.mp3" id="mp3" preload="auto"></audio>
+<script>
+            if (localStorage.getItem('c') < c)
+            {
+                playMP3();
+            }
+            localStorage.setItem('c', c);
+            function playMP3() {
+                document.getElementById("mp3").play();
+            }
+            function mostrar(p)
+            {
+                alert(p);
+                val = '{{ path('support_transferir') }}';
+                var parametros = {
+                    'id': p
+                };
+                $.ajax({
+                    data: parametros,
+                    url: val,
+                    type: 'post',
+                    beforeSend: function() {
+
+                    },
+                    success: function(response) {
+                        alert(response);
+                        //$("#popup").fadeIn(200, "linear");
+                        //$("#popup_frame").html(response);
+                    }
+                });
+            }
+</script>    
+{% endblock %}

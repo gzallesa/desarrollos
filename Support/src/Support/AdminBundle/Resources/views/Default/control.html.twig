@@ -1,0 +1,98 @@
+{% extends "::adminPagePanel.html_1.twig" %}
+{% block scripts %}
+{% endblock %}
+{% block body %}
+    <div id="sidebar">
+        <div class="search">
+            <input type="search" placeholder="Search here...">
+            <i class="fa fa-search"></i>
+        </div>
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active"> 
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>        
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div> <!-- /sidebar -->
+
+    <div id="content" class="clearfix">
+        
+        <div class="breadcrumbs">
+            <i class="fa fa-home"></i> Home <i class="fa fa-caret-right"></i> Dashboard
+        </div>
+
+        <div class="wrp clearfix">
+
+
+            <!--<div class="quick-nav">
+                <ul>
+                    <li class="qn-first"><a href="#" onclick="return false;"><i class="fa fa-edit"></i> Add an Article</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-save"></i> Save File</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-plus"></i> Add More</a></li>
+                    <li>
+                        <a href="#" onclick="return false;"><i class="fa fa-envelope"></i> Messages</a>
+                        <span class="badge qnav-badge blue">16</span>
+                    </li>
+                    <li class="qn-last active"><a href="#" onclick="return false;"><i class="fa fa-bar-chart-o"></i> Check Statistics</a></li>
+                    <li><a class="qn-arrow-left" href="#" onclick="return false;"><i class="fa fa-chevron-left"></i></a></li>
+                    <li><a class="qn-arrow-right" href="#" onclick="return false;"><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </div>-->
+
+
+            <div class="fluid">
+
+                <div class="widget grid12">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fa fa-paperclip"></i> Control de inicio y fin de sesión
+                        </div>
+                        <div class="widget-controls">
+                            <input type="checkbox" id="switch-ui" />
+                            <label class="switch" for="switch-ui"><i></i></label>
+                        </div>
+                    </div> <!-- /widget-header -->
+
+                    <div class="widget-content">
+
+                        <table>
+                            <tr><th></th>
+                                <th>SOPORTE</th>
+                                <th>FECHA</th>
+                                <th>INICIO</th>
+                                <th>FIN</th></tr>
+                            {% for item in data %}
+                                <tr>
+                                    <td style="padding: 5px;" ><img class="user-img" src=" {{ asset('bundles') }}/fotos/{{ item.id }}.jpg"></td>
+                                    <td style="padding: 5px;" >{{ item.name }}</td>
+                                    <td style="padding: 5px;">{{ item[0].fecha|date('Y-m-d') }}</td>
+                                    <td style="padding: 5px;">{{ item[0].inicio|date('H:i:s') }}</td>
+                                    {% if item[0].fin!=null %}
+                                        <td style="padding: 5px;">{{ item[0].fin|date('H:i:s') }}</td>
+                                    {% else %}    
+                                        <td style="padding: 5px;">---</td>
+                                    {% endif %}    
+                                </tr>
+                            {%endfor %}    
+                        </table>
+                    </div>
+
+                </div> <!-- /widget -->
+
+            </div> <!-- /fluid -->
+
+        </div> <!-- /wrp -->
+
+    </div> <!-- /content -->
+{% endblock %}
+
+
+
+

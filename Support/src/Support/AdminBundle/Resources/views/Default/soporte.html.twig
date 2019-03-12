@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title id='Description'>sThis example shows how to create a Grid from JSON data.</title>
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.ui-redmond.css" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.filter.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.sort.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.edit.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxpanel.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxnumberinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.grouping.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxtabs.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.columnsresize.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/globalization/globalize.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleAdmin') }}/js/localization.js"></script>
+        <style>
+            .imggrid{
+                border-radius: 5px;
+            }
+        </style>    
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // prepare the data
+
+                var url = "{{ path('admin_grilla_getsolicitudes') }}";
+                $("#jqxgrid").bind('bindingcomplete', function ()
+                {
+                    $("#jqxgrid").jqxGrid('sortby', 'fechasolicitud', 'desc');
+                });
+                var initrowdetails = function (index, parentElement, gridElement, datarecord) {
+                    var tabsdiv = null;
+                    var information = null;
+                    var notes = null;
+                    tabsdiv = $($(parentElement).children()[0]);
+                    if (tabsdiv != null) {
+                        information = tabsdiv.find('.information');
+                        notes = tabsdiv.find('.notes');
+                        var title = tabsdiv.find('.title');
+                        console.log(datarecord);
+                        title.text(datarecord.usuario);
+                        var container = $('<div style="margin: 5px;"></div>')
+                        container.appendTo($(information));
+                        var photocolumn = $('<div style="float: left; width: 15%;"></div>');
+                        var leftcolumn = $('<div style="float: left; width: 45%;"></div>');
+                        var rightcolumn = $('<div style="float: left; width: 40%;"></div>');
+                        container.append(photocolumn);
+                        container.append(leftcolumn);
+                        container.append(rightcolumn);
+                        var photo = $("<div class='jqx-rc-all' style='margin: 10px;'></div>");
+                        var image = $("<div style='margin-top: 10px;'></div>");
+                        var imgurl = '{{ asset('bundles') }}/fotos/' + datarecord.ids + '.jpg';
+                        var img = $('<img style="border-radius:50%;border-color:#eeeeee;border-style:solid;border-width:5px;" height="50" width="50" src="' + imgurl + '"/>');
+                        image.append(img);
+                        image.appendTo(photo);
+                        photocolumn.append(photo);
+                        var firstname = "<div style='margin: 10px;'><b>Soporte:</b> " + datarecord.soporte + "</div>";
+                        var lastname = "<div style='margin: 10px;'><b>Solicitante:</b> " + datarecord.usuario + "</div>";
+                        var title = "<div style='margin: 10px;'><b>Problema:</b> " + datarecord.servicio + "</div>";
+                        var address = "<div style='margin: 10px;'><b>Interno:</b> " + datarecord.interno + "</div>";
+                        $(leftcolumn).append(firstname);
+                        $(leftcolumn).append(lastname);
+                        $(leftcolumn).append(title);
+                        $(leftcolumn).append(address);
+                        var postalcode = "<div style='margin: 10px;'><b>Fecha solicitud:</b> " + datarecord.fechasolicitud + " " + datarecord.horasolicitud + "</div>";
+                        var city = "<div style='margin: 10px;'><b>Fecha solucion:</b> " + datarecord.fechasolucion + " " + datarecord.horaatencion + "</div>";
+                        var phone = "<div style='margin: 10px;'><b>Estado:</b> " + datarecord.interno + "</div>";
+                        var hiredate = "<div style='margin: 10px;'><b>Tiempo de respuesta:</b> " + datarecord.tiempo.d + ' dias ' + datarecord.tiempo.h + 'Hrs ' + datarecord.tiempo.h + "min</div>";
+                        $(rightcolumn).append(postalcode);
+                        $(rightcolumn).append(city);
+                        $(rightcolumn).append(phone);
+                        $(rightcolumn).append(hiredate);
+                        var notescontainer = $('<div style="white-space: normal; margin: 5px;"><span>' + datarecord.servicio + '</span></div>');
+                        $(notes).append(notescontainer);
+                        $(tabsdiv).jqxTabs({width: 800, height: 170});
+                    }
+                }
+                var source =
+                        {
+                            datatype: "json",
+                            datafields:
+                                    [
+                                        {name: 'soporte', type: 'string'},
+                                        {name: 'estado', type: 'string'},
+                                        {name: 'usuario', type: 'string'},
+                                        {name: 'cargo', type: 'string'},
+                                        {name: 'interno', type: 'string'},
+                                        {name: 'servicio', type: 'string'},
+                                        {name: 'fechasolicitud', type: 'date'},
+                                        {name: 'horasolicitud', type: 'string'},
+                                        {name: 'fechasolucion', type: 'date'},
+                                        {name: 'horaatencion', type: 'string'},
+                                        {name: 'ids', type: 'string'},
+                                        {name: 'tiempo', type: 'string'},
+                                        {name: 'color', type: 'string'},
+                                    ],
+                            id: 'id',
+                            url: url
+                        };
+                var imagerenderer = function (row, datafield, value) {
+                    console.log(value);
+                    if (value == 'Alerta')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:red"></div>';
+                    }
+                    if (value == 'Medio')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:orange"></div>';
+                    }
+                    if (value == 'Bueno')
+                    {
+                        return '<div  style="margin:5px;border-radius:50%;padding:2px;width:10px;height:10px;background-color:green"></div>';
+                    }
+
+                }
+                var estadorenderer = function (row, datafield, value) {
+                    console.log(value);
+                    if (value == 'Cerrado')
+                    {
+                        return '<span style="color:green;">Cerrado</span>';
+                    } else {
+                        return '<span style="color:red;">Abierto</span>';
+                    }
+                }
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#jqxgrid").jqxGrid(
+                        {
+                            width: '100%',
+                            height: 500,
+                            source: dataAdapter,
+                            rowdetails: true,
+                            filterable: true,
+                            showfilterrow: true,
+                            groupable: true,
+                            pageable: false,
+                            columnsresize: true,
+                            localization: getLocalization(),
+                            sortable: true,
+                            theme: 'ui-redmond',
+                            rowdetailstemplate: {rowdetails: "<div style='margin: 10px;'><ul style='margin-left: 30px;'><li class='title'></li><li>Estadisticos</li></ul><div class='information'></div><div class='notes'></div></div>", rowdetailsheight: 200},
+                            initrowdetails: initrowdetails,
+                            columns: [
+                                {text: 'RESULTADO ATENCION', filtertype: 'list', filteritems: ['Alerta', 'Medio', 'Bueno'], datafield: 'color', cellsrenderer: imagerenderer, width: '60px'},
+                                {text: 'ESTADO', datafield: 'estado', width: '60', filtertype: 'list', cellsrenderer: estadorenderer, filteritems: ['Abierto', 'Cerrado']},
+                                {text: 'TIEMPO ATENCION', datafield: 'tiempo', width: '20%'},
+                                {text: 'SOPORTE', datafield: 'soporte', width: '20%', filtertype: 'list'},
+                                {text: 'USUARIO', datafield: 'usuario', width: '20%'},
+                                {text: 'SERVICIO', datafield: 'servicio', width: '20%', filtertype: 'list'},
+                                {text: 'FECHA SOLICITUD', datafield: 'fechasolicitud', width: '10%', filtertype: 'date', cellsformat: 'd'},
+                                {text: 'HORA SOLICITUD', datafield: 'horasolicitud', width: '10%'},
+                                {text: 'FECHA SOLUCION', datafield: 'fechasolucion', width: '10%', filtertype: 'date', cellsformat: 'd'},
+                                {text: 'HORA ETENCION', datafield: 'horaatencion', width: '10%'},
+                                {text: 'ids', datafield: 'ids', hidden: true},
+                                {text: 'CARGO', datafield: 'cargo', hidden: true},
+                                {text: 'INTERNO', datafield: 'interno', hidden: true},
+                            ]
+                        });
+                $("#excelExport").click(function () {
+                    $("#jqxgrid").jqxGrid('exportdata', 'xls', 'jqxGrid');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id='jqxWidget' style=" width: 100%;font-size: 10px; font-family: Verdana; float: left;">
+            <input type="button" value="Exportar a Excel" id='excelExport' />
+            <div id="jqxgrid"></div>
+
+        </div>
+
+    </body>
+</html>

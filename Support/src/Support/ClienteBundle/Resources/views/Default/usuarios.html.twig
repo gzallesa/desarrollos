@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id='Description'>This example shows how to create a Grid from JSON data.</title>
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.ui-redmond.css" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.filter.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.sort.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.edit.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxpanel.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxnumberinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.grouping.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/demos.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/globalization/globalize.js"></script>
+        <style>
+            .imggrid{
+                border-radius: 5px;
+            }
+        </style>    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var url = "{{ path('cliente_listar') }}";
+                var source =
+                        {
+                            datatype: "json",
+                            datafields:
+                                    [
+                                        {name: 'interno', type: 'string'},
+                                        {name: 'name', type: 'string'},
+                                        {name: 'cargo', type: 'string'},
+                                        {name: 'ci', type: 'string'},
+                                        {name: 'ip', type: 'string'},
+                                        {name: 'email', type: 'string'},
+                                        {name: 'telefono', type: 'string'},
+                                        {name: 'movil', type: 'string'},
+                                        {name: 'direccion', type: 'string'},
+                                        {name: 'dependede', type: 'string'},
+                                        {name: 'foto', type: 'string'}
+                                    ],
+                            id: 'id',
+                            url: url
+                        };
+                var imagerenderer = function(row, datafield, value) {
+                    return '<img onError="this.src='+String.fromCharCode(39)+'{{ asset('bundles') }}/new-user.png'+String.fromCharCode(39)+'" class="imggrid" width="45" height="50" src="https://siemi.oopp.gob.bo/doccargados/rrhh/' + value + '"/>';
+                }
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#jqxgrid").jqxGrid(  
+                        {
+                            width: '100%',
+                            height: 450,
+                            source: dataAdapter,
+                            showfilterrow: true,
+                            filterable: true,
+                            sortable: true,
+                            theme:'ui-redmond',
+                            selectionmode: 'singlecell',
+                            scrollmode: 'deferred',
+                            scrollfeedback: function(row)
+                            {
+                                return '<table style="height: 150px;width:110px;"><tr><td><img onError="this.src='+String.fromCharCode(39)+'{{ asset('bundles') }}/new-user.png'+String.fromCharCode(39)+'" height="90" src="https://siemi.oopp.gob.bo/doccargados/rrhh/' + row.foto + '"/></td></tr><tr><td>' + row.name + '</td></tr></table>';
+                            },
+                            rowsheight: 50,
+                            columns: [
+                                {text: 'Foto', filtertype: 'none',datafield: 'foto', width: 45, cellsrenderer: imagerenderer},
+                                {text: 'Int', columntype: 'textbox', filtertype: 'textbox', datafield: 'interno', width: 50},
+                                {text: 'Nombre(s) y Apellidos', filtertype: 'textbox', datafield: 'name', width: 300},
+                                {text: 'Cargo', datafield: 'cargo', columntype: 'textbox', filtertype: 'textbox', width: 200, cellsformat: 'd'},
+                                {text: 'CI', datafield: 'ci', columntype: 'textbox', filtertype: 'textbox', width: 100},
+                                {text: 'IP', datafield: 'ip', columntype: 'textbox', filtertype: 'textbox', width: 100},
+                                {text: 'Correo electrónico', datafield: 'email', columntype: 'textbox', filtertype: 'textbox', width: 200},
+                                {text: 'Teléfono', datafield: 'telefono', columntype: 'textbox', filtertype: 'textbox', width: 100},
+                                {text: 'Móvil', datafield: 'movil', columntype: 'textbox', filtertype: 'textbox', width: 100},
+                                {text: 'Dirección', datafield: 'direccion', columntype: 'textbox', filtertype: 'textbox', width: 200}
+                                
+                            ]
+                        });
+            });
+        </script>
+    </head>
+    <body class='default'>
+        <div id="jqxgrid" style="width: 100%;font-size: 13px; font-family: Verdana; float: left;">
+        </div>
+    </body>
+</html>

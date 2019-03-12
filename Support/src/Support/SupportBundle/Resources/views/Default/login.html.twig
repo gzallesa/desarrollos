@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+<link rel='stylesheet' href='{{ asset('bundles') }}/css/style_1.css' type='text/css' media='all' />
+{% endblock %}
+{% block body %}
+<div class="box">
+    <div style="color:red;font-size: 10px;font-family: arial">{{ err }}</div>
+    <form action="{{ path('support_support_login_check') }}" method="post">
+        <div class="input">
+            <i class="fa fa-user fa-2x"></i>
+            <input type="text" id="username" name="_username" placeholder="nombre de usuario"/>
+        </div>
+        <div class="input">
+            <i class="fa fa-lock fa-2x"></i>
+            <input type="password" id="password" name="_password" placeholder="contraseña"/>
+        </div>
+    <input class="boton" type="submit" name="login" value="Acceder" />
+</form>
+</div>    
+{% endblock %}

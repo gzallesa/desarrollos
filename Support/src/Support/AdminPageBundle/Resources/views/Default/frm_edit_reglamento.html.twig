@@ -1,0 +1,127 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+    <link href="{{ asset('bundles') }}/css/style_2.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('chosen') }}/docsupport/prism.css">
+    <link rel="stylesheet" href="{{ asset('chosen') }}/chosen.css">
+    <style type="text/css" media="all">
+        .chosen-rtl .chosen-drop {
+            left: -9000px;
+        }
+    </style>
+
+    <!-- DatePicker compatible Firefox -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $('input[type="date"]').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        });
+    </script>
+{% endblock %}
+{% block body %}
+    <div id="sidebar">
+
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active">
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}"><i
+                                    class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}"><i
+                                    class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div> <!-- /sidebar -->
+
+    <div id="content" class="clearfix">
+
+
+        <div class="breadcrumbs">
+            <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> {{ name }}
+        </div>
+
+        <div class="wrp clearfix">
+
+            <div class="fluid">
+
+                <div class="widget grid6">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fa fa-paperclip"></i> {{ name }}
+                        </div>
+                    </div> <!-- /widget-header -->
+
+                    <div class="widget-content">
+
+                        <form method="post" enctype="multipart/form-data"
+                              action="{{ path('admin_page_modificarReglamento') }}">
+                            {% for reglamento in reglamentos %}
+                                <input type="hidden" value="{{ reglamento.id }}" name="id_reglamento"
+                                       id="id_reglamento"/>
+                                <div>
+                                    <label for="titulo_reglamento" class="required">Titulo</label>
+                                    <input id="titulo_reglamento" name="titulo_reglamento" required="required"
+                                           type="text" value="{{ reglamento.titulo }}">
+                                </div>
+                                <div>
+                                    <label for="descripcion_reglamento" class="required">Descripción</label>
+                                    <input id="descripcion_reglamento" name="descripcion_reglamento" required="required"
+                                           type="text" value="{{ reglamento.descripcion }}">
+                                </div>
+                                <!-- Circular -->
+                                <div>
+                                    <label for="file_circular" class="">Subir Circular</label>
+                                    <input type="file" name="file_circular" id="file_circular" value="{{ reglamento.file_circular }}"/>
+                                </div>
+                                <!-- Resolucion -->
+                                <div>
+                                    <label for="file_reglamento" class="">Subir Reglamento</label>
+                                    <input type="file" name="file_reglamento" id="file_reglamento" value="{{ reglamento.file_reglamento }}"/>
+                                </div>
+                                <!-- Reglamento -->
+                                <div>
+                                    <label for="file_resolucion" class="">Subir Resolución</label>
+                                    <input type="file" name="file_resolucion" id="file_resolucion" value="{{ reglamento.file_resolucion }}"/>
+                                </div>
+
+                                <input class="boton" type="submit" value="Modificar"/>
+                            {% endfor %}
+                        </form>
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"
+                                type="text/javascript"></script>
+                        <script src="{{ asset('chosen') }}/chosen.jquery.js" type="text/javascript"></script>
+                        <script src="{{ asset('chosen') }}/docsupport/prism.js" type="text/javascript"
+                                charset="utf-8"></script>
+                        <script type="text/javascript">
+                            var config = {
+                                '.chosen-select': {},
+                                '.chosen-select-deselect': {allow_single_deselect: true},
+                                '.chosen-select-no-single': {disable_search_threshold: 10},
+                                '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+                                '.chosen-select-width': {width: "95%"}
+                            }
+                            for (var selector in config) {
+                                $(selector).chosen(config[selector]);
+                            }
+                        </script>
+
+                    </div>
+
+                </div> <!-- /widget -->
+
+            </div> <!-- /fluid -->
+
+        </div> <!-- /wrp -->
+
+    </div> <!-- /content -->
+{% endblock %}
+

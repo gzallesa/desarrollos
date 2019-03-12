@@ -1,0 +1,53 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * BuzonEntrada
+ *
+ * @ORM\Table(name="buzon_entrada")
+ * @ORM\Entity
+ */
+class BuzonEntrada
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numero", type="string", length=15, nullable=false)
+     */
+    private $numero;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="hora", type="time", nullable=false)
+     */
+    private $hora;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensaje", type="string", length=200, nullable=false)
+     */
+    private $mensaje;
+
+
+}

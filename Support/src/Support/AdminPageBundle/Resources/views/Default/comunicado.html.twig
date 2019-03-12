@@ -1,0 +1,90 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+<link href="{{ asset('bundles') }}/css/style_2.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="{{ asset('chosen') }}/docsupport/prism.css">
+ <link rel="stylesheet" href="{{ asset('chosen') }}/chosen.css">
+ <style type="text/css" media="all">
+    .chosen-rtl .chosen-drop { left: -9000px; }
+ </style>
+{% endblock %}
+{% block body %}
+<div id="sidebar">
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active"> 
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>        
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+</div> <!-- /sidebar -->
+
+<div id="content" class="clearfix">
+
+
+    <div class="breadcrumbs">
+        <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> {{ name }}
+    </div>
+
+    <div class="wrp clearfix">
+
+        <div class="fluid">
+
+            <div class="widget grid12">
+                <div class="widget-header">
+                    <div class="widget-title">
+                        <i class="fa fa-paperclip"></i> {{ name }}
+                    </div>
+                    <div class="widget-controls">
+                        <input type="checkbox" id="switch-ui" />
+                        <label class="switch" for="switch-ui"><i></i></label>
+                    </div>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+<form action="{{ path('admin_page_guardarComunicado') }}" method="post" {{
+form_enctype(formulario) }}>
+<select data-placeholder="De..." class="chosen-select" style="width:350px;" tabindex="2" name="usuario">
+            <option value=""></option>
+            {% for usuario in usuarios %}
+                <option value="{{ usuario.id }}">{{ usuario.name }}</option>
+            {% endfor %}
+</select>        
+{{ form_widget(formulario) }}
+<input class="boton" type="submit" value="Registrarme" />
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <script src="{{ asset('chosen') }}/chosen.jquery.js" type="text/javascript"></script>
+  <script src="{{ asset('chosen') }}/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script> 
+
+                </div>
+
+            </div> <!-- /widget -->
+
+        </div> <!-- /fluid -->
+
+    </div> <!-- /wrp -->
+
+</div> <!-- /content -->
+{% endblock %}
+
+
+

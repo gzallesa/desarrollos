@@ -1,0 +1,118 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+    <link href="{{ asset('bundles') }}/css/style_2.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('chosen') }}/docsupport/prism.css">
+    <link rel="stylesheet" href="{{ asset('chosen') }}/chosen.css">
+    <style type="text/css" media="all">
+        .chosen-rtl .chosen-drop {
+            left: -9000px;
+        }
+    </style>
+
+    <!-- DatePicker compatible Firefox -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $('input[type="date"]').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        });
+    </script>
+{% endblock %}
+{% block body %}
+    <div id="sidebar">
+
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active">
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}"><i
+                                    class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}"><i
+                                    class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div> <!-- /sidebar -->
+
+    <div id="content" class="clearfix">
+
+
+        <div class="breadcrumbs">
+            <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> {{ name }}
+        </div>
+
+        <div class="wrp clearfix">
+
+            <div class="fluid">
+
+                <div class="widget grid6">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fa fa-paperclip"></i> {{ name }}
+                        </div>
+                    </div> <!-- /widget-header -->
+
+                    <div class="widget-content">
+
+                        <form method="post" enctype="multipart/form-data"
+                              action="{{ path('admin_page_modificarPopup') }}">
+                            {% for popup in popups %}
+                                <input type="hidden" value="{{ popup.ID }}" name="id_popup" id="id_popup"/>
+                                <div>
+                                    <label for="titulo_popup" class="required">Titulo</label>
+                                    <input id="titulo_popup" name="titulo_popup" required="required" type="text"
+                                           value="{{ popup.Titulo }}">
+                                </div>
+                                <div>
+                                    <label for="fecha_publicacion_popup" class="required">Fecha de Publicación</label>
+                                    <input type="date" name="fecha_publicacion_popup" id="fecha_publicacion_popup"
+                                           required="required" value="{{ popup.Fecha_Publicar | date("Y-m-d") }}">
+                                </div>
+                                <div>
+                                    <label for="dias_popup" class="required">Días</label>
+                                    <input id="dias_popup" name="dias_popup" required="required" type="text" value="{{ popup.dias }}">
+                                </div>                                
+                                <div>
+                                    <label for="file_popup" class="">Imagen</label>
+                                    <input type="file" name="file_popup" id="file_popup" value="{{ popup.image_url }}"/>
+                                </div>
+                                <input class="boton" type="submit" value="Modificar"/>
+                            {% endfor %}
+                        </form>
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"
+                                type="text/javascript"></script>
+                        <script src="{{ asset('chosen') }}/chosen.jquery.js" type="text/javascript"></script>
+                        <script src="{{ asset('chosen') }}/docsupport/prism.js" type="text/javascript"
+                                charset="utf-8"></script>
+                        <script type="text/javascript">
+                            var config = {
+                                '.chosen-select': {},
+                                '.chosen-select-deselect': {allow_single_deselect: true},
+                                '.chosen-select-no-single': {disable_search_threshold: 10},
+                                '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+                                '.chosen-select-width': {width: "95%"}
+                            }
+                            for (var selector in config) {
+                                $(selector).chosen(config[selector]);
+                            }
+                        </script>
+
+                    </div>
+
+                </div> <!-- /widget -->
+
+            </div> <!-- /fluid -->
+
+        </div> <!-- /wrp -->
+
+    </div> <!-- /content -->
+{% endblock %}
+

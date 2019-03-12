@@ -1,0 +1,56 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanProblema
+ *
+ * @ORM\Table(name="docman_problema", indexes={@ORM\Index(name="fk_usr1", columns={"fun"})})
+ * @ORM\Entity
+ */
+class DocmanProblema
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idp", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idp;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=255, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="icon", type="string", length=255, nullable=true)
+     */
+    private $icon;
+
+    /**
+     * @var \DocmanUser
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanUser")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fun", referencedColumnName="id")
+     * })
+     */
+    private $fun;
+
+
+}

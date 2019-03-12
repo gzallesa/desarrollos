@@ -1,0 +1,134 @@
+admin_page_homepage:
+    pattern:  /adminpage/{t}
+    defaults: { _controller: AdminPageBundle:Default:index }
+admin_page_Comunicado:
+    pattern:  /comunicado
+    defaults: { _controller: AdminPageBundle:Default:comunicado }
+admin_page_Anuncio:
+    pattern:  /anuncio
+    defaults: { _controller: AdminPageBundle:Default:anuncio }
+admin_page_Video:
+    pattern:  /video
+    defaults: { _controller: AdminPageBundle:Default:video }
+admin_page_guardarAnuncio:
+    pattern:  /guardarAnuncio
+    defaults: { _controller: AdminPageBundle:Default:guardarAnuncio }
+admin_page_guardarComunicado:
+    pattern:  /guardarComunicado
+    defaults: { _controller: AdminPageBundle:Default:guardarComunicado }
+admin_page_guardarVideo:
+    pattern:  /guardarVideo
+    defaults: { _controller: AdminPageBundle:Default:guardarVideo }
+admin_page_formulario:
+    pattern:  /formulario
+    defaults: { _controller: AdminPageBundle:Default:formulario }
+admin_page_upload:
+    pattern:  /up
+    defaults: { _controller: AdminPageBundle:Default:upload }
+admin_page_prueba:
+    pattern:  /prueba
+    defaults: { _controller: AdminPageBundle:Default:prueba }
+admin_page_comunicadoPanel:
+    pattern:  /comunicadoPanel
+    defaults: { _controller: AdminPageBundle:Default:comunicadoPanel }
+admin_page_anuncios:
+    pattern:  /anuncios
+    defaults: { _controller: AdminPageBundle:Default:getAnuncios }
+admin_page_getContenido:
+    pattern:  /contenido/{id}
+    defaults: { _controller: AdminPageBundle:Default:getContenido }
+admin_page_getComunicado:
+    pattern:  /getComunicado/{id}
+    defaults: { _controller: AdminPageBundle:Default:getComunicado }
+
+admin_page_delContenido:
+    pattern:  /delcontenido/{id}
+    defaults: { _controller: AdminPageBundle:Default:eliminarAnuncio }
+admin_page_delComunicado:
+    pattern:  /delComunicado/{id}
+    defaults: { _controller: AdminPageBundle:Default:eliminarComunicado }
+
+admin_page_modificarAnuncio:
+    pattern:  /modificarAnuncio
+    defaults: { _controller: AdminPageBundle:Default:modificarAnuncio }
+admin_page_modificarComunicado:
+    pattern:  /modificarComunicado
+    defaults: { _controller: AdminPageBundle:Default:modificarComunicado }
+admin_page_uploader:
+    pattern:  /upload
+    defaults: { _controller: AdminPageBundle:Default:upload }
+admin_page_uploadfile:
+    pattern:  /uploadfile
+    defaults: { _controller: AdminPageBundle:Default:uploadFile }
+admin_page_getusers:
+    pattern:  /getusers
+    defaults: { _controller: AdminPageBundle:Default:getusers }
+admin_page_getu:
+    pattern:  /getu
+    defaults: { _controller: AdminPageBundle:Default:getu }
+admin_page_getsoportes:
+    pattern:  /getsoportes
+    defaults: { _controller: AdminPageBundle:Default:getSoportes }
+admin_page_videoform:
+    pattern:  /videoform
+    defaults: { _controller: AdminPageBundle:Default:videoform }
+admin_page_getsoportes2:
+    pattern:  /getsoportes2
+    defaults: { _controller: AdminPageBundle:Default:getSoportes2 }
+admin_page_getoficinas:
+    pattern:  /getoficinas
+    defaults: { _controller: AdminPageBundle:Default:getOficinas }
+save_user:
+    pattern:  /saveuser
+    defaults: { _controller: AdminPageBundle:Default:saveUser }
+update_user:
+    pattern:  /updateuser
+    defaults: { _controller: AdminPageBundle:Default:updateUser }
+# Popups (Creacion, Edicion y Eliminacion)
+admin_page_popupPanel:
+    pattern:  /popupPanel
+    defaults: { _controller: AdminPageBundle:Default:popupPanel }
+
+admin_page_createPopup:
+    pattern:  /createPopup
+    defaults: { _controller: AdminPageBundle:Default:createPopup }
+
+admin_page_getPopup:
+    pattern:  /getPopup/{id}
+    defaults: { _controller: AdminPageBundle:Default:getPopup }
+
+admin_page_deletePopup:
+    pattern:  /deletePopup/{id}
+    defaults: { _controller: AdminPageBundle:Default:deletePopup }
+
+admin_page_guardarPopup:
+    pattern:  /guardarPopup
+    defaults: { _controller: AdminPageBundle:Default:guardarPopup }
+
+admin_page_modificarPopup:
+    pattern:  /modificarPopup
+    defaults: { _controller: AdminPageBundle:Default:modificarPopup }
+# Reglamentos (Creacion, Edicion y Eliminacion)
+admin_page_reglamentoPanel:
+    pattern:  /reglamentoPanel
+    defaults: { _controller: AdminPageBundle:Default:reglamentoPanel }
+
+admin_page_createReglamento:
+    pattern:  /createReglamento
+    defaults: { _controller: AdminPageBundle:Default:createReglamento }
+
+admin_page_getReglamento:
+    pattern:  /getReglamento/{id}
+    defaults: { _controller: AdminPageBundle:Default:getReglamento }
+
+admin_page_guardarReglamento:
+    pattern:  /guardarReglamento
+    defaults: { _controller: AdminPageBundle:Default:guardarReglamento }
+
+admin_page_modificarReglamento:
+    pattern:  /modificarReglamento
+    defaults: { _controller: AdminPageBundle:Default:modificarReglamento }
+
+admin_page_eliminarReglamento:
+    pattern:  /eliminarReglamento/{id}
+    defaults: { _controller: AdminPageBundle:Default:eliminarReglamento }

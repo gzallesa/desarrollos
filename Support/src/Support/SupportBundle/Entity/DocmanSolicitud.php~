@@ -1,0 +1,111 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanSolicitud
+ *
+ * @ORM\Table(name="docman_solicitud", indexes={@ORM\Index(name="sop", columns={"solicitante"}), @ORM\Index(name="fk_sop", columns={"estado"}), @ORM\Index(name="fk_prob", columns={"problema"}), @ORM\Index(name="fk_soportex", columns={"soporte"})})
+ * @ORM\Entity
+ */
+class DocmanSolicitud
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=5, nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="hora_solicitud", type="time", nullable=false)
+     */
+    private $horaSolicitud;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="hora_atencion", type="time", nullable=true)
+     */
+    private $horaAtencion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=255, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prioridad", type="string", length=5, nullable=false)
+     */
+    private $prioridad;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_solicitud", type="date", nullable=false)
+     */
+    private $fechaSolicitud;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_solucion", type="date", nullable=true)
+     */
+    private $fechaSolucion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="derivado", type="string", length=2, nullable=true)
+     */
+    private $derivado;
+
+    /**
+     * @var \DocmanProblema
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanProblema")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="problema", referencedColumnName="idp")
+     * })
+     */
+    private $problema;
+
+    /**
+     * @var \DocmanUser
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanUser")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="solicitante", referencedColumnName="id")
+     * })
+     */
+    private $solicitante;
+
+    /**
+     * @var \DocmanUser
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanUser")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="soporte", referencedColumnName="id")
+     * })
+     */
+    private $soporte;
+
+
+}

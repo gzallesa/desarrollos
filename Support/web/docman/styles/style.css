@@ -1,0 +1,691 @@
+@font-face{
+    font-family: docman;
+    src:local('docman'), url('../BrannbollSmal.ttf') format('truetype');
+}
+@font-face{
+    font-family: docman2;
+    src:local('docman2'), url('../BrannbollSmal.ttf') format('truetype');
+}
+html{
+    margin: 0px;
+}
+body{
+    margin: 0px;
+    font-family: arial;
+    font-size: 12px;
+}
+.instant{
+    float: left;
+    width: 8px;
+    height: 30px;
+    background-image: url('../images/bc_separator.png');
+}
+#instantpreview{
+    top: 10%;
+    width: 400px;
+    height: 500px;
+    box-shadow: 3px 3px 5px #444444;
+    border-style: solid;
+    border-color: #333333;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #dddddd;
+    z-index: 10;
+    position: fixed;
+    display: none;
+}
+#pdf{
+	width: 380px;
+	height: 480px;
+        margin: 10px;
+}
+.clock{
+    float:right;
+    font-weight: bold;
+    margin-top: 2px;
+    font-size: 18px;
+    width: 78px;
+    height: 25px;
+    color: #ffffff;
+    background-repeat:no-repeat;
+    background-image: url('../images/clock.png');
+}
+.clock div{
+    float:left;
+    width:25px;
+    margin-top: 1px;
+    margin-left: 1px;
+    text-shadow: 0px 0px 2px  #000000;
+    
+    text-align: center;
+}
+.multiple{
+    width: 100%;
+    height: 30px;
+}
+.bienvenido{
+    position: absolute;margin-left: 200px;top:15px;text-transform: capitalize;
+    font-family: docman;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 3px 3px 2px #888888;
+}
+#closebutton{
+    cursor: pointer;
+    background-image: url('../images/close.png');
+    width:19px;
+    height:19px;
+    float:right;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+#closebutton:hover{
+    background-position: 0px -19px;
+}
+.buscfun{
+    height: 24px;
+    width: 150px;
+    float: left;
+    border-radius: 5px;
+    margin: 3px;
+    border-color: #999999;
+    border-width: 1px;
+    border-style: solid;
+}
+.buscfun:hover{
+    box-shadow: 0px 0px 3px  #999999;
+}
+.buscfun input{
+    height: 20px;
+    width: 120px;
+    border:none;
+}
+.btnsrch{
+    background-image: url('../images/icons.png');
+    background-position: 0px -180px;
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+a{
+    text-decoration:none;
+    color: #006699;
+}
+a:hover{
+    text-decoration:underline;
+}
+#sleep{
+    position: fixed;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-image:url('../images/back.png');
+    z-index: 105;
+    display: none;
+}
+.tbl{
+    width: 100%;
+    font-size: small;
+    padding: 0px;
+}
+.tbl td{
+    border-color: #cccccc;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #ffffff;
+    text-align: left;
+    padding: 3px;
+    border-radius: 3px;
+}
+.tbl td:hover{
+    background-color: #006699;
+    color:#ffffff;
+}
+.tbl th{
+    font-size: medium;
+    color: #ffffff;
+    border-color: #f2f8fd;
+    height:20px; 
+    padding: 5px;
+    background-image: url('../images/backtitle.jpg');
+}
+.pie{
+    text-shadow: 2px 2px 2px #888888;
+    margin-top:10px;
+    font-weight:bold;
+    margin-left: 10px;
+}
+.newUser{
+    font-size: small;
+}
+.newUser td{
+    text-align: right;
+}
+.newUser th{
+    text-align: center;
+    font-size: medium;
+}
+option{
+    border-radius: 5px;
+}
+.newUser td input{
+    height: 18px;
+    width: 200px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color:  #BDBDAE;
+    border-style: solid;
+}
+.newUser td input:hover{
+    box-shadow: 0px 0px 3px  #117AC0;
+    border-color: #99ccff;
+}
+.lapiz{
+    background-image: url('../images/icons.png');
+    background-position: 0px -887px;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+}
+.eliminar{
+    background-image: url('../images/icons.png');
+    background-position: 0px -440px;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+}
+.eliminar:hover{
+    background-position: 0px -441px;
+}
+.lapiz:hover{
+    background-position: 0px -888px;
+}
+.activar{
+    background-image: url('../images/buttons.png');
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+}
+.desactivar{
+    background-image: url('../images/buttons.png');
+    background-color: transparent;
+    background-position: -35px 0px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+}
+.desactivar:hover{
+    background-position: -35px -17px;
+}
+.activar:hover{
+    background-position: 0px -17px;
+}
+.tableUser td{
+    background-color: #f2f8fd;
+    border-radius: 5px;
+}
+.tableUser input:hover{
+    box-shadow: 0px 0px 3px #3399ff;
+}
+.toolbarleft{
+    float: left;margin-left: 4px; color:white;
+    margin-left: 0px;
+}
+.toolbarleft .statistic{
+    background-image: url('../images/sprite.png');
+    background-position: -247px -353px;
+    float: left;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.toolbarleft .statistic:hover{
+     background-position: -213px -353px;
+ }
+.toolbarleft .gohome{
+    background-image: url('../images/sprite.png');
+    background-position: -112px -353px;
+    float: left;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.toolbarleft div:hover{
+    background-position: -80px -353px;
+}
+.description{
+    margin-left: 10px;
+    font-size: smaller;
+    float: left;
+    width: 440px;
+    text-transform: uppercase;
+}
+.description span{
+    font-size: xx-small;
+    font-weight: bold;
+}
+
+.fechacrea{
+    background-image: url('../images/icons.png');
+    background-position: 0px -42px;
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.cargadopor{
+    background-image: url('../images/icons.png');
+    background-position: 0px -159px;
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+.txt{
+    background-image: url('../images/sprite.png');
+    background-position: -120px -80px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.docx,.doc{
+    background-image: url('../images/sprite.png');
+    background-position: -36px -40px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.xlsx,.xls{
+    background-image: url('../images/sprite.png');
+    background-position: -76px -119px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.jpg,.jpeg,.png,.gif,.bmp{
+    background-image: url('../images/sprite.png');
+    background-position: 0px -119px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.zip,.rar,.tar,.gz{
+    background-image: url('../images/sprite.png');
+    background-position: -118px -40px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.pdf{
+    background-image: url('../images/sprite.png');
+    background-position: -80px -40px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.path{
+    height: 30px;
+    text-align: left;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-style: solid;
+}
+.path div{
+    margin-top: 5px;
+    float: left;
+    font-size: small;
+}
+.path a{
+    color: #006699;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px  #ffffff;
+}
+.path a:hover{
+    text-decoration: underline;
+}
+.foldericon{
+    background-image: url('../images/folder.png');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+.search{
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 25px;
+}
+.search input{
+    border: none;
+    margin: 2px;
+    float: left;
+}
+.search button{
+    background-image: url('../images/search.png');
+    height: 25px;
+    margin-right: 2px;
+    width: 25px;
+    margin-top: 0px;
+    float: right;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.search button:hover{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius: 5px;
+}
+.foldertoolbar{
+    width: 100%;
+    height: 30px;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+.contenido{
+    margin: 5px;
+    position: relative;
+}
+.button{
+    font-family: sans-serif;
+    background-image: url('../images/b2.png');
+    height: 28px;
+    margin: 3px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaaaaa;    
+    cursor: pointer;
+}
+.button:hover{
+    border-color: #dddddd; 
+    box-shadow: 0px 0px 5px #ffffff;
+}
+.icons{
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    height: 28px;
+    background-image: url('../images/b2.png');
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaaaaa;    
+    cursor: pointer;
+}
+.icons:hover{
+    border-color: #eeeeee; 
+    box-shadow: 0px 0px 5px 3px #ffffff;
+}
+.icons2{
+    background-color: #ffffff;
+    height: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaaaaa;
+    background-image: url('../images/b2.png');
+    float: right;
+    cursor: pointer;
+}
+.icons2:hover{
+    border-color: #eeeeee;    
+    box-shadow: 0px 0px 5px #ffffff;
+}
+.upload{
+    background-image: url('../images/icons.png');
+    height: 24px;
+    width: 24px;
+    background-position: 0px -958px;
+    float: left;
+}
+.tablefolders{
+    width: 100%;
+    border: none;
+}
+.tablefolders td{
+    padding: 5px;
+    background-color: #ffffff;
+    height: 40px;
+    border-radius: 5px;
+}
+.tablefolders td checkbox{
+    padding: 0px;
+}
+.tablefolders td:hover{
+    background-color:  #eeeeee;
+}
+.tablefolders td a{
+    margin-top: -10px;
+    color: #006699;
+    font-weight: bold;
+    font-size: medium;
+    vertical-align: top;
+    text-decoration: none;
+}
+.tablefolders td a:hover{
+    text-decoration: underline;
+}
+.folder{
+    background-image: url('../images/icons.png');
+    background-position: 0px -865px;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.file{
+    background-image: url('../images/icons.png');
+    background-position: 0px -911px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.renamefolder{
+    background-image: url('../images/icons.png');
+    background-position: 0px -840px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.download{
+    background-image: url('../images/icons.png');
+    background-position: 0px -370px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.permisos{
+    background-image: url('../images/icons.png');
+    background-position: 0px -205px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.restaurar{
+    background-image: url('../images/icons.png');
+    background-position: 0px -300px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+
+.deletefolder{
+    background-image: url('../images/icons.png');
+    background-position: 0px -440px;
+    height: 24px;
+    width: 24px;
+    float: left;
+}
+.p{
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
+.contenedor{
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    min-height: 652px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #333333;
+}
+.top{
+    width: 100%;
+    height: 50px;
+/*    background-image: url('../images/backbread.jpg');*/
+}
+.toolbar{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    background-image: url('../images/backbread.jpg');
+    background-color: #0085B2;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    margin-bottom: 2px;
+    z-index: 10;
+}
+.leftbar{
+    width: 748px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #999999;
+    float: left;
+    position: relative;
+    background-color: #ffffff;
+}
+.rightbar{
+    width: 246px;
+    height: 100%;
+    border-width: 1px;
+    margin-right: 1px;
+    border-style:solid;
+    border-color: #cccccc;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+}
+.f{
+    clear: both;
+}
+.footer{
+    font-size: small;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #333333;
+    text-align: center;
+    color: #cccccc;
+    clear: both;
+}
+.top li{
+    display: inline;
+}
+.top ul{
+    float: right;
+    margin-top: 0px;
+    margin-right: 5px;
+    padding: 0px;
+}
+.top li a{
+    color: #006699;
+    font-size: small;
+    text-decoration:none;
+}
+.top li a:hover{
+    text-decoration:underline;
+}
+.fecha{
+    background-image: url('../images/sprite.png');
+    background-position: -149px -346px;
+    font-size: smaller;
+    color: #000000;
+    width: 62px;
+    height: 44px;
+    text-align: center;
+}
+.fecha .dia{
+    margin-left: 7px;
+    color: #00cc00;
+    font-size: 12px;
+    font-weight: bold;
+}
+.fecha .mes{
+    color: #3399ff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.fecha .anio{
+    position: relative;
+    color: #F7F7F7;
+    top:3px;
+    left: 6px;
+}
+.papelera{
+    margin: 2px;
+    background-image: url('../images/papelera.png');
+    width: 56px;
+    height: 70px;
+    cursor: pointer;
+    float: right;
+}
+.papelera:hover{
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+.xmp{
+    position: absolute;
+    top: 50px;
+    margin-left: 99px;
+    width: 100px;
+    height: 35px;
+    background-image: url('../images/backbread.jpg');
+    z-index: 6;
+}
+.xmp1{
+    position: absolute;
+    top: 18px;
+    margin-left: 100px;
+    width: 98px;
+    height: 32px;
+    background-image: url('../images/xmp1.png');
+    z-index: 5;
+}
+.xmp2{
+    position: absolute;
+    top: 50px;
+    margin-left: 100px;
+    width: 100px;
+    height: 6px;
+    background-image: url('../images/xmp2.png');
+    z-index: 7;
+}

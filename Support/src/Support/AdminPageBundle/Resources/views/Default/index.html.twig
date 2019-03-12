@@ -1,0 +1,46 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+{% endblock %}
+{% block body %}
+<div id="sidebar">
+    <div class="search">
+        <input type="search" placeholder="Search here...">
+        <i class="fa fa-search"></i>
+    </div>
+    <ul class="main-nav">
+        {% for m in menu %}
+        {% if(active==m.id) %}
+            <li class="active"> 
+                <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+            </li>        
+        {% else %}
+            <li>
+                <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+            </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div> <!-- /sidebar -->
+
+<div id="content" class="clearfix">
+
+
+    <div class="breadcrumbs">
+        <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> 
+    </div>
+
+    <div class="wrp clearfix">
+
+       
+
+        <div class="fluid">
+
+            Bienvenido
+
+        </div> <!-- /fluid -->
+
+
+    </div> <!-- /wrp -->
+
+</div> <!-- /content -->{% endblock %}
+

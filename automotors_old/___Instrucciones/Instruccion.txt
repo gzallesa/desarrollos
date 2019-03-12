@@ -1,0 +1,9 @@
+En el servidor de apache habilitar la opcion de rewrite_module
+
+Colocar el archivo .htaccess en la carpeta public html y cambiar la linea:
+
+/monterrey/public_html/
+
+por la que se adecua a su servidor
+
+Igualmente hacer el cambio en el archivo config/config.php en la linea de $config['base_url']

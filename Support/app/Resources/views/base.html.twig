@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Soporte{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="{{ asset('bundles') }}/css/font-awesome.min.css" rel="stylesheet"/>
+        {% block link %}{% endblock %}
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles') }}/js/jquery-2.0.3.min.js"></script>
+        <!--script type="text/javascript" src="knockout-3.0.0.js"></script-->
+        <!--script type="text/javascript" src="angular.min.js"></script-->
+        <script type="text/javascript" src="{{ asset('bundles') }}/js/globalize.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles') }}/js/dx.chartjs.js"></script>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles') }}/12.png" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

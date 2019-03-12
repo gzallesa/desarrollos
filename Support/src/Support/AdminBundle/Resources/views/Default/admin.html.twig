@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+    <head>
+        <meta charset="utf-8" />
+        <title>Scale | Web Application</title>
+        <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="{{ asset('scale') }}/css/app.v1.css" type="text/css" />
+        <!--[if lt IE 9]> <script src="js/ie/html5shiv.js"></script> <script src="js/ie/respond.min.js"></script> <script src="js/ie/excanvas.js"></script> <![endif]-->
+    </head>
+    <body class="">
+        <section class="vbox">
+
+            <section>
+                <section class="hbox stretch">
+                    <section id="content">
+                        <section class="vbox">
+                            <section class="scrollable wrapper">
+                                <!-- .nav-justified -->
+                                <section class="panel panel-default">
+                                    <header class="panel-heading bg-light">
+                                        <ul class="nav nav-tabs nav-justified">
+                                            <li><a href="#home" data-toggle="tab">SOLICITUDES DE SOPORTE</a></li>
+                                            <li><a href="#profile" data-toggle="tab">INFORMACIÓN ESTADISTICA</a></li>
+                                            <li class="active"><a href="#messages" data-toggle="tab">RESUMEN TÉCNICO</a></li>
+                                        </ul>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane" id="home">
+                                                <iframe style="width:100%;height:600px;padding:0px;margin:0px;border: none;"  src="{{ path('admin_grilla') }}"></iframe>
+                                            </div>
+                                            <div class="tab-pane" id="profile">
+                                                <iframe scrolling="no" style="width:100%;height:1300px;padding:0px;margin:0px;border: none;"  src="{{ path('admin_charts') }}"></iframe>
+                                            </div>
+                                            <div class="tab-pane active" id="messages">
+                                                {% for item in values %}
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h3 class="panel-title">
+                                                                <img style="height:40px;width:40px;border-radius:50%;" src='{{ asset('bundles') }}/fotos/{{ item.id }}.jpg'>
+                                                                {{ item.soporte }}
+                                                            </h3>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-body">
+                                                                            <div style="float:left;color:white;text-align: center;line-height: 2em;background-color: red;border-radius:50%;width:30px;height:30px;">
+                                                                                {{ item.Alerta }}
+                                                                            </div>
+                                                                            <span style="line-height: 2em;margin-left: 5px" > Más de 5 horas en dar solución</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-body">
+                                                                            <div style="float:left;color:white;text-align: center;line-height: 2em;background-color: orange;border-radius:50%;width:30px;height:30px;">
+                                                                                {{ item.Medio }}
+                                                                            </div>
+                                                                            <span style="line-height: 2em;margin-left: 5px" > Entre 2 y 5 horas en dar solución</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-body">
+                                                                            <div style="float:left;color:white;text-align: center;line-height: 2em;background-color: green;border-radius:50%;width:30px;height:30px;">
+                                                                            {{ item.Bueno }}
+                                                                            </div>
+                                                                            <span style="line-height: 2em;margin-left: 5px" > Menos de 2 horas en dar solución</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="tab-pane" id="settings">settings</div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- / .nav-justified -->
+
+                            </section>
+                            <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a> </section>
+                    </section>
+                </section>
+            </section>
+            <!-- Bootstrap -->
+            <!-- App -->
+            <script src="{{ asset('scale') }}/js/app.v1.js"></script>
+            <script src="{{ asset('scale') }}/js/app.plugin.js"></script>
+    </body>
+</html>

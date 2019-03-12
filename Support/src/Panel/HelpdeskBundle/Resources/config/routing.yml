@@ -1,0 +1,9 @@
+helpdesk_homepage:
+    pattern:  /inicio
+    defaults: { _controller: HelpdeskBundle:Default:index }
+helpdesk_homepage2:
+    pattern:  /sol
+    defaults: { _controller: HelpdeskBundle:Default:solicitudes }    
+helpdesk_abiertas:
+    pattern:  /abiertas
+    defaults: { _controller: HelpdeskBundle:Default:abiertas }    

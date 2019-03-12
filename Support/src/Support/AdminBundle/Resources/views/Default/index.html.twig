@@ -1,0 +1,75 @@
+{% extends "::adminPagePanel.html_1.twig" %}
+{% block scripts %}
+{% endblock %}
+{% block body %}
+<div id="sidebar">
+ 
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active"> 
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>        
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+</div> <!-- /sidebar -->
+
+<div id="content" class="clearfix">
+
+    <div class="header">
+
+        <h1 class="page-title">Dashboards</h1>
+        <div class="stats">
+            <div class="stat" id="st-visits">
+                <div class="st-chart">
+                    <span id="stats_visits" values="100"></span><br>
+                    100%
+                </div>
+                <div class="st-detail">
+							{{ totalSolicitudes }}<br><span>Solicitudes</span>
+                </div>
+            </div> <!-- /stat -->
+            <div class="stat" id="st-users">
+                <div class="st-chart">
+                    <span id="stats_users" values="{{ totalSolicitudes }},{{ totalSolicitudesAtendidas['p'] }}"></span><br>
+							{{ totalSolicitudesAtendidas['p'] }}%
+                </div>
+                <div class="st-detail">
+							{{ totalSolicitudesAtendidas['n'] }}<br><span>Atendidas</span>
+                </div>
+            </div> <!-- /stat -->
+            <div class="stat" id="st-orders">
+                <div class="st-chart">
+                    <span id="stats_orders" values="{{ totalSolicitudesAtendidas['p'] }},{{ totalSolicitudes }}"></span><br>
+							{{ 100-totalSolicitudesAtendidas['p'] }}%
+                </div>
+                <div class="st-detail">
+							{{ totalSolicitudes-totalSolicitudesAtendidas['n'] }}<br><span>Pendientes</span>
+                </div>
+            </div> <!-- /stat -->
+            <button onclick="location.reload();" class="btn btn-green"><i class="fa fa-refresh"></i> Actualizar</button>
+        </div> <!-- /stats -->
+
+    </div> <!-- /header -->
+
+    <div class="breadcrumbs">
+        <i class="fa fa-home"></i> Home <i class="fa fa-caret-right"></i> Dashboard
+    </div>
+
+    <div class="wrp clearfix">
+
+        <iframe scrolling="yes" style="width:100%;height:1500px;padding:0px;margin:0px;border: none;"  src="{{ path('admin_panel') }}"></iframe>
+
+    </div> <!-- /wrp -->
+
+</div> <!-- /content -->
+{% endblock %}
+
+
+
+

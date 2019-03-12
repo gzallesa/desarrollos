@@ -1,0 +1,84 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanProvider
+ *
+ * @ORM\Table(name="docman_provider", indexes={@ORM\Index(name="grupo", columns={"group"})})
+ * @ORM\Entity
+ */
+class DocmanProvider
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idp", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idp;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=15, nullable=false)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="celular", type="string", length=15, nullable=false)
+     */
+    private $celular;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fax", type="string", length=15, nullable=false)
+     */
+    private $fax;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=255, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pagina", type="string", length=255, nullable=false)
+     */
+    private $pagina;
+
+    /**
+     * @var \DocmanGroup
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanGroup")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="group", referencedColumnName="idg")
+     * })
+     */
+    private $group;
+
+
+}

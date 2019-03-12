@@ -1,0 +1,15 @@
+support_rest_add:
+    path:  /add
+    defaults: { _controller: SupportBundle:RestFul:add }
+support_rest_del:
+    path:  /del
+    defaults: { _controller: SupportBundle:RestFul:del }
+support_rest_update:
+    path:  /update
+    defaults: { _controller: SupportBundle:RestFul:update }
+support_rest_list:
+    path:  /list/{ids}
+    defaults: { _controller: SupportBundle:RestFul:list }
+support_rest_list:
+    path:  /list/{ids}
+    defaults: { _controller: SupportBundle:RestFul:list }

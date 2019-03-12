@@ -1,0 +1,26 @@
+<graph numdivlines='4' lineThickness='3' showValues='0' numVDivLines='10' formatNumberScale='1' rotateNames='1' decimalPrecision='1' anchorRadius='2' anchorBgAlpha='0' numberPrefix='' divLineAlpha='30' showAlternateHGridColor='1' yAxisMinValue='800000' shadowAlpha='50' >
+<categories >
+<category Name='Lun 17' />
+<category Name='Mar 18' />
+<category Name='Mie 19' />
+<category Name='Jue 20' />
+<category Name='Vie 21' />
+<category Name='Sab 22' />
+</categories>
+<dataset seriesName='Este mes' color='#0059B2' anchorBorderColor='#FFFFFF' anchorRadius='3'>
+	<set value='25'/>
+	<set value='36' />
+	<set value='36' />
+	<set value='25' />
+	<set value='22' />
+	<set value='12'/>
+</dataset>
+<dataset seriesName='El mes pasado' color='#2693FF' anchorBorderColor='#FFFFFF' anchorRadius='3'>
+	<set value='48' />
+	<set value='45' />
+	<set value='45' />
+	<set value='40' />
+	<set value='39' />
+	<set value='15' />
+</dataset>
+</graph>

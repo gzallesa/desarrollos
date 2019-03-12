@@ -1,0 +1,39 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanUR
+ *
+ * @ORM\Table(name="docman_u_r")
+ * @ORM\Entity
+ */
+class DocmanUR
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="refidu", type="integer", nullable=false)
+     */
+    private $refidu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="refidr", type="integer", nullable=false)
+     */
+    private $refidr;
+
+
+}

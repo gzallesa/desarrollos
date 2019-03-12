@@ -1,0 +1,69 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+{% endblock %}
+{% block body %}
+    <div id="sidebar">
+        <div class="search">
+            <input type="search" placeholder="Buscar...">
+            <i class="fa fa-search"></i>
+        </div>
+        <ul class="main-nav">
+            {% for m in menu %}
+                {% if(active==m.id) %}
+                    <li class="active"> 
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>        
+                {% else %}
+                    <li>
+                        <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+    </div> <!-- /sidebar -->
+
+    <div id="content" class="clearfix">
+
+        <div class="header">
+
+            <h1 class="page-title"></h1>
+
+
+        </div> <!-- /header -->
+
+        <div class="breadcrumbs">
+            <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> {{ name }}
+        </div>
+
+        <div class="wrp clearfix">
+
+            <div class="fluid">
+
+                <div class="widget grid12">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fa fa-paperclip"></i> {{ name }}
+                        </div>
+                        <div class="widget-controls">
+                            <input type="checkbox" id="switch-ui" />
+                            <label class="switch" for="switch-ui"><i></i></label>
+                        </div>
+                    </div> <!-- /widget-header -->
+                    <a class="btn icon-button" href="{{ path('evento') }}">
+                        Volver
+                    </a>
+                    <div class="widget-content">
+
+                        {{ form(form) }}
+
+                    </div>
+
+                </div> <!-- /widget -->
+
+            </div> <!-- /fluid -->
+
+        </div> <!-- /wrp -->
+
+    </div> <!-- /content -->
+{% endblock %}

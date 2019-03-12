@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-01-2014, 05:04:54 PM
+    Author     : Irra_b
+*/
+body{
+    background-image: url('images/back.jpg');
+    background-size: 100%;
+}
+.box{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%; 
+    width: 210px;
+    padding: 30px;
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: 12px;
+    border-radius: 10px;
+    background-color: white; 
+    opacity: .9;
+}
+input[type="text"],input[type="password"]{
+    margin-left: 2px;
+    margin-right: 3px;
+    float: right;
+    width: 160px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+input[type="password"]:hover{
+    border-color: #cccccc;
+}
+input[type="text"]:hover{
+    border-color: #aaaaaa;
+}
+.input{
+    width:200px;
+    margin:1px;
+    padding:2px;
+    border-color:#dddddd;
+    border-style:solid;
+    border-width:1px;
+    border-radius:5px;
+    height:30px;
+    box-shadow:1px 1px 5px 1px  #cccccc inset; 
+}
+.boton{
+    position: relative;
+    padding: 3px;
+    border-color: #99ccff;
+    border-width: 1px;
+    border-style:solid;
+    color: white;
+    background-color: #33ccff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.boton:hover{
+    background-color: #08C;
+}
+

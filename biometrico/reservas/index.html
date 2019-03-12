@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RESERVAS TALLER</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	   <h1>RESERVAS TALLER</h1>
+	   <table width="500" align="center" border="1">
+	   <tr><td><img src="bg-cotizador.jpg" height="200" width="500" align="center" ></td></tr>
+	   <tr><td>
+	   	   <div class="form">
+	       <form class="form-horizontal" action="reservas.php" method="POST">	   
+	          <p>Nombre</p>
+	          <label for="nombre">Su Nombre Completo</label>
+	          <br>
+	          <input type="text" name="nombre" placeholder="Nombre" required>
+	          <br>	          
+	          
+	          <p>Apellidos</p>
+	          <label for="apellido">Sus Apellidos Completos Completo</label>
+	          <br>
+	          <input type="text" name="apellido" placeholder="Apellido" required>	        	          
+	          <br>	          
+	          	          
+	          <p>Email</p>
+	          <label for="email">Su Email</label>
+	          <br>
+	          <input type="text" name="email" placeholder="Email" required>  
+	          <br>
+
+	          <p>Celular</p>
+	          <label for="celular">Su Celular</label>
+	          <br>
+	          <input type="text" name="celular" placeholder="Celular" required>  
+	          <br>
+	          
+	          <p>Taller</p>
+	          <label for="taller">Taller</label>
+	          <br>
+	              <select name="taller">
+	              	<option value="urenda">Urenda</option>
+	              	<option value="urenda">Dakar</option>
+	              </select>
+	          <br>
+	          
+	          	          
+	          
+	          <br>
+	          <br>
+	          <input type="submit" value="Reservar">
+	       </form>  
+	   </div>	
+	   </td></tr>       
+   	   </table>
+	</body>
+</html>

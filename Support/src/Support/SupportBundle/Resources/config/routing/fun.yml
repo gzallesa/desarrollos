@@ -1,0 +1,15 @@
+fun_support_mostrar:
+    pattern:  /mostrarx/{id}
+    defaults: { _controller: SupportBundle:Fun:getSolicitudes }
+fun_support_panel:
+    pattern:  /soportesx
+    defaults: { _controller: SupportBundle:Fun:mostrar }
+fun_support_getJsonSupport:
+    pattern:  /JsonSupportx
+    defaults: { _controller: SupportBundle:Fun:getJsonSupport }
+fun_support_uploader:
+    pattern:  /uploaderx
+    defaults: { _controller: SupportBundle:Fun:uploader }
+fun_transferir:
+    pattern:  /transferirx
+    defaults: { _controller: SupportBundle:Fun:transferir }

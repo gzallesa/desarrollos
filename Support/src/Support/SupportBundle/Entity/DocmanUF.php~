@@ -1,0 +1,46 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanUF
+ *
+ * @ORM\Table(name="docman_u_f", indexes={@ORM\Index(name="fecha", columns={"fecha"})})
+ * @ORM\Entity
+ */
+class DocmanUF
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user", type="integer", nullable=false)
+     */
+    private $user;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="file", type="integer", nullable=false)
+     */
+    private $file;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+
+}

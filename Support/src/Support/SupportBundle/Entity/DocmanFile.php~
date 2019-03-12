@@ -1,0 +1,81 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanFile
+ *
+ * @ORM\Table(name="docman_file")
+ * @ORM\Entity
+ */
+class DocmanFile
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idf", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idf;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", length=255, nullable=false)
+     */
+    private $filename;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime", nullable=false)
+     */
+    private $created;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ext", type="string", length=5, nullable=false)
+     */
+    private $ext;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="filesize", type="integer", nullable=false)
+     */
+    private $filesize;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="parentfolder", type="integer", nullable=false)
+     */
+    private $parentfolder;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user", type="integer", nullable=false)
+     */
+    private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", length=1, nullable=false)
+     */
+    private $status;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=100, nullable=false)
+     */
+    private $path;
+
+
+}

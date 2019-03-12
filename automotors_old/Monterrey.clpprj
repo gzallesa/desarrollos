@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\xampp\htdocs\monterrey\Monterrey.clpprj">
+	<settings><PM_URL><![CDATA[http://localhost/MiCode/]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/MiCode/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuWebOpcion.php"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuMobOpcion.php"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\rmw_opcion_vista.php"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobopcion\rmm_opcion_vista.php"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuMobOpcion_model.php"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuWebOpcion_model.php"/>
+	</lastopfiles>
+	<errors version="5.11">
+		<errfile name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\list.php">
+			<error val="0;12;44;12;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\rol\rol_menu_web_vista.php">
+			<error val="77;20;90;20;2002;1;"/>
+			<error val="96;25;109;25;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\rol\listado_vista.php">
+			<error val="58;15;77;15;2002;1;"/>
+			<error val="77;15;90;15;2002;1;"/>
+			<error val="25;1;45;1;2002;1;"/>
+			<error val="25;2;43;2;2002;1;"/>
+			<error val="0;2;25;2;2002;1;"/>
+			<error val="43;2;63;2;2002;1;"/>
+			<error val="63;2;82;2;2002;1;"/>
+			<error val="15;6;27;6;2002;1;"/>
+			<error val="15;7;34;7;2002;1;"/>
+			<error val="15;8;30;8;2002;1;"/>
+			<error val="15;9;35;9;2002;1;"/>
+			<error val="45;10;71;10;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\rmw_opcion_vista.php">
+			<error val="76;25;89;25;2002;1;"/>
+			<error val="95;30;108;30;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\listar_vista.php">
+			<error val="62;33;81;33;2002;1;"/>
+			<error val="81;33;94;33;2002;1;"/>
+			<error val="38;16;58;16;2002;1;"/>
+			<error val="29;17;47;17;2002;1;"/>
+			<error val="0;17;29;17;2002;1;"/>
+			<error val="47;17;67;17;2002;1;"/>
+			<error val="67;17;86;17;2002;1;"/>
+			<error val="19;21;43;21;2002;1;"/>
+			<error val="19;22;32;22;2002;1;"/>
+			<error val="19;23;41;23;2002;1;"/>
+			<error val="19;24;39;24;2002;1;"/>
+			<error val="19;25;34;25;2002;1;"/>
+			<error val="19;26;39;26;2002;1;"/>
+			<error val="19;27;42;27;2002;1;"/>
+			<error val="49;28;75;28;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\menuweb\listar_vista.php">
+			<error val="49;53;75;53;2002;1;"/>
+		</errfile>
+		<errfile name="C:\xampp\htdocs\monterrey\application\views\menumobile\listar_vista.php">
+			<error val="49;53;75;53;2002;1;"/>
+		</errfile>
+	</errors>
+	<cakedata>
+	</cakedata>
+	<dplmenupath>
+	</dplmenupath><laravael>
+	</laravael><smartyassings>
+	</smartyassings><twigtemplate>
+	</twigtemplate><yiidata>
+	</yiidata>
+	<todoblock>
+		<todofile name="C:\xampp\htdocs\monterrey\application\libraries\Grocery_CRUD.php">
+			<todo name="@todo have a where for the relation_n_n statement" pos="7;654"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\core\Loader.php">
+			<todo name="todo Figure out a way to move this to the constructor" pos="5;148"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\core\Output.php">
+			<todo name="todo We need to figure out how to permit headers to be cached." pos="5;209"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\database\DB_forge.php">
+			<todo name="todo Remove deprecated $_after option in 3.1+" pos="5;557"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\database\DB_query_builder.php">
+			<todo name="@todo error" pos="4;2000"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_driver.php">
+			<todo name="todo Implement use of SQLite3::querySingle(), if needed" pos="5;120"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_forge.php">
+			<todo name="todo implement drop_column(), modify_column()" pos="5;135"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\sqlite_forge.php">
+			<todo name="todo implement drop_column(), modify_column()" pos="5;115"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\helpers\date_helper.php">
+			<todo name="todo Remove in version 3.1+." pos="5;134"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\helpers\file_helper.php">
+			<todo name="todo Remove in version 3.1+." pos="5;58"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\helpers\security_helper.php">
+			<todo name="todo Remove in version 3.1+." pos="5;89"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\helpers\string_helper.php">
+			<todo name="todo Remove in version 3.1+." pos="5;64"/>
+			<todo name="todo: remove in 3.1+" pos="19;229"/>
+			<todo name="todo: remove in 3.1+" pos="20;232"/>
+			<todo name="todo Remove in version 3.1+." pos="5;292"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\helpers\url_helper.php">
+			<todo name="todo Remove old 'dash' and 'underscore' usage in 3.1+." pos="5;472"/>
+		</todofile>
+		<todofile name="C:\xampp\htdocs\monterrey\system\libraries\Xmlrpc.php">
+			<todo name="@todo - this needs to be made more general purpose" pos="6;1574"/>
+		</todofile>
+	</todoblock>
+	<filescache>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\drivers\Session_redis_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\drivers\Session_memcached_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\drivers\Session_files_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\drivers\Session_database_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\drivers\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\SessionHandlerInterface.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\Session_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\Session.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Session\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Javascript\Jquery.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Javascript\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_wincache.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_redis.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_memcached.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_file.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_dummy.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\drivers\Cache_apc.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cache\Cache.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Zip.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Xmlrpcs.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Xmlrpc.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\User_agent.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Upload.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Unit_test.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Typography.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Trackback.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Table.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Profiler.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Parser.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Pagination.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Migration.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Javascript.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Image_lib.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Ftp.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Form_validation.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Encryption.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Encrypt.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Email.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Cart.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\libraries\Calendar.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\upload_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\unit_test_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\profiler_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\pagination_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\number_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\migration_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\imglib_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\ftp_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\form_validation_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\email_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\db_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\date_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\english\calendar_lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\language\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\xml_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\url_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\typography_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\text_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\string_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\smiley_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\security_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\path_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\number_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\language_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\inflector_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\html_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\form_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\file_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\email_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\download_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\directory_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\date_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\cookie_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\captcha_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\helpers\array_helper.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\fonts\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlsrv\sqlsrv_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlsrv\sqlsrv_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlsrv\sqlsrv_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlsrv\sqlsrv_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlsrv\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\sqlite3_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite3\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\sqlite_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\sqlite_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\sqlite_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\sqlite_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\sqlite\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\postgre\postgre_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\postgre\postgre_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\postgre\postgre_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\postgre\postgre_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\postgre\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_sqlsrv_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_sqlsrv_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_sqlite_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_sqlite_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_pgsql_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_pgsql_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_odbc_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_odbc_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_oci_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_oci_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_mysql_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_mysql_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_informix_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_informix_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_ibm_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_ibm_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_firebird_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_firebird_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_dblib_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_dblib_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_cubrid_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_cubrid_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_4d_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\pdo_4d_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\subdrivers\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\pdo_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\pdo_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\pdo_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\pdo_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\pdo\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\odbc\odbc_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\odbc\odbc_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\odbc\odbc_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\odbc\odbc_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\odbc\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\oci8\oci8_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\oci8\oci8_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\oci8\oci8_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\oci8\oci8_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\oci8\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysqli\mysqli_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysqli\mysqli_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysqli\mysqli_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysqli\mysqli_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysqli\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysql\mysql_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysql\mysql_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysql\mysql_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysql\mysql_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mysql\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mssql\mssql_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mssql\mssql_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mssql\mssql_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mssql\mssql_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\mssql\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\ibase\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\ibase\ibase_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\ibase\ibase_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\ibase\ibase_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\ibase\ibase_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\cubrid\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\cubrid\cubrid_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\cubrid\cubrid_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\cubrid\cubrid_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\cubrid\cubrid_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\drivers\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_utility.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_result.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_query_builder.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_forge.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_driver.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB_cache.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\database\DB.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\compat\standard.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\compat\password.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\compat\mbstring.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\compat\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\compat\hash.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Utf8.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\URI.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Security.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Router.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Output.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Model.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Log.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Loader.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Lang.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Input.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Hooks.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Exceptions.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Controller.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Config.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Common.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\CodeIgniter.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\core\Benchmark.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\system\.htaccess" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\uploads\files\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\uploads\index.html" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\window.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\validatebox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\tree.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\tooltip.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\textbox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\tagbox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\tabs.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\switchbutton.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\splitbutton.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\spinner.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\slider.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\searchbox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\propertygrid.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\progressbar.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\passwordbox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\panel.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\pagination.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\numberbox.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\messager.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\menubutton.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\menu.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\linkbutton.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\layout.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\filebox.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\easyui.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\dialog.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\datebox.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\datalist.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\datagrid.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\combobox.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\combo.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\calendar.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\metro\accordion.css" crc="1500731478"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\icons\led\1license.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\window.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\validatebox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\tree.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\tooltip.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\textbox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\tagbox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\tabs.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\switchbutton.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\splitbutton.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\spinner.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\slider.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\searchbox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\propertygrid.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\progressbar.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\passwordbox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\panel.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\pagination.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\numberbox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\messager.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\menubutton.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\menu.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\linkbutton.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\layout.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\filebox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\easyui.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\dialog.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\datebox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\datalist.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\datagrid.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\combobox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\combo.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\calendar.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\gray\accordion.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\mobile.css" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\icon.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\demo.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\themes\color.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\locale\easyui-lang-es.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\locale\easyui-lang-en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\npm.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\jquery.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\jquery.easyui.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\datagrid-groupview.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\bootstrap.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\js\bootstrap.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\read.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\list_template.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\list.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\edit.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\add.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\views\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\jquery.printElement.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\jquery.printElement.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\jquery.form.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\flexigrid.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\flexigrid-edit.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\flexigrid-add.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\js\cookies.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\css\images\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\css\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\css\flexigrid.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\flexigrid\config.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\read.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\list_template.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\list.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\edit.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\add.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\views\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\jquery.dataTables.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\jquery.dataTables.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\datatables.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\datatables-extras.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\datatables-edit.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\js\datatables-add.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\extras\TableTools\media\js\ZeroClipboard.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\extras\TableTools\media\js\TableTools.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\extras\TableTools\media\js\TableTools.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\extras\TableTools\media\css\TableTools_JUI.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\extras\TableTools\media\css\TableTools.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\css\images\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\css\jquery.dataTables.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\css\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\css\demo_table_jui.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\css\datatables.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\datatables\config.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\themes\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\themes\default\theme.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\skins\kama\templates.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\skins\kama\skin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\skins\kama\editor.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\skins\kama\dialog.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\xml\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\wsc\dialogs\wsc.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\wsc\dialogs\wsc.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\wsc\dialogs\ciframe.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\yui\assets\yui.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\yui\yui.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\mk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\hr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\et.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\dialogs\uicolor.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\uicolor\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\templates\templates\default.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\templates\dialogs\templates.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\tabletools\dialogs\tableCell.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\tableresize\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\table\dialogs\table.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\stylesheetparser\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\styles\styles\default.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\hr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\et.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\specialchar\dialogs\specialchar.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\smiley\dialogs\smiley.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\scayt\dialogs\toolbar.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\scayt\dialogs\options.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\preview\preview.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\hr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\et.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\dialogs\placeholder.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\placeholder\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\pastetext\dialogs\pastetext.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\pastefromword\filter\default.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\liststyle\dialogs\liststyle.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\link\dialogs\link.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\link\dialogs\anchor.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\image\dialogs\image.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\iframedialog\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\iframe\dialogs\iframe.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\textfield.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\textarea.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\select.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\radio.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\hiddenfield.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\form.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\checkbox.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\forms\dialogs\button.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\flash\dialogs\flash.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\find\dialogs\find.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\docprops\dialogs\docprops.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\docprops\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\div\dialogs\div.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\dialog\dialogDefinition.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\hr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\gu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\et.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\devtools\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\colordialog\dialogs\colordialog.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\clipboard\dialogs\paste.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\bbcode\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\autogrow\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\ajax\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\adobeair\plugin.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\about\dialogs\about.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\ro.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\mk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\gu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\zh.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ug.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\th.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\sv.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\sr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\sr-latn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\sl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ru.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ro.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\pt.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\nb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ms.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\mn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\mk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\lv.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\lt.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ku.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ko.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\km.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ka.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ja.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\is.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\id.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\hu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\hr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\hi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\he.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\gu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\gl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\fr-ca.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\fo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\fi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\eu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\et.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\es.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\eo.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\en-gb.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\en-ca.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\en-au.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\cy.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ca.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\bs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\bn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\ar.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\af.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\_translationstatus.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\lang\_languages.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\adapters\jquery.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\LICENSE.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\contents.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\ckeditor_php5.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\ckeditor_php4.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\ckeditor.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\ckeditor.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\texteditor\ckeditor\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\vietnamese.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\ukrainian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\turkish.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\thai.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\spanish.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\slovak.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\russian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\romanian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\pt-pt.portuguese.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\pt-br.portuguese.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\polish.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\persian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\norwegian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\mongolian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\lithuanian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\korean.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\japanese.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\italian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\indonesian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\hungarian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\hindi.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\greek.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\german.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\french.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\english.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\dutch.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\danish.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\czech.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\croatian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\chinese.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\catalan.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\bulgarian.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\bengali.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\arabic.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\afrikaans.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\languages\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-ru.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-ro.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-pt.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-ko.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-ja.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-id.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-hu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-es.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-ar.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\jquery-ui-timepicker-af.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\timepicker\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-ru.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-ja.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-es.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-en.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\ui-multiselect-ar.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\multiselect\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-zh-cn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-vi.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-uk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-tr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-th.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-sk.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-ru.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-ro.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-pt.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-pt-br.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-pl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-no.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-nl.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-ko.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-ja.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-it.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-id.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-hu.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-fr.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-fa.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-es.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-el.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-de.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-da.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-cs.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-bn.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-bg.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-ar.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\jquery.ui.datepicker-af.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\datepicker\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\i18n\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\jquery-ui-1.10.3.custom.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.uniform.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.tine_mce.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.numeric.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.noty.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.multiselect.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.markitup.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.fileupload.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.fancybox.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.datetime.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.datepicker.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.ckeditor.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery.chosen.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\jquery-ui-timepicker-addon.config.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\config\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ui.multiselect.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\tmpl.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\load-image.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.ui.datetime.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.numeric.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.noty.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.iframe-transport.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.form.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.form.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.fileupload.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.fancybox.pack.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.fancybox.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.fancybox-1.3.4.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.easing-1.3.pack.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.chosen.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery.chosen.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery-ui-timepicker-addon.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\jquery-ui-timepicker-addon.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery_plugins\ajax-chosen.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\common\list.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\common\lazyload-min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery-1.11.1.min.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\jquery-1.11.1.js" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\js\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\ui\simple\jquery-ui-1.10.1.custom.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\ui\simple\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\ui\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\file_upload\jquery.fileupload-ui.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\file_upload\fileuploader.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\file_upload\file-uploader.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\file_upload\bootstrap.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\fancybox\jquery.fancybox.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\chosen\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\chosen\chosen.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\chosen\chosen.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\ui.multiselect.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\jquery.ui.datetime.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\jquery-ui-timepicker-addon.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\jquery_plugins\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\css\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\config\translit_chars.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\config\language_alias.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\config\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\license-mit.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\license-grocery-crud.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\license-gpl3.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\grocery_crud\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\images\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\font-awesome.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\estilos.css" crc="1500851627"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\bootstrap.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\bootstrap.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\bootstrap-theme.min.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\assets\css\bootstrap-theme.css" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\index.php" crc="1500731479"/>
+		<file name="C:\xampp\htdocs\monterrey\public_html\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\usuarios\usuarios_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\usuarios\usuario_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\usuarios\abm_vista.php" crc="1501035932"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\rol\rol_menu_web_vista.php" crc="1501121980"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\rol\rol_menu_mobile_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\rol\listado_vista.php" crc="1501036185"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\rol\formulario_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\rol\abm_vista.php" crc="1501036198"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\rmw_opcion_vista.php" crc="1501302313"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\listar_vista.php" crc="1501128921"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuwebopcion\formulario_vista.php" crc="1500762698"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuweb\listar_vista.php" crc="1501033903"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menuweb\formulario_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobopcion\rmm_opcion_vista.php" crc="1501302141"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobopcion\listar_vista.php" crc="1500762542"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobopcion\formulario_vista.php" crc="1500762667"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobile\listar_vista.php" crc="1501034379"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\menumobile\formulario_vista.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\MasterPage\head.php" crc="1501023966"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\MasterPage\footer.php" crc="1500763837"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\login\login_vista.php" crc="1500844396"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\error_php.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\error_general.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\error_exception.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\error_db.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\html\error_404.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\error_php.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\error_general.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\error_exception.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\error_db.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\cli\error_404.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\errors\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\inicio_vista.php" crc="1500851987"/>
+		<file name="C:\xampp\htdocs\monterrey\application\views\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\third_party\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\Usuario_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\Rol_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuWebOpcion_model.php" crc="1501301942"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuWeb_model.php" crc="1500774709"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuMobOpcion_model.php" crc="1501302567"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\MenuMobile_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\Login_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\Grocery_crud_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\models\Crud_query_model.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\logs\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\libraries\Vista.php" crc="1500775226"/>
+		<file name="C:\xampp\htdocs\monterrey\application\libraries\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\libraries\image_moo.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\libraries\Grocery_CRUD.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\language\english\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\language\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\hooks\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\helpers\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\helpers\acceso_helper.php" crc="1500844051"/>
+		<file name="C:\xampp\htdocs\monterrey\application\core\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\Usuarios.php" crc="1501035941"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\Rol.php" crc="1501036435"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuWebOpcion.php" crc="1501302458"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuWeb.php" crc="1501033103"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuMobOpcion.php" crc="1501302498"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\MenuMobile.php" crc="1501034142"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\controllers\Auth.php" crc="1500764443"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\user_agents.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\smileys.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\routes.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\profiler.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\mimes.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\migration.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\memcached.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\hooks.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\grocery_crud.php" crc="1500853150"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\foreign_chars.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\doctypes.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\database.php" crc="1501024115"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\constants.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\config.php" crc="1500852760"/>
+		<file name="C:\xampp\htdocs\monterrey\application\config\autoload.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\cache\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\cache\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\index.html" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\application\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\___Instrucciones\para insertar usuario.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\___Instrucciones\Instruccion.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\___Instrucciones\.htaccess" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\scopes\scope_settings.xml" crc="1500839392"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\workspace.xml" crc="1501295329"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\vcs.xml" crc="1500839392"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\modules.xml" crc="1500839392"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\misc.xml" crc="1501295286"/>
+		<file name="C:\xampp\htdocs\monterrey\.idea\encodings.xml" crc="1500839392"/>
+		<file name="C:\xampp\htdocs\monterrey\license.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\license-mit.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\license-gpl3.txt" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\index.php" crc="1500731477"/>
+		<file name="C:\xampp\htdocs\monterrey\.htaccess" crc="1500731477"/>
+	</filescache>
+</project>

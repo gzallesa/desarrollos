@@ -1,0 +1,24 @@
+<graph bgColor='FCFCFC'  xaxisname='Documentos' yaxisname='# Descargas' canvasBorderColor='333333'
+numdivlines='4' divLineColor='333333' yAxisMaxValue='100' decimalPrecision='1' numberPrefix=''>
+	<categories font='Arial' fontSize='10' fontColor='000000'>
+		<category name='Normativa.pdf' />
+		<category name='experimento.xls' />
+		<category name='informe125.docx' />
+                <category name='Normativa.pdf' />
+		<category name='experimento.xls' />
+		<category name='informe125.docx' />
+	</categories>
+	<dataset seriesname='Documentos mas valorados' color='#0059B2' showValues='0'>
+		<set value='58' />
+		<set value='48' />
+		<set value='36' />
+                <set value='28' />
+		<set value='25' />
+		<set value='18' />
+	</dataset>
+
+	<trendLines>
+		<line startValue='1250000' endValue='1450000' color='8BBA00' thickness='1' alpha='20' showOnTop='1' displayValue='Estimated' isTrendZone='1'/>
+
+	</trendLines>
+</graph>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id='Description'>This example shows how to create a Grid from JSON data.</title>
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.ui-redmond.css" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.filter.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.sort.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.edit.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxpanel.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxnumberinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.grouping.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/demos.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/globalization/globalize.js"></script>
+        <style>
+            .imggrid{
+                border-radius: 5px;
+            }
+        </style>    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var url = "{{ path('cliente_resoluciones') }}";
+                var source =
+                        {
+                            datatype: "json",
+                            datafields:
+                                    [
+                                        {name: 'titulo', type: 'string'},
+                                        {name: 'descripcion', type: 'string'},
+                                        {name: 'fecha', type: 'string'},
+                                        {name: 'url', type: 'string'}
+                                    ],
+                            id: 'id',
+                            url: url
+                        };
+                var linkrenderer = function(row, datafield, value) {
+                    return '<a target="_blank" href="{{ asset('uploads') }}/'+value+'">Descargar</a>';
+                }
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#jqxgrid").jqxGrid(
+                        {
+                            width: '100%',
+                            height: 450,
+                            source: dataAdapter,
+                            showfilterrow: true,
+                            filterable: true,
+                            sortable: true,
+                            theme:'ui-redmond',
+                            selectionmode: 'singlecell',
+                            scrollfeedback: function(row)
+                            {
+                                return '<table style="height: 150px;width:110px;"><tr><td><img height="90" src="{{ asset('bundles') }}/fotos/' + row.foto + '.jpg"/></td></tr><tr><td>' + row.name + '</td></tr></table>';
+                            },
+                            rowsheight: 50,
+                            columns: [
+                                {text: 'Titulo', datafield: 'titulo', width: 300, columntype: 'textbox',filtertype: 'textbox'},
+                                {text: 'Descricion', columntype: 'textbox', filtertype: 'textbox', datafield: 'descripcion', width: 300},
+                                {text: 'Fecha', filtertype: 'textbox', datafield: 'fecha', width: 100},
+                                {text: 'URL', cellsrenderer:linkrenderer,datafield: 'url'},
+                            ]
+                        });
+            });
+        </script>
+    </head>
+    <body class='default'>
+        <div id="jqxgrid" style="font-size: 13px; font-family: Verdana; float: left;">
+        </div>
+    </body>
+</html>

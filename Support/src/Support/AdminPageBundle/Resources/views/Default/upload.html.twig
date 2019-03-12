@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+{% block link %}
+{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('bundles') }}/css/style_2.css" rel="stylesheet"/>
+{% endblock %}
+{% block body %}
+<form action="{{ path('admin_page_uploadfile') }}" method="post" {{
+form_enctype(formulario) }}>
+{{ form_widget(formulario) }}
+<input class="boton" type="submit" value="Cargar" />
+</form>
+{% endblock %}
+

@@ -1,0 +1,46 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanOficina
+ *
+ * @ORM\Table(name="docman_oficina")
+ * @ORM\Entity
+ */
+class DocmanOficina
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sigla", type="string", length=255, nullable=false)
+     */
+    private $sigla;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="padre", type="integer", nullable=true)
+     */
+    private $padre;
+
+
+}

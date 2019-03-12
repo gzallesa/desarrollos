@@ -1,0 +1,30 @@
+evento:
+    pattern:  /
+    defaults: { _controller: "SupportBundle:Evento:index" }
+
+evento_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SupportBundle:Evento:show" }
+
+evento_new:
+    pattern:  /new
+    defaults: { _controller: "SupportBundle:Evento:new" }
+
+evento_create:
+    pattern:  /create
+    defaults: { _controller: "SupportBundle:Evento:create" }
+    requirements: { _method: post }
+
+evento_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SupportBundle:Evento:edit" }
+
+evento_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SupportBundle:Evento:update" }
+    requirements: { _method: post|put }
+
+evento_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SupportBundle:Evento:delete" }
+    requirements: { _method: post|delete }

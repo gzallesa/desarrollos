@@ -1,0 +1,612 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-clear{
+	background:url('icons/clear.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+.icon-man{
+	background:url('icons/man.png') no-repeat center center;
+}
+.icon-lock{
+	background:url('icons/lock.png') no-repeat center center;
+}
+.icon-more{
+	background:url('icons/more.png') no-repeat center center;
+}
+
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-large-picture{
+	background:url('icons/large_picture.png') no-repeat center center;
+}
+.icon-large-clipart{
+	background:url('icons/large_clipart.png') no-repeat center center;
+}
+.icon-large-shapes{
+	background:url('icons/large_shapes.png') no-repeat center center;
+}
+.icon-large-smartart{
+	background:url('icons/large_smartart.png') no-repeat center center;
+}
+.icon-large-chart{
+	background:url('icons/large_chart.png') no-repeat center center;
+}
+
+/*Iconos Miguel*/
+
+.icono-accept{ background:url('icons/led/accept.png') no-repeat center center;}
+.icono-add{ background:url('icons/led/add.png') no-repeat center center;}
+.icono-alarm{ background:url('icons/led/alarm.png') no-repeat center center;}
+.icono-anchor{ background:url('icons/led/anchor.png') no-repeat center center;}
+.icono-application{ background:url('icons/led/application.png') no-repeat center center;}
+.icono-application_add{ background:url('icons/led/application_add.png') no-repeat center center;}
+.icono-application_cascade{ background:url('icons/led/application_cascade.png') no-repeat center center;}
+.icono-application_delete{ background:url('icons/led/application_delete.png') no-repeat center center;}
+.icono-application_double{ background:url('icons/led/application_double.png') no-repeat center center;}
+.icono-application_edit{ background:url('icons/led/application_edit.png') no-repeat center center;}
+.icono-application_error{ background:url('icons/led/application_error.png') no-repeat center center;}
+.icono-application_form{ background:url('icons/led/application_form.png') no-repeat center center;}
+.icono-application_get{ background:url('icons/led/application_get.png') no-repeat center center;}
+.icono-application_go{ background:url('icons/led/application_go.png') no-repeat center center;}
+.icono-application_home{ background:url('icons/led/application_home.png') no-repeat center center;}
+.icono-application_key{ background:url('icons/led/application_key.png') no-repeat center center;}
+.icono-application_lightning{ background:url('icons/led/application_lightning.png') no-repeat center center;}
+.icono-application_link{ background:url('icons/led/application_link.png') no-repeat center center;}
+.icono-application_osx{ background:url('icons/led/application_osx.png') no-repeat center center;}
+.icono-application_osx_terminal{ background:url('icons/led/application_osx_terminal.png') no-repeat center center;}
+.icono-application_put{ background:url('icons/led/application_put.png') no-repeat center center;}
+.icono-application_side_boxes{ background:url('icons/led/application_side_boxes.png') no-repeat center center;}
+.icono-application_side_contract{ background:url('icons/led/application_side_contract.png') no-repeat center center;}
+.icono-application_side_expand{ background:url('icons/led/application_side_expand.png') no-repeat center center;}
+.icono-application_side_list{ background:url('icons/led/application_side_list.png') no-repeat center center;}
+.icono-application_side_tree{ background:url('icons/led/application_side_tree.png') no-repeat center center;}
+.icono-application_split{ background:url('icons/led/application_split.png') no-repeat center center;}
+.icono-application_tile_horizontal{ background:url('icons/led/application_tile_horizontal.png') no-repeat center center;}
+.icono-application_tile_vertical{ background:url('icons/led/application_tile_vertical.png') no-repeat center center;}
+.icono-application_view_columns{ background:url('icons/led/application_view_columns.png') no-repeat center center;}
+.icono-application_view_detail{ background:url('icons/led/application_view_detail.png') no-repeat center center;}
+.icono-application_view_gallery{ background:url('icons/led/application_view_gallery.png') no-repeat center center;}
+.icono-application_view_icons{ background:url('icons/led/application_view_icons.png') no-repeat center center;}
+.icono-application_view_list{ background:url('icons/led/application_view_list.png') no-repeat center center;}
+.icono-application_view_tile{ background:url('icons/led/application_view_tile.png') no-repeat center center;}
+.icono-application_view_xp{ background:url('icons/led/application_view_xp.png') no-repeat center center;}
+.icono-application_view_xp_terminal{ background:url('icons/led/application_view_xp_terminal.png') no-repeat center center;}
+.icono-application2{ background:url('icons/led/application2.png') no-repeat center center;}
+.icono-arrow_branch{ background:url('icons/led/arrow_branch.png') no-repeat center center;}
+.icono-arrow_divide{ background:url('icons/led/arrow_divide.png') no-repeat center center;}
+.icono-arrow_in{ background:url('icons/led/arrow_in.png') no-repeat center center;}
+.icono-arrow_inout{ background:url('icons/led/arrow_inout.png') no-repeat center center;}
+.icono-arrow_join{ background:url('icons/led/arrow_join.png') no-repeat center center;}
+.icono-arrow_left{ background:url('icons/led/arrow_left.png') no-repeat center center;}
+.icono-arrow_merge{ background:url('icons/led/arrow_merge.png') no-repeat center center;}
+.icono-arrow_out{ background:url('icons/led/arrow_out.png') no-repeat center center;}
+.icono-arrow_redo{ background:url('icons/led/arrow_redo.png') no-repeat center center;}
+.icono-arrow_refresh{ background:url('icons/led/arrow_refresh.png') no-repeat center center;}
+.icono-arrow_right{ background:url('icons/led/arrow_right.png') no-repeat center center;}
+.icono-arrow_undo{ background:url('icons/led/arrow_undo.png') no-repeat center center;}
+.icono-asterisk_orange{ background:url('icons/led/asterisk_orange.png') no-repeat center center;}
+.icono-attach{ background:url('icons/led/attach.png') no-repeat center center;}
+.icono-attach_2{ background:url('icons/led/attach_2.png') no-repeat center center;}
+.icono-award_star_gold{ background:url('icons/led/award_star_gold.png') no-repeat center center;}
+.icono-bandaid{ background:url('icons/led/bandaid.png') no-repeat center center;}
+.icono-basket{ background:url('icons/led/basket.png') no-repeat center center;}
+.icono-bell{ background:url('icons/led/bell.png') no-repeat center center;}
+.icono-bin_closed{ background:url('icons/led/bin_closed.png') no-repeat center center;}
+.icono-blog{ background:url('icons/led/blog.png') no-repeat center center;}
+.icono-blueprint{ background:url('icons/led/blueprint.png') no-repeat center center;}
+.icono-blueprint_horizontal{ background:url('icons/led/blueprint_horizontal.png') no-repeat center center;}
+.icono-bluetooth{ background:url('icons/led/bluetooth.png') no-repeat center center;}
+.icono-bomb{ background:url('icons/led/bomb.png') no-repeat center center;}
+.icono-book{ background:url('icons/led/book.png') no-repeat center center;}
+.icono-book_addresses{ background:url('icons/led/book_addresses.png') no-repeat center center;}
+.icono-book_next{ background:url('icons/led/book_next.png') no-repeat center center;}
+.icono-book_open{ background:url('icons/led/book_open.png') no-repeat center center;}
+.icono-book_previous{ background:url('icons/led/book_previous.png') no-repeat center center;}
+.icono-bookmark{ background:url('icons/led/bookmark.png') no-repeat center center;}
+.icono-bookmark_book{ background:url('icons/led/bookmark_book.png') no-repeat center center;}
+.icono-bookmark_book_open{ background:url('icons/led/bookmark_book_open.png') no-repeat center center;}
+.icono-bookmark_document{ background:url('icons/led/bookmark_document.png') no-repeat center center;}
+.icono-bookmark_folder{ background:url('icons/led/bookmark_folder.png') no-repeat center center;}
+.icono-books{ background:url('icons/led/books.png') no-repeat center center;}
+.icono-box{ background:url('icons/led/box.png') no-repeat center center;}
+.icono-brick{ background:url('icons/led/brick.png') no-repeat center center;}
+.icono-bricks{ background:url('icons/led/bricks.png') no-repeat center center;}
+.icono-briefcase{ background:url('icons/led/briefcase.png') no-repeat center center;}
+.icono-bug{ background:url('icons/led/bug.png') no-repeat center center;}
+.icono-buildings{ background:url('icons/led/buildings.png') no-repeat center center;}
+.icono-bullet_add_1{ background:url('icons/led/bullet_add_1.png') no-repeat center center;}
+.icono-bullet_add_2{ background:url('icons/led/bullet_add_2.png') no-repeat center center;}
+.icono-bullet_key{ background:url('icons/led/bullet_key.png') no-repeat center center;}
+.icono-cake{ background:url('icons/led/cake.png') no-repeat center center;}
+.icono-calculator{ background:url('icons/led/calculator.png') no-repeat center center;}
+.icono-calendar_1{ background:url('icons/led/calendar_1.png') no-repeat center center;}
+.icono-calendar_2{ background:url('icons/led/calendar_2.png') no-repeat center center;}
+.icono-camera{ background:url('icons/led/camera.png') no-repeat center center;}
+.icono-cancel{ background:url('icons/led/cancel.png') no-repeat center center;}
+.icono-car{ background:url('icons/led/car.png') no-repeat center center;}
+.icono-cart{ background:url('icons/led/cart.png') no-repeat center center;}
+.icono-cd{ background:url('icons/led/cd.png') no-repeat center center;}
+.icono-chart_bar{ background:url('icons/led/chart_bar.png') no-repeat center center;}
+.icono-chart_curve{ background:url('icons/led/chart_curve.png') no-repeat center center;}
+.icono-chart_line{ background:url('icons/led/chart_line.png') no-repeat center center;}
+.icono-chart_organisation{ background:url('icons/led/chart_organisation.png') no-repeat center center;}
+.icono-chart_pie{ background:url('icons/led/chart_pie.png') no-repeat center center;}
+.icono-clipboard_paste_image{ background:url('icons/led/clipboard_paste_image.png') no-repeat center center;}
+.icono-clipboard_sign{ background:url('icons/led/clipboard_sign.png') no-repeat center center;}
+.icono-clipboard_text{ background:url('icons/led/clipboard_text.png') no-repeat center center;}
+.icono-clock{ background:url('icons/led/clock.png') no-repeat center center;}
+.icono-cog{ background:url('icons/led/cog.png') no-repeat center center;}
+.icono-coins{ background:url('icons/led/coins.png') no-repeat center center;}
+.icono-color_swatch_1{ background:url('icons/led/color_swatch_1.png') no-repeat center center;}
+.icono-color_swatch_2{ background:url('icons/led/color_swatch_2.png') no-repeat center center;}
+.icono-comment{ background:url('icons/led/comment.png') no-repeat center center;}
+.icono-compass{ background:url('icons/led/compass.png') no-repeat center center;}
+.icono-compress{ background:url('icons/led/compress.png') no-repeat center center;}
+.icono-computer{ background:url('icons/led/computer.png') no-repeat center center;}
+.icono-connect{ background:url('icons/led/connect.png') no-repeat center center;}
+.icono-contrast{ background:url('icons/led/contrast.png') no-repeat center center;}
+.icono-control_eject{ background:url('icons/led/control_eject.png') no-repeat center center;}
+.icono-control_end{ background:url('icons/led/control_end.png') no-repeat center center;}
+.icono-control_equalizer{ background:url('icons/led/control_equalizer.png') no-repeat center center;}
+.icono-control_fastforward{ background:url('icons/led/control_fastforward.png') no-repeat center center;}
+.icono-control_pause{ background:url('icons/led/control_pause.png') no-repeat center center;}
+.icono-control_play{ background:url('icons/led/control_play.png') no-repeat center center;}
+.icono-control_repeat{ background:url('icons/led/control_repeat.png') no-repeat center center;}
+.icono-control_rewind{ background:url('icons/led/control_rewind.png') no-repeat center center;}
+.icono-control_start{ background:url('icons/led/control_start.png') no-repeat center center;}
+.icono-control_stop{ background:url('icons/led/control_stop.png') no-repeat center center;}
+.icono-control_wheel{ background:url('icons/led/control_wheel.png') no-repeat center center;}
+.icono-counter{ background:url('icons/led/counter.png') no-repeat center center;}
+.icono-counter_count{ background:url('icons/led/counter_count.png') no-repeat center center;}
+.icono-counter_count_up{ background:url('icons/led/counter_count_up.png') no-repeat center center;}
+.icono-counter_reset{ background:url('icons/led/counter_reset.png') no-repeat center center;}
+.icono-counter_stop{ background:url('icons/led/counter_stop.png') no-repeat center center;}
+.icono-cross{ background:url('icons/led/cross.png') no-repeat center center;}
+.icono-cross_octagon{ background:url('icons/led/cross_octagon.png') no-repeat center center;}
+.icono-cross_octagon_fram{ background:url('icons/led/cross_octagon_fram.png') no-repeat center center;}
+.icono-cross_shield{ background:url('icons/led/cross_shield.png') no-repeat center center;}
+.icono-cross_shield_2{ background:url('icons/led/cross_shield_2.png') no-repeat center center;}
+.icono-crown{ background:url('icons/led/crown.png') no-repeat center center;}
+.icono-crown_bronze{ background:url('icons/led/crown_bronze.png') no-repeat center center;}
+.icono-crown_silver{ background:url('icons/led/crown_silver.png') no-repeat center center;}
+.icono-css{ background:url('icons/led/css.png') no-repeat center center;}
+.icono-cursor{ background:url('icons/led/cursor.png') no-repeat center center;}
+.icono-cut{ background:url('icons/led/cut.png') no-repeat center center;}
+.icono-dashboard{ background:url('icons/led/dashboard.png') no-repeat center center;}
+.icono-data{ background:url('icons/led/data.png') no-repeat center center;}
+.icono-database{ background:url('icons/led/database.png') no-repeat center center;}
+.icono-databases{ background:url('icons/led/databases.png') no-repeat center center;}
+.icono-delete{ background:url('icons/led/delete.png') no-repeat center center;}
+.icono-delivery{ background:url('icons/led/delivery.png') no-repeat center center;}
+.icono-desktop{ background:url('icons/led/desktop.png') no-repeat center center;}
+.icono-desktop_empty{ background:url('icons/led/desktop_empty.png') no-repeat center center;}
+.icono-direction{ background:url('icons/led/direction.png') no-repeat center center;}
+.icono-disconnect{ background:url('icons/led/disconnect.png') no-repeat center center;}
+.icono-disk{ background:url('icons/led/disk.png') no-repeat center center;}
+.icono-doc_access{ background:url('icons/led/doc_access.png') no-repeat center center;}
+.icono-doc_break{ background:url('icons/led/doc_break.png') no-repeat center center;}
+.icono-doc_convert{ background:url('icons/led/doc_convert.png') no-repeat center center;}
+.icono-doc_excel_csv{ background:url('icons/led/doc_excel_csv.png') no-repeat center center;}
+.icono-doc_excel_table{ background:url('icons/led/doc_excel_table.png') no-repeat center center;}
+.icono-doc_film{ background:url('icons/led/doc_film.png') no-repeat center center;}
+.icono-doc_illustrator{ background:url('icons/led/doc_illustrator.png') no-repeat center center;}
+.icono-doc_music{ background:url('icons/led/doc_music.png') no-repeat center center;}
+.icono-doc_music_playlist{ background:url('icons/led/doc_music_playlist.png') no-repeat center center;}
+.icono-doc_offlice{ background:url('icons/led/doc_offlice.png') no-repeat center center;}
+.icono-doc_page{ background:url('icons/led/doc_page.png') no-repeat center center;}
+.icono-doc_page_previous{ background:url('icons/led/doc_page_previous.png') no-repeat center center;}
+.icono-doc_pdf{ background:url('icons/led/doc_pdf.png') no-repeat center center;}
+.icono-doc_photoshop{ background:url('icons/led/doc_photoshop.png') no-repeat center center;}
+.icono-doc_resize{ background:url('icons/led/doc_resize.png') no-repeat center center;}
+.icono-doc_resize_actual{ background:url('icons/led/doc_resize_actual.png') no-repeat center center;}
+.icono-doc_shred{ background:url('icons/led/doc_shred.png') no-repeat center center;}
+.icono-doc_stand{ background:url('icons/led/doc_stand.png') no-repeat center center;}
+.icono-doc_table{ background:url('icons/led/doc_table.png') no-repeat center center;}
+.icono-doc_tag{ background:url('icons/led/doc_tag.png') no-repeat center center;}
+.icono-doc_text_image{ background:url('icons/led/doc_text_image.png') no-repeat center center;}
+.icono-door{ background:url('icons/led/door.png') no-repeat center center;}
+.icono-door_in{ background:url('icons/led/door_in.png') no-repeat center center;}
+.icono-drawer{ background:url('icons/led/drawer.png') no-repeat center center;}
+.icono-drink{ background:url('icons/led/drink.png') no-repeat center center;}
+.icono-drink_empty{ background:url('icons/led/drink_empty.png') no-repeat center center;}
+.icono-drive{ background:url('icons/led/drive.png') no-repeat center center;}
+.icono-drive_burn{ background:url('icons/led/drive_burn.png') no-repeat center center;}
+.icono-drive_cd{ background:url('icons/led/drive_cd.png') no-repeat center center;}
+.icono-drive_cd_empty{ background:url('icons/led/drive_cd_empty.png') no-repeat center center;}
+.icono-drive_delete{ background:url('icons/led/drive_delete.png') no-repeat center center;}
+.icono-drive_disk{ background:url('icons/led/drive_disk.png') no-repeat center center;}
+.icono-drive_error{ background:url('icons/led/drive_error.png') no-repeat center center;}
+.icono-drive_go{ background:url('icons/led/drive_go.png') no-repeat center center;}
+.icono-drive_link{ background:url('icons/led/drive_link.png') no-repeat center center;}
+.icono-drive_network{ background:url('icons/led/drive_network.png') no-repeat center center;}
+.icono-drive_rename{ background:url('icons/led/drive_rename.png') no-repeat center center;}
+.icono-dvd{ background:url('icons/led/dvd.png') no-repeat center center;}
+.icono-email{ background:url('icons/led/email.png') no-repeat center center;}
+.icono-email_open{ background:url('icons/led/email_open.png') no-repeat center center;}
+.icono-email_open_image{ background:url('icons/led/email_open_image.png') no-repeat center center;}
+.icono-emoticon_evilgrin{ background:url('icons/led/emoticon_evilgrin.png') no-repeat center center;}
+.icono-emoticon_grin{ background:url('icons/led/emoticon_grin.png') no-repeat center center;}
+.icono-emoticon_happy{ background:url('icons/led/emoticon_happy.png') no-repeat center center;}
+.icono-emoticon_smile{ background:url('icons/led/emoticon_smile.png') no-repeat center center;}
+.icono-emoticon_surprised{ background:url('icons/led/emoticon_surprised.png') no-repeat center center;}
+.icono-emoticon_tongue{ background:url('icons/led/emoticon_tongue.png') no-repeat center center;}
+.icono-emoticon_unhappy{ background:url('icons/led/emoticon_unhappy.png') no-repeat center center;}
+.icono-emoticon_waii{ background:url('icons/led/emoticon_waii.png') no-repeat center center;}
+.icono-emoticon_wink{ background:url('icons/led/emoticon_wink.png') no-repeat center center;}
+.icono-envelope{ background:url('icons/led/envelope.png') no-repeat center center;}
+.icono-envelope_2{ background:url('icons/led/envelope_2.png') no-repeat center center;}
+.icono-error{ background:url('icons/led/error.png') no-repeat center center;}
+.icono-exclamation{ background:url('icons/led/exclamation.png') no-repeat center center;}
+.icono-exclamation_octagon_fram{ background:url('icons/led/exclamation_octagon_fram.png') no-repeat center center;}
+.icono-eye{ background:url('icons/led/eye.png') no-repeat center center;}
+.icono-feed{ background:url('icons/led/feed.png') no-repeat center center;}
+.icono-feed_ballon{ background:url('icons/led/feed_ballon.png') no-repeat center center;}
+.icono-feed_document{ background:url('icons/led/feed_document.png') no-repeat center center;}
+.icono-female{ background:url('icons/led/female.png') no-repeat center center;}
+.icono-film{ background:url('icons/led/film.png') no-repeat center center;}
+.icono-films{ background:url('icons/led/films.png') no-repeat center center;}
+.icono-find{ background:url('icons/led/find.png') no-repeat center center;}
+.icono-flag_blue{ background:url('icons/led/flag_blue.png') no-repeat center center;}
+.icono-folder{ background:url('icons/led/folder.png') no-repeat center center;}
+.icono-font{ background:url('icons/led/font.png') no-repeat center center;}
+.icono-funnel{ background:url('icons/led/funnel.png') no-repeat center center;}
+.icono-grid{ background:url('icons/led/grid.png') no-repeat center center;}
+.icono-grid_dot{ background:url('icons/led/grid_dot.png') no-repeat center center;}
+.icono-group{ background:url('icons/led/group.png') no-repeat center center;}
+.icono-hammer{ background:url('icons/led/hammer.png') no-repeat center center;}
+.icono-hammer_screwdriver{ background:url('icons/led/hammer_screwdriver.png') no-repeat center center;}
+.icono-hand{ background:url('icons/led/hand.png') no-repeat center center;}
+.icono-hand_point{ background:url('icons/led/hand_point.png') no-repeat center center;}
+.icono-heart{ background:url('icons/led/heart.png') no-repeat center center;}
+.icono-heart_break{ background:url('icons/led/heart_break.png') no-repeat center center;}
+.icono-heart_empty{ background:url('icons/led/heart_empty.png') no-repeat center center;}
+.icono-heart_half{ background:url('icons/led/heart_half.png') no-repeat center center;}
+.icono-heart_small{ background:url('icons/led/heart_small.png') no-repeat center center;}
+.icono-help{ background:url('icons/led/help.png') no-repeat center center;}
+.icono-highlighter{ background:url('icons/led/highlighter.png') no-repeat center center;}
+.icono-house{ background:url('icons/led/house.png') no-repeat center center;}
+.icono-html{ background:url('icons/led/html.png') no-repeat center center;}
+.icono-image_1{ background:url('icons/led/image_1.png') no-repeat center center;}
+.icono-image_2{ background:url('icons/led/image_2.png') no-repeat center center;}
+.icono-images{ background:url('icons/led/images.png') no-repeat center center;}
+.icono-inbox{ background:url('icons/led/inbox.png') no-repeat center center;}
+.icono-ipod{ background:url('icons/led/ipod.png') no-repeat center center;}
+.icono-ipod_cast{ background:url('icons/led/ipod_cast.png') no-repeat center center;}
+.icono-joystick{ background:url('icons/led/joystick.png') no-repeat center center;}
+.icono-key{ background:url('icons/led/key.png') no-repeat center center;}
+.icono-keyboard{ background:url('icons/led/keyboard.png') no-repeat center center;}
+.icono-layer_treansparent{ background:url('icons/led/layer_treansparent.png') no-repeat center center;}
+.icono-layers{ background:url('icons/led/layers.png') no-repeat center center;}
+.icono-layout{ background:url('icons/led/layout.png') no-repeat center center;}
+.icono-layout_header_footer_3{ background:url('icons/led/layout_header_footer_3.png') no-repeat center center;}
+.icono-layout_header_footer_3_mix{ background:url('icons/led/layout_header_footer_3_mix.png') no-repeat center center;}
+.icono-layout_join{ background:url('icons/led/layout_join.png') no-repeat center center;}
+.icono-layout_join_vertical{ background:url('icons/led/layout_join_vertical.png') no-repeat center center;}
+.icono-layout_select{ background:url('icons/led/layout_select.png') no-repeat center center;}
+.icono-layout_select_content{ background:url('icons/led/layout_select_content.png') no-repeat center center;}
+.icono-layout_select_footer{ background:url('icons/led/layout_select_footer.png') no-repeat center center;}
+.icono-layout_select_sidebar{ background:url('icons/led/layout_select_sidebar.png') no-repeat center center;}
+.icono-layout_split{ background:url('icons/led/layout_split.png') no-repeat center center;}
+.icono-layout_split_vertical{ background:url('icons/led/layout_split_vertical.png') no-repeat center center;}
+.icono-lifebuoy{ background:url('icons/led/lifebuoy.png') no-repeat center center;}
+.icono-lightbulb{ background:url('icons/led/lightbulb.png') no-repeat center center;}
+.icono-lightbulb_off{ background:url('icons/led/lightbulb_off.png') no-repeat center center;}
+.icono-lightning{ background:url('icons/led/lightning.png') no-repeat center center;}
+.icono-link{ background:url('icons/led/link.png') no-repeat center center;}
+.icono-link_break{ background:url('icons/led/link_break.png') no-repeat center center;}
+.icono-lock{ background:url('icons/led/lock.png') no-repeat center center;}
+.icono-lock_unlock{ background:url('icons/led/lock_unlock.png') no-repeat center center;}
+.icono-magnet{ background:url('icons/led/magnet.png') no-repeat center center;}
+.icono-magnifier{ background:url('icons/led/magnifier.png') no-repeat center center;}
+.icono-magnifier_zoom_in{ background:url('icons/led/magnifier_zoom_in.png') no-repeat center center;}
+.icono-male{ background:url('icons/led/male.png') no-repeat center center;}
+.icono-map{ background:url('icons/led/map.png') no-repeat center center;}
+.icono-marker{ background:url('icons/led/marker.png') no-repeat center center;}
+.icono-medal_bronze_1{ background:url('icons/led/medal_bronze_1.png') no-repeat center center;}
+.icono-medal_gold_1{ background:url('icons/led/medal_gold_1.png') no-repeat center center;}
+.icono-media_player_small_blue{ background:url('icons/led/media_player_small_blue.png') no-repeat center center;}
+.icono-microphone{ background:url('icons/led/microphone.png') no-repeat center center;}
+.icono-mobile_phone{ background:url('icons/led/mobile_phone.png') no-repeat center center;}
+.icono-money{ background:url('icons/led/money.png') no-repeat center center;}
+.icono-money_dollar{ background:url('icons/led/money_dollar.png') no-repeat center center;}
+.icono-money_euro{ background:url('icons/led/money_euro.png') no-repeat center center;}
+.icono-money_pound{ background:url('icons/led/money_pound.png') no-repeat center center;}
+.icono-money_yen{ background:url('icons/led/money_yen.png') no-repeat center center;}
+.icono-monitor{ background:url('icons/led/monitor.png') no-repeat center center;}
+.icono-mouse{ background:url('icons/led/mouse.png') no-repeat center center;}
+.icono-music{ background:url('icons/led/music.png') no-repeat center center;}
+.icono-music_beam{ background:url('icons/led/music_beam.png') no-repeat center center;}
+.icono-neutral{ background:url('icons/led/neutral.png') no-repeat center center;}
+.icono-new{ background:url('icons/led/new.png') no-repeat center center;}
+.icono-newspaper{ background:url('icons/led/newspaper.png') no-repeat center center;}
+.icono-note{ background:url('icons/led/note.png') no-repeat center center;}
+.icono-nuclear{ background:url('icons/led/nuclear.png') no-repeat center center;}
+.icono-package{ background:url('icons/led/package.png') no-repeat center center;}
+.icono-page{ background:url('icons/led/page.png') no-repeat center center;}
+.icono-page_2{ background:url('icons/led/page_2.png') no-repeat center center;}
+.icono-page_2_copy{ background:url('icons/led/page_2_copy.png') no-repeat center center;}
+.icono-page_code{ background:url('icons/led/page_code.png') no-repeat center center;}
+.icono-page_copy{ background:url('icons/led/page_copy.png') no-repeat center center;}
+.icono-page_excel{ background:url('icons/led/page_excel.png') no-repeat center center;}
+.icono-page_lightning{ background:url('icons/led/page_lightning.png') no-repeat center center;}
+.icono-page_paste{ background:url('icons/led/page_paste.png') no-repeat center center;}
+.icono-page_red{ background:url('icons/led/page_red.png') no-repeat center center;}
+.icono-page_refresh{ background:url('icons/led/page_refresh.png') no-repeat center center;}
+.icono-page_save{ background:url('icons/led/page_save.png') no-repeat center center;}
+.icono-page_white_cplusplus{ background:url('icons/led/page_white_cplusplus.png') no-repeat center center;}
+.icono-page_white_csharp{ background:url('icons/led/page_white_csharp.png') no-repeat center center;}
+.icono-page_white_cup{ background:url('icons/led/page_white_cup.png') no-repeat center center;}
+.icono-page_white_database{ background:url('icons/led/page_white_database.png') no-repeat center center;}
+.icono-page_white_delete{ background:url('icons/led/page_white_delete.png') no-repeat center center;}
+.icono-page_white_dvd{ background:url('icons/led/page_white_dvd.png') no-repeat center center;}
+.icono-page_white_edit{ background:url('icons/led/page_white_edit.png') no-repeat center center;}
+.icono-page_white_error{ background:url('icons/led/page_white_error.png') no-repeat center center;}
+.icono-page_white_excel{ background:url('icons/led/page_white_excel.png') no-repeat center center;}
+.icono-page_white_find{ background:url('icons/led/page_white_find.png') no-repeat center center;}
+.icono-page_white_flash{ background:url('icons/led/page_white_flash.png') no-repeat center center;}
+.icono-page_white_freehand{ background:url('icons/led/page_white_freehand.png') no-repeat center center;}
+.icono-page_white_gear{ background:url('icons/led/page_white_gear.png') no-repeat center center;}
+.icono-page_white_get{ background:url('icons/led/page_white_get.png') no-repeat center center;}
+.icono-page_white_paintbrush{ background:url('icons/led/page_white_paintbrush.png') no-repeat center center;}
+.icono-page_white_paste{ background:url('icons/led/page_white_paste.png') no-repeat center center;}
+.icono-page_white_php{ background:url('icons/led/page_white_php.png') no-repeat center center;}
+.icono-page_white_picture{ background:url('icons/led/page_white_picture.png') no-repeat center center;}
+.icono-page_white_powerpoint{ background:url('icons/led/page_white_powerpoint.png') no-repeat center center;}
+.icono-page_white_put{ background:url('icons/led/page_white_put.png') no-repeat center center;}
+.icono-page_white_ruby{ background:url('icons/led/page_white_ruby.png') no-repeat center center;}
+.icono-page_white_stack{ background:url('icons/led/page_white_stack.png') no-repeat center center;}
+.icono-page_white_star{ background:url('icons/led/page_white_star.png') no-repeat center center;}
+.icono-page_white_swoosh{ background:url('icons/led/page_white_swoosh.png') no-repeat center center;}
+.icono-page_white_text{ background:url('icons/led/page_white_text.png') no-repeat center center;}
+.icono-page_white_text_width{ background:url('icons/led/page_white_text_width.png') no-repeat center center;}
+.icono-page_white_tux{ background:url('icons/led/page_white_tux.png') no-repeat center center;}
+.icono-page_white_vector{ background:url('icons/led/page_white_vector.png') no-repeat center center;}
+.icono-page_white_visualstudio{ background:url('icons/led/page_white_visualstudio.png') no-repeat center center;}
+.icono-page_white_width{ background:url('icons/led/page_white_width.png') no-repeat center center;}
+.icono-page_white_word{ background:url('icons/led/page_white_word.png') no-repeat center center;}
+.icono-page_white_world{ background:url('icons/led/page_white_world.png') no-repeat center center;}
+.icono-page_white_wrench{ background:url('icons/led/page_white_wrench.png') no-repeat center center;}
+.icono-page_white_zip{ background:url('icons/led/page_white_zip.png') no-repeat center center;}
+.icono-paintbrush{ background:url('icons/led/paintbrush.png') no-repeat center center;}
+.icono-paintcan{ background:url('icons/led/paintcan.png') no-repeat center center;}
+.icono-palette{ background:url('icons/led/palette.png') no-repeat center center;}
+.icono-paper_bag{ background:url('icons/led/paper_bag.png') no-repeat center center;}
+.icono-paste_plain{ background:url('icons/led/paste_plain.png') no-repeat center center;}
+.icono-paste_word{ background:url('icons/led/paste_word.png') no-repeat center center;}
+.icono-pencil{ background:url('icons/led/pencil.png') no-repeat center center;}
+.icono-photo{ background:url('icons/led/photo.png') no-repeat center center;}
+.icono-photo_album{ background:url('icons/led/photo_album.png') no-repeat center center;}
+.icono-photos{ background:url('icons/led/photos.png') no-repeat center center;}
+.icono-piano{ background:url('icons/led/piano.png') no-repeat center center;}
+.icono-picture{ background:url('icons/led/picture.png') no-repeat center center;}
+.icono-pilcrow{ background:url('icons/led/pilcrow.png') no-repeat center center;}
+.icono-pill{ background:url('icons/led/pill.png') no-repeat center center;}
+.icono-pin{ background:url('icons/led/pin.png') no-repeat center center;}
+.icono-pipette{ background:url('icons/led/pipette.png') no-repeat center center;}
+.icono-plaing_card{ background:url('icons/led/plaing_card.png') no-repeat center center;}
+.icono-plug{ background:url('icons/led/plug.png') no-repeat center center;}
+.icono-plugin{ background:url('icons/led/plugin.png') no-repeat center center;}
+.icono-printer{ background:url('icons/led/printer.png') no-repeat center center;}
+.icono-projection_screen{ background:url('icons/led/projection_screen.png') no-repeat center center;}
+.icono-projection_screen_present{ background:url('icons/led/projection_screen_present.png') no-repeat center center;}
+.icono-rainbow{ background:url('icons/led/rainbow.png') no-repeat center center;}
+.icono-readme.txt{ background:url('icons/led/readme.txt') no-repeat center center;}
+.icono-report{ background:url('icons/led/report.png') no-repeat center center;}
+.icono-rocket{ background:url('icons/led/rocket.png') no-repeat center center;}
+.icono-rosette{ background:url('icons/led/rosette.png') no-repeat center center;}
+.icono-rss{ background:url('icons/led/rss.png') no-repeat center center;}
+.icono-ruby{ background:url('icons/led/ruby.png') no-repeat center center;}
+.icono-ruler_1{ background:url('icons/led/ruler_1.png') no-repeat center center;}
+.icono-ruler_2{ background:url('icons/led/ruler_2.png') no-repeat center center;}
+.icono-ruler_crop{ background:url('icons/led/ruler_crop.png') no-repeat center center;}
+.icono-ruler_triangle{ background:url('icons/led/ruler_triangle.png') no-repeat center center;}
+.icono-safe{ background:url('icons/led/safe.png') no-repeat center center;}
+.icono-script{ background:url('icons/led/script.png') no-repeat center center;}
+.icono-selection{ background:url('icons/led/selection.png') no-repeat center center;}
+.icono-selection_select{ background:url('icons/led/selection_select.png') no-repeat center center;}
+.icono-server{ background:url('icons/led/server.png') no-repeat center center;}
+.icono-shading{ background:url('icons/led/shading.png') no-repeat center center;}
+.icono-shape_aling_bottom{ background:url('icons/led/shape_aling_bottom.png') no-repeat center center;}
+.icono-shape_aling_center{ background:url('icons/led/shape_aling_center.png') no-repeat center center;}
+.icono-shape_aling_left{ background:url('icons/led/shape_aling_left.png') no-repeat center center;}
+.icono-shape_aling_middle{ background:url('icons/led/shape_aling_middle.png') no-repeat center center;}
+.icono-shape_aling_right{ background:url('icons/led/shape_aling_right.png') no-repeat center center;}
+.icono-shape_aling_top{ background:url('icons/led/shape_aling_top.png') no-repeat center center;}
+.icono-shape_flip_horizontal{ background:url('icons/led/shape_flip_horizontal.png') no-repeat center center;}
+.icono-shape_flip_vertical{ background:url('icons/led/shape_flip_vertical.png') no-repeat center center;}
+.icono-shape_group{ background:url('icons/led/shape_group.png') no-repeat center center;}
+.icono-shape_handles{ background:url('icons/led/shape_handles.png') no-repeat center center;}
+.icono-shape_move_back{ background:url('icons/led/shape_move_back.png') no-repeat center center;}
+.icono-shape_move_backwards{ background:url('icons/led/shape_move_backwards.png') no-repeat center center;}
+.icono-shape_move_forwards{ background:url('icons/led/shape_move_forwards.png') no-repeat center center;}
+.icono-shape_move_front{ background:url('icons/led/shape_move_front.png') no-repeat center center;}
+.icono-shape_square{ background:url('icons/led/shape_square.png') no-repeat center center;}
+.icono-shield{ background:url('icons/led/shield.png') no-repeat center center;}
+.icono-sitemap{ background:url('icons/led/sitemap.png') no-repeat center center;}
+.icono-slide{ background:url('icons/led/slide.png') no-repeat center center;}
+.icono-slides{ background:url('icons/led/slides.png') no-repeat center center;}
+.icono-slides_stack{ background:url('icons/led/slides_stack.png') no-repeat center center;}
+.icono-smiley_confuse{ background:url('icons/led/smiley_confuse.png') no-repeat center center;}
+.icono-smiley_cool{ background:url('icons/led/smiley_cool.png') no-repeat center center;}
+.icono-smiley_cry{ background:url('icons/led/smiley_cry.png') no-repeat center center;}
+.icono-smiley_fat{ background:url('icons/led/smiley_fat.png') no-repeat center center;}
+.icono-smiley_mad{ background:url('icons/led/smiley_mad.png') no-repeat center center;}
+.icono-smiley_red{ background:url('icons/led/smiley_red.png') no-repeat center center;}
+.icono-smiley_roll{ background:url('icons/led/smiley_roll.png') no-repeat center center;}
+.icono-smiley_slim{ background:url('icons/led/smiley_slim.png') no-repeat center center;}
+.icono-smiley_yell{ background:url('icons/led/smiley_yell.png') no-repeat center center;}
+.icono-socket{ background:url('icons/led/socket.png') no-repeat center center;}
+.icono-sockets{ background:url('icons/led/sockets.png') no-repeat center center;}
+.icono-sort{ background:url('icons/led/sort.png') no-repeat center center;}
+.icono-sort_alphabet{ background:url('icons/led/sort_alphabet.png') no-repeat center center;}
+.icono-sort_date{ background:url('icons/led/sort_date.png') no-repeat center center;}
+.icono-sort_disable{ background:url('icons/led/sort_disable.png') no-repeat center center;}
+.icono-sort_number{ background:url('icons/led/sort_number.png') no-repeat center center;}
+.icono-sort_price{ background:url('icons/led/sort_price.png') no-repeat center center;}
+.icono-sort_quantity{ background:url('icons/led/sort_quantity.png') no-repeat center center;}
+.icono-sort_rating{ background:url('icons/led/sort_rating.png') no-repeat center center;}
+.icono-sound{ background:url('icons/led/sound.png') no-repeat center center;}
+.icono-sound_note{ background:url('icons/led/sound_note.png') no-repeat center center;}
+.icono-spellcheck{ background:url('icons/led/spellcheck.png') no-repeat center center;}
+.icono-sport_8ball{ background:url('icons/led/sport_8ball.png') no-repeat center center;}
+.icono-sport_basketball{ background:url('icons/led/sport_basketball.png') no-repeat center center;}
+.icono-sport_football{ background:url('icons/led/sport_football.png') no-repeat center center;}
+.icono-sport_golf{ background:url('icons/led/sport_golf.png') no-repeat center center;}
+.icono-sport_raquet{ background:url('icons/led/sport_raquet.png') no-repeat center center;}
+.icono-sport_shuttlecock{ background:url('icons/led/sport_shuttlecock.png') no-repeat center center;}
+.icono-sport_soccer{ background:url('icons/led/sport_soccer.png') no-repeat center center;}
+.icono-sport_tennis{ background:url('icons/led/sport_tennis.png') no-repeat center center;}
+.icono-stamp{ background:url('icons/led/stamp.png') no-repeat center center;}
+.icono-star_1{ background:url('icons/led/star_1.png') no-repeat center center;}
+.icono-star_2{ background:url('icons/led/star_2.png') no-repeat center center;}
+.icono-status_online{ background:url('icons/led/status_online.png') no-repeat center center;}
+.icono-stop{ background:url('icons/led/stop.png') no-repeat center center;}
+.icono-style{ background:url('icons/led/style.png') no-repeat center center;}
+.icono-sum{ background:url('icons/led/sum.png') no-repeat center center;}
+.icono-sum_2{ background:url('icons/led/sum_2.png') no-repeat center center;}
+.icono-switch{ background:url('icons/led/switch.png') no-repeat center center;}
+.icono-tab{ background:url('icons/led/tab.png') no-repeat center center;}
+.icono-table{ background:url('icons/led/table.png') no-repeat center center;}
+.icono-tag{ background:url('icons/led/tag.png') no-repeat center center;}
+.icono-tag_blue{ background:url('icons/led/tag_blue.png') no-repeat center center;}
+.icono-target{ background:url('icons/led/target.png') no-repeat center center;}
+.icono-telephone{ background:url('icons/led/telephone.png') no-repeat center center;}
+.icono-television{ background:url('icons/led/television.png') no-repeat center center;}
+.icono-text_align_center{ background:url('icons/led/text_align_center.png') no-repeat center center;}
+.icono-text_align_justify{ background:url('icons/led/text_align_justify.png') no-repeat center center;}
+.icono-text_align_left{ background:url('icons/led/text_align_left.png') no-repeat center center;}
+.icono-text_align_right{ background:url('icons/led/text_align_right.png') no-repeat center center;}
+.icono-text_allcaps{ background:url('icons/led/text_allcaps.png') no-repeat center center;}
+.icono-text_bold{ background:url('icons/led/text_bold.png') no-repeat center center;}
+.icono-text_columns{ background:url('icons/led/text_columns.png') no-repeat center center;}
+.icono-text_dropcaps{ background:url('icons/led/text_dropcaps.png') no-repeat center center;}
+.icono-text_heading_1{ background:url('icons/led/text_heading_1.png') no-repeat center center;}
+.icono-text_horizontalrule{ background:url('icons/led/text_horizontalrule.png') no-repeat center center;}
+.icono-text_indent{ background:url('icons/led/text_indent.png') no-repeat center center;}
+.icono-text_indent_remove{ background:url('icons/led/text_indent_remove.png') no-repeat center center;}
+.icono-text_italic{ background:url('icons/led/text_italic.png') no-repeat center center;}
+.icono-text_kerning{ background:url('icons/led/text_kerning.png') no-repeat center center;}
+.icono-text_letter_omega{ background:url('icons/led/text_letter_omega.png') no-repeat center center;}
+.icono-text_letterspacing{ background:url('icons/led/text_letterspacing.png') no-repeat center center;}
+.icono-text_linespacing{ background:url('icons/led/text_linespacing.png') no-repeat center center;}
+.icono-text_list_bullets{ background:url('icons/led/text_list_bullets.png') no-repeat center center;}
+.icono-text_list_numbers{ background:url('icons/led/text_list_numbers.png') no-repeat center center;}
+.icono-text_lowercase{ background:url('icons/led/text_lowercase.png') no-repeat center center;}
+.icono-text_padding_bottom{ background:url('icons/led/text_padding_bottom.png') no-repeat center center;}
+.icono-text_padding_left{ background:url('icons/led/text_padding_left.png') no-repeat center center;}
+.icono-text_padding_right{ background:url('icons/led/text_padding_right.png') no-repeat center center;}
+.icono-text_padding_top{ background:url('icons/led/text_padding_top.png') no-repeat center center;}
+.icono-text_signature{ background:url('icons/led/text_signature.png') no-repeat center center;}
+.icono-text_smallcaps{ background:url('icons/led/text_smallcaps.png') no-repeat center center;}
+.icono-text_strikethrough{ background:url('icons/led/text_strikethrough.png') no-repeat center center;}
+.icono-text_subscript{ background:url('icons/led/text_subscript.png') no-repeat center center;}
+.icono-textfield{ background:url('icons/led/textfield.png') no-repeat center center;}
+.icono-textfield_rename{ background:url('icons/led/textfield_rename.png') no-repeat center center;}
+.icono-ticket{ background:url('icons/led/ticket.png') no-repeat center center;}
+.icono-timeline_marker{ background:url('icons/led/timeline_marker.png') no-repeat center center;}
+.icono-traffic{ background:url('icons/led/traffic.png') no-repeat center center;}
+.icono-transmit{ background:url('icons/led/transmit.png') no-repeat center center;}
+.icono-trophy{ background:url('icons/led/trophy.png') no-repeat center center;}
+.icono-trophy_bronze{ background:url('icons/led/trophy_bronze.png') no-repeat center center;}
+.icono-trophy_silver{ background:url('icons/led/trophy_silver.png') no-repeat center center;}
+.icono-ui_combo_box{ background:url('icons/led/ui_combo_box.png') no-repeat center center;}
+.icono-ui_saccordion{ background:url('icons/led/ui_saccordion.png') no-repeat center center;}
+.icono-ui_slider_1{ background:url('icons/led/ui_slider_1.png') no-repeat center center;}
+.icono-ui_slider_2{ background:url('icons/led/ui_slider_2.png') no-repeat center center;}
+.icono-ui_tab_bottom{ background:url('icons/led/ui_tab_bottom.png') no-repeat center center;}
+.icono-ui_tab_content{ background:url('icons/led/ui_tab_content.png') no-repeat center center;}
+.icono-ui_tab_disable{ background:url('icons/led/ui_tab_disable.png') no-repeat center center;}
+.icono-ui_tab_side{ background:url('icons/led/ui_tab_side.png') no-repeat center center;}
+.icono-ui_text_field_hidden{ background:url('icons/led/ui_text_field_hidden.png') no-repeat center center;}
+.icono-ui_text_field_password{ background:url('icons/led/ui_text_field_password.png') no-repeat center center;}
+.icono-umbrella{ background:url('icons/led/umbrella.png') no-repeat center center;}
+.icono-user{ background:url('icons/led/user.png') no-repeat center center;}
+.icono-user_black_female{ background:url('icons/led/user_black_female.png') no-repeat center center;}
+.icono-user_business{ background:url('icons/led/user_business.png') no-repeat center center;}
+.icono-user_business_boss{ background:url('icons/led/user_business_boss.png') no-repeat center center;}
+.icono-user_female{ background:url('icons/led/user_female.png') no-repeat center center;}
+.icono-user_silhouette{ background:url('icons/led/user_silhouette.png') no-repeat center center;}
+.icono-user_thief{ background:url('icons/led/user_thief.png') no-repeat center center;}
+.icono-user_thief_baldie{ background:url('icons/led/user_thief_baldie.png') no-repeat center center;}
+.icono-vcard{ background:url('icons/led/vcard.png') no-repeat center center;}
+.icono-vector{ background:url('icons/led/vector.png') no-repeat center center;}
+.icono-wait{ background:url('icons/led/wait.png') no-repeat center center;}
+.icono-wall{ background:url('icons/led/wall.png') no-repeat center center;}
+.icono-wall_break{ background:url('icons/led/wall_break.png') no-repeat center center;}
+.icono-wall_brick{ background:url('icons/led/wall_brick.png') no-repeat center center;}
+.icono-wall_disable{ background:url('icons/led/wall_disable.png') no-repeat center center;}
+.icono-wand{ background:url('icons/led/wand.png') no-repeat center center;}
+.icono-weather_clouds{ background:url('icons/led/weather_clouds.png') no-repeat center center;}
+.icono-weather_cloudy{ background:url('icons/led/weather_cloudy.png') no-repeat center center;}
+.icono-weather_lightning{ background:url('icons/led/weather_lightning.png') no-repeat center center;}
+.icono-weather_rain{ background:url('icons/led/weather_rain.png') no-repeat center center;}
+.icono-weather_snow{ background:url('icons/led/weather_snow.png') no-repeat center center;}
+.icono-weather_sun{ background:url('icons/led/weather_sun.png') no-repeat center center;}
+.icono-webcam{ background:url('icons/led/webcam.png') no-repeat center center;}
+.icono-world{ background:url('icons/led/world.png') no-repeat center center;}
+.icono-zone{ background:url('icons/led/zone.png') no-repeat center center;}
+.icono-zone_money{ background:url('icons/led/zone_money.png') no-repeat center center;}
+.icono-zones{ background:url('icons/led/zones.png') no-repeat center center;}

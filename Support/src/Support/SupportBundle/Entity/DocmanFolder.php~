@@ -1,0 +1,67 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanFolder
+ *
+ * @ORM\Table(name="docman_folder")
+ * @ORM\Entity
+ */
+class DocmanFolder
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idf", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idf;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=200, nullable=false)
+     */
+    private $path;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="parentfolder", type="integer", nullable=false)
+     */
+    private $parentfolder;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdate", type="datetime", nullable=false)
+     */
+    private $createdate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", length=1, nullable=false)
+     */
+    private $status = '1';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user", type="integer", nullable=true)
+     */
+    private $user;
+
+
+}

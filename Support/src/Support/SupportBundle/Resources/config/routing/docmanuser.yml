@@ -1,0 +1,30 @@
+docmanuser:
+    pattern:  /
+    defaults: { _controller: "SupportBundle:DocmanUser:index" }
+
+docmanuser_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SupportBundle:DocmanUser:show" }
+
+docmanuser_new:
+    pattern:  /new
+    defaults: { _controller: "SupportBundle:DocmanUser:new" }
+
+docmanuser_create:
+    pattern:  /create
+    defaults: { _controller: "SupportBundle:DocmanUser:create" }
+    requirements: { _method: post }
+
+docmanuser_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SupportBundle:DocmanUser:edit" }
+
+docmanuser_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SupportBundle:DocmanUser:update" }
+    requirements: { _method: post|put }
+
+docmanuser_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SupportBundle:DocmanUser:delete" }
+    requirements: { _method: post|delete }

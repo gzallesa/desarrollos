@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id='Description'>This example shows how to create a Grid from JSON data.</title>
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('bundleCliente') }}/jqwidgets/styles/jqx.arctic.css" type="text/css" />
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxscrollbar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxlistbox.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdropdownlist.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxmenu.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.filter.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.sort.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.edit.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.selection.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxpanel.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.pager.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxnumberinput.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.grouping.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxdata.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/jqxgrid.export.js"></script> 
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/scripts/demos.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleCliente') }}/jqwidgets/globalization/globalize.js"></script>
+        <script type="text/javascript" src="{{ asset('bundleAdmin') }}/js/localization.js"></script>
+        <style>
+            .imggrid{
+                border-radius: 5px;
+            }
+        </style>    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var url = "{{ path('support_getSolicitudes') }}";
+                var source =
+                        {
+                            datatype: "json",
+                            datafields:
+                                    [
+                                        {name: 'usuario', type: 'string'},
+                                        {name: 'servicio', type: 'string'},
+                                        {name: 'fechasolicitud', type: 'date'},
+                                        {name: 'horasolicitud', type: 'string'},
+                                        {name: 'fechasolucion', type: 'date'},
+                                        {name: 'horaatencion', type: 'string'},
+                                    ],
+                            id: 'id',
+                            url: url
+                        };
+                var imagerenderer = function(row, datafield, value) {
+                    return '<img class="imggrid" height="50" src="{{ asset('bundles') }}/fotos/' + value + '.jpg"/>';
+                }
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                $("#jqxgrid").jqxGrid(
+                        {
+                            width: '100%',
+                            height: 450,
+                            source: dataAdapter,
+                            pageable: false,
+                            groupable: true,
+                            showfilterrow: true,
+                            filterable: true,
+                            sortable: true,
+                            theme:'arctic',
+                            selectionmode: 'singlecell',
+                            localization: getLocalization(),
+                            scrollfeedback: function(row)
+                            {
+                                return '<table style="height: 150px;width:110px;"><tr><td><img height="90" src="{{ asset('bundles') }}/fotos/' + row.foto + '.jpg"/></td></tr><tr><td>' + row.name + '</td></tr></table>';
+                            },
+                            rowsheight: 25,
+                            columns: [
+                                {text: 'usuario', datafield: 'usuario', width: '30%'},
+                                {text: 'servicio', columntype: 'textbox', filtertype: 'textbox', datafield: 'servicio', width: '30%'},
+                                {text: 'Fecha Solicitud', filtertype: 'date', datafield: 'fechasolicitud', width: '10%',cellsformat: 'd'},
+                                {text: 'Hora', datafield: 'horasolicitud', columntype: 'textbox', filtertype: 'textbox', width: '10%'},
+                                {text: 'Fecha Solucion', datafield: 'fechasolucion', columntype: 'textbox', filtertype: 'date', width: '10%',cellsformat: 'd'},
+                                {text: 'Hora', datafield: 'horaatencion', columntype: 'textbox', filtertype: 'textbox', width: '10%'},
+                            ]
+                        });
+                        $("#excelExport").jqxButton({ theme: theme });
+            $("#excelExport").click(function () {
+                $("#jqxgrid").jqxGrid('exportdata', 'xls', 'jqxGrid');           
+            });
+            });
+        </script>
+    </head>
+    <body class='default'>
+        <div id="jqxgrid" style="font-size: 13px; font-family: Verdana; float: left;">
+            
+        </div>
+        <div style='float: left;'>
+                <input type="button" value="Exportar a Excel" id='excelExport' />
+            </div>
+    </body>
+</html>

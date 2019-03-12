@@ -1,0 +1,30 @@
+docmancontenido:
+    pattern:  /
+    defaults: { _controller: "SupportBundle:DocmanContenido:index" }
+
+docmancontenido_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SupportBundle:DocmanContenido:show" }
+
+docmancontenido_new:
+    pattern:  /new
+    defaults: { _controller: "SupportBundle:DocmanContenido:new" }
+
+docmancontenido_create:
+    pattern:  /create
+    defaults: { _controller: "SupportBundle:DocmanContenido:create" }
+    requirements: { _method: post }
+
+docmancontenido_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SupportBundle:DocmanContenido:edit" }
+
+docmancontenido_update:
+    pattern:  /update
+    defaults: { _controller: "SupportBundle:DocmanContenido:update" }
+    requirements: { _method: post|put }
+
+docmancontenido_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SupportBundle:DocmanContenido:delete" }
+    requirements: { _method: post|delete }

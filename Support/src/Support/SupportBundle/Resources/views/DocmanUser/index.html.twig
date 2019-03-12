@@ -1,0 +1,75 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>DocmanUser list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Movil</th>
+                <th>Interno</th>
+                <th>Ci</th>
+                <th>Type</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Telefref</th>
+                <th>Numseguro</th>
+                <th>Cargo</th>
+                <th>Fechanac</th>
+                <th>Ip</th>
+                <th>Dependede</th>
+                <th>Foto</th>
+                <th>Soporte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('docmanuser_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.username }}</td>
+                <td>{{ entity.password }}</td>
+                <td>{{ entity.movil }}</td>
+                <td>{{ entity.interno }}</td>
+                <td>{{ entity.ci }}</td>
+                <td>{{ entity.type }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.direccion }}</td>
+                <td>{{ entity.telefref }}</td>
+                <td>{{ entity.numseguro }}</td>
+                <td>{{ entity.cargo }}</td>
+                <td>{% if entity.fechanac %}{{ entity.fechanac|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ entity.ip }}</td>
+                <td>{{ entity.dependeDe }}</td>
+                <td>{{ entity.foto }}</td>
+                <td>{{ entity.soporte }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('docmanuser_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('docmanuser_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('docmanuser_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

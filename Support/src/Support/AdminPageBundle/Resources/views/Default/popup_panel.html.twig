@@ -1,0 +1,78 @@
+{% extends "::adminPagePanel.html.twig" %}
+{% block scripts %}
+{% endblock %}
+{% block body %}
+<div id="sidebar">
+    
+    <ul class="main-nav">
+        {% for m in menu %}
+        {% if(active==m.id) %}
+            <li class="active"> 
+                <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+            </li>        
+        {% else %}
+            <li>
+                <a href="{{ path('admin_page_homepage',{'t':m.id}) }}" ><i class="fa {{ m.descripcion }} fa-home"></i> {{ m.nombre }}</a>
+            </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div> <!-- /sidebar -->
+
+<div id="content" class="clearfix">
+
+
+    <div class="breadcrumbs">
+        <i class="fa fa-home"></i> Inicio <i class="fa fa-caret-right"></i> {{ name }}
+    </div>
+
+    <div class="wrp clearfix">
+
+        
+        <a class="btn icon-button" href="{{ path('admin_page_createPopup') }}" ><i class="fa fa-edit"></i> Nuevo</a>
+        
+        <div class="fluid">
+
+            <div class="widget grid12">
+                <div class="widget-header">
+                    <div class="widget-title">
+                        <i class="fa fa-paperclip"></i> {{ name }}
+                    </div>
+                    <div class="widget-controls">
+                        <input type="checkbox" id="switch-ui" />
+                        <label class="switch" for="switch-ui"><i></i></label>
+                    </div>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+     <table style="width:100%;">
+             <th>Titulo</th>
+             <th>Fecha de Publicación</th>
+             <th>Imagen</th>
+             <th>Días</th>
+         </tr>
+         {% for new in news %}
+            <tr>
+                 <td>{{ new.Titulo | raw }}</td>
+                 <td>{{ new.Fecha_Publicar | raw }}</td>
+                 <td>{{ new.image_url | raw }}</td>
+                 <td>{{ new.dias | raw }}</td>
+                 <td><a class="btn icon-button" href="{{ path('admin_page_getPopup',{ 'id': new.ID })  }}"><i class="fa fa-edit fa-1x"></i></a></td>
+                 <!--<td><a class="btn icon-button" href="{{ path('admin_page_deletePopup',{ 'id': new.ID })  }}"><i class="fa fa-times-circle fa-1x"></i></a></td>-->
+            </tr>    
+         {% endfor %}
+     </table>    
+
+
+                </div>
+
+            </div> <!-- /widget -->
+
+        </div> <!-- /fluid -->
+
+    </div> <!-- /wrp -->
+
+</div> <!-- /content -->{% endblock %}
+
+

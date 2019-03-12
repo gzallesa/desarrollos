@@ -1,0 +1,43 @@
+support_support_login:
+    path:  /login
+    defaults: { _controller: SupportBundle:Default:login }
+support_support_login_check:
+    path:  /login_check
+    defaults: { _controller: SupportBundle:Default:loginCheck }
+support_support_logout:
+    path:  /logout
+    defaults: { _controller: SupportBundle:Default:logout }
+support_support_mostrar:
+    pattern:  /mostrar/{id}
+    defaults: { _controller: SupportBundle:Default:getSolicitudes }
+support_support_panel:
+    pattern:  /soporte
+    defaults: { _controller: SupportBundle:Default:mostrar }
+support_support_getJsonSupport:
+    pattern:  /JsonSupport
+    defaults: { _controller: SupportBundle:Default:getJsonSupport }
+support_support_uploader:
+    pattern:  /uploader
+    defaults: { _controller: SupportBundle:Default:uploader }
+support_transferir:
+    pattern:  /transferir
+    defaults: { _controller: SupportBundle:Default:transferir }
+support_grid:
+    pattern:  /grid
+    defaults: { _controller: SupportBundle:Default:grid }
+support_getSolicitudes:
+    pattern:  /getSolicitudes
+    defaults: { _controller: SupportBundle:Default:getJSONSolicitudes }
+support_getBars:
+    pattern:  /getBars
+    defaults: { _controller: SupportBundle:Default:getBars }
+support_update:
+    pattern:  /update
+    defaults: { _controller: SupportBundle:Default:update }
+support_grid_popup:
+    pattern:  /gridpopup/{intervalo}/{problema}
+    defaults: { _controller: SupportBundle:Default:gridPopup }
+support_getSolicitudesByProb:
+    pattern:  /getSolicitudesByProb/{intervalo}/{problema}
+    defaults: { _controller: SupportBundle:Default:getJSONSolicitudes2 }
+    

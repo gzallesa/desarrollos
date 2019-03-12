@@ -1,0 +1,9 @@
+monitoreo_guardar:
+    pattern:  /guardarMonitoreo
+    defaults: { _controller: SupportBundle:Monitoreo:guardarMonitoreo }
+monitoreo_get:
+    pattern:  /getMonitoreo
+    defaults: { _controller: SupportBundle:Monitoreo:getMonitoreo }
+monitoreo_monitoreo:
+    pattern:  /monitoreo
+    defaults: { _controller: SupportBundle:Monitoreo:monitoreo }

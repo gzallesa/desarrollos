@@ -1,0 +1,46 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * MonKeyword
+ *
+ * @ORM\Table(name="mon_keyword")
+ * @ORM\Entity
+ */
+class MonKeyword
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="palabra", type="string", length=500, nullable=false)
+     */
+    private $palabra;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cliente", type="integer", nullable=false)
+     */
+    private $cliente;
+
+
+}

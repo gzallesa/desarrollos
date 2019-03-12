@@ -1,0 +1,56 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanLoginLog
+ *
+ * @ORM\Table(name="docman_login_log", indexes={@ORM\Index(name="fk_user", columns={"usuario"})})
+ * @ORM\Entity
+ */
+class DocmanLoginLog
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="inicio", type="time", nullable=false)
+     */
+    private $inicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fin", type="time", nullable=true)
+     */
+    private $fin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var \DocmanUser
+     *
+     * @ORM\ManyToOne(targetEntity="DocmanUser")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id")
+     * })
+     */
+    private $usuario;
+
+
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic CRUD Application - jQuery EasyUI CRUD Demo</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('ui') }}/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('ui') }}/themes/icon.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('ui') }}/demo/demo.css">
+        <script type="text/javascript" src="{{ asset('ui') }}/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('ui') }}/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="{{ asset('ui') }}/datagrid-filter.js"></script>
+    </head>
+    <body>
+        <table id="dg" title="Usuarios" class="easyui-datagrid" style="width:auto;height:400px"
+               url="{{ path('admin_page_getusers') }}"
+               toolbar="#toolbar" pagination="true"
+               rownumbers="true" fitColumns="true" singleSelect="true">
+            <thead>
+                <tr>
+                    <th field="interno" width="20">Interno</th>
+                    <th field="name" width="200">Nombres y apellidos</th>
+                    <th field="ci" width="100">CI</th>
+                    <th field="fechanac" width="100">Fecha de nacimiento</th>
+                    <th field="cargo" width="100">Cargo</th>
+                    <th field="oficina" width="100">Oficina</th>
+                    <th field="email" width="100">Email</th>
+                    <th field="usuario" width="100">Usuario</th>
+                    <th field="telefono" width="100">Telefono</th>
+                    <th field="movil" width="100">Movil</th>
+                    <th field="direccion" width="100">Dirección</th>
+                    <th field="ip" width="100">IP</th>
+                    <th field="estado" width="50">Habilitado</th>
+                    <th field="superior" width="100">Superior</th>
+                    <th field="soporte" width="100">Soporte</th>
+                </tr>
+            </thead>
+        </table>
+        <div id="toolbar">
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">Nuevo</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Editar</a>
+        </div>
+        <div id="dlg" class="easyui-dialog" style="width:800px;height:520px;padding:10px 20px"
+             closed="true" buttons="#dlg-buttons">
+            <div class="ftitle">Usuario</div>
+            <form id="fm" method="post" novalidate>
+                <div style="border:none;float:left;width:300px;">
+                <iframe style="border:none;overflow: hidden" src="{{ path('admin_page_uploader') }}" ></iframe>
+                    <div class="fitem">
+                        <label>Interno:</label>
+                        <input name="interno" class="easyui-validatebox" required="true">
+                    </div>
+                    <div class="fitem">
+                        <label>Nombres y apellidos:</label>
+                        <input name="name" class="easyui-validatebox" required="true">
+                    </div>
+                    <div class="fitem">
+                        <label>CI:</label>
+                        <input name="ci" class="easyui-numberbox" required="false">
+                    </div>
+                    <div class="fitem">
+                        <label>Fecha de nacimiento:</label>
+                        <input name="fechanac" id="dd" type="text" class="easyui-datebox" required="required">
+                    </div>
+                    </div>
+                    <div style="border:none;float:left;width:300px;">
+                    <div class="fitem">
+                        <label>Cargo:</label>
+                        <input name="cargo" class="easyui-validatebox" required="true">
+                    </div>
+                    <div class="fitem">
+                        <label>Email:</label>
+                        <input name="email" class="easyui-validatebox" validType="email">
+                    </div>
+                    <div class="fitem">
+                        <label>Usuario:</label>
+                        <input name="usuario" class="easyui-validatebox" required="true">
+                    </div>
+                    <div class="fitem">
+                        <label>Teléfono:</label>
+                        <input name="telefono" class="easyui-validatebox">
+                    </div>
+                    <div class="fitem">
+                        <label>Movil:</label>
+                        <input name="movil" class="easyui-validatebox">
+                    </div>
+                    <div class="fitem">
+                        <label>Dirección:</label>
+                        <input name="direccion" class="easyui-validatebox" required="true">
+                    </div>
+                    <div class="fitem">
+                        <label>Oficina:</label>
+                        <input style=" width:200px;" id="cc" class="easyui-combobox" name="oficina"
+                               data-options="valueField:'id',textField:'nombre',url:'{{ path('admin_page_getoficinas') }}'">
+                    </div>
+                    <div class="fitem">
+                        <label>IP:</label>
+                        <input name="ip" class="easyui-validatebox" required="true" validType="ip">
+                    </div>
+                    <div class="fitem">
+                        <label>Habilitado:</label>
+                        <input id="cc" class="easyui-combobox" name="estado"
+                               data-options="valueField:'value',textField:'label',data: [{
+                               label: 'SI',
+                               value: '1'
+                               },{
+                               label: 'NO',
+                               value: '0'
+                               }]">
+                    </div>
+                    <div class="fitem">
+                        <label>Tipo de usuario:</label>
+                        <input id="cc" class="easyui-combobox" name="tipo"
+                               data-options="valueField:'value',textField:'label',data: [{
+                               label: 'Normal',
+                               value: '2'
+                               },{
+                               label: 'Admin',
+                               value: '1'
+                               },{
+                               label: 'Editor',
+                               value: '0'
+                               },{
+                               label: 'Soporte',
+                               value: '3'
+                               },{
+                               label: 'Jefe de soporte',
+                               value: '4'
+                               },{
+                               label: 'Jefe de oficina',
+                               value: '5'
+                               },{
+                               label: 'Jefe',
+                               value: '6'
+                               }]">
+                    </div>
+                    <div class="fitem">
+                        <label>Soporte:</label>
+                        <input id="cc" class="easyui-combobox" name="soporte"
+                               data-options="valueField:'id',textField:'name',url:'{{ path('admin_page_getsoportes') }}'">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="dlg-buttons">
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">Guardar</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">Cancelar</a>
+        </div>
+        <script type="text/javascript">
+            var url;
+            $(function() {
+                //var dg = $('#dg').datagrid();
+                //dg.datagrid('enableFilter');
+            });
+            function newUser() {
+                $('#dlg').dialog('open').dialog('setTitle', 'Nuevo Usuario');
+                $('#fm').form('clear');
+                $('#dd').datebox('setValue', '1/1/1970');	
+                url = '{{ path('save_user') }}';
+            }
+            function editUser() {
+                var row = $('#dg').datagrid('getSelected');
+                if (row) {
+                    $('#dlg').dialog('open').dialog('setTitle', 'Editar Usuario');
+                    $('#fm').form('load', row);
+                    var r = '{{ path('update_user',{'idu':'66'}) }}';
+                    url = r.replace('66', row.id);
+                }
+            }
+            function saveUser() {
+                $('#fm').form('submit', {
+                    url: url,
+                    onSubmit: function() {
+                        return $(this).form('validate');
+                    },
+                    success: function(result) {
+
+                        var result = eval('(' + result + ')');
+                        if (result.errorMsg) {
+                            $.messager.show({
+                                title: 'Error',
+                                msg: result.errorMsg
+                            });
+                        } else {
+                            $('#dlg').dialog('close'); // close the dialog
+                            $('#dg').datagrid('reload'); // reload the user data
+                        }
+                    }
+                });
+            }
+            function destroyUser() {
+                var row = $('#dg').datagrid('getSelected');
+                if (row) {
+                    $.messager.confirm('Confirm', 'Are you sure you want to destroy this user?', function(r) {
+                        if (r) {
+                            $.post('destroy_user.php', {id: row.id}, function(result) {
+                                if (result.success) {
+                                    $('#dg').datagrid('reload'); // reload the user data
+                                } else {
+                                    $.messager.show({// show error message
+                                        title: 'Error',
+                                        msg: result.errorMsg
+                                    });
+                                }
+                            }, 'json');
+                        }
+                    });
+                }
+            }
+        </script>
+        <style type="text/css">
+            #fm{
+                margin:0;
+                padding:10px 30px;
+            }
+            .ftitle{
+                font-size:14px;
+                font-weight:bold;
+                padding:5px 0;
+                margin-bottom:10px;
+                border-bottom:1px solid #ccc;
+            }
+            .fitem{
+                margin-bottom:5px;
+            }
+            .fitem input{
+                width: 200px;
+            }
+            .fitem label{
+                display:inline-block;
+                width:80px;
+            }
+        </style>    </body>
+</html>

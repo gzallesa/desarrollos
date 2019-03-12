@@ -1,0 +1,88 @@
+<?php
+
+namespace Support\SupportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DocmanExternUser
+ *
+ * @ORM\Table(name="docman_extern_user", uniqueConstraints={@ORM\UniqueConstraint(name="email", columns={"email"})})
+ * @ORM\Entity
+ */
+class DocmanExternUser
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idu", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="movil", type="string", length=10, nullable=false)
+     */
+    private $movil;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="interno", type="string", length=10, nullable=false)
+     */
+    private $interno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=15, nullable=false)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=255, nullable=false)
+     */
+    private $direccion = 'MOPSV';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cargo", type="string", length=255, nullable=false)
+     */
+    private $cargo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="institucion", type="integer", nullable=false)
+     */
+    private $institucion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ci", type="string", length=15, nullable=false)
+     */
+    private $ci;
+
+
+}

@@ -1,0 +1,39 @@
+helpdesk:
+    resource: "@HelpdeskBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_page:
+    resource: "@AdminPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+cliente:
+    resource: "@ClienteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+support_docmanuser:
+    resource: "@SupportBundle/Resources/config/routing/docmanuser.yml"
+    prefix:   /docmanuser
+
+support_evento:
+    resource: "@SupportBundle/Resources/config/routing/evento.yml"
+    prefix:   /evento
+support_content:
+    resource: "@SupportBundle/Resources/config/routing/docmancontenido.yml"
+    prefix:   /dcontenido
+support:
+    resource: "@SupportBundle/Resources/config/routing.yml"
+    prefix:   /
+fun:
+    resource: "@SupportBundle/Resources/config/routing/fun.yml"
+    prefix:   /
+monitoreo:
+    resource: "@SupportBundle/Resources/config/routing/monitoreo.yml"
+    prefix:   /
+rest:
+    resource: "@SupportBundle/Resources/config/rest/routing.yml"
+    prefix:   /
+
